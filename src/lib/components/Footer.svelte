@@ -1,5 +1,6 @@
 <script>
 	import LogoIcon from './LogoIcon.svelte';
+	import { Github } from 'lucide-svelte';
 
 	const legalLinks = [
 		{ name: 'Legal', href: '/legal' },
@@ -24,6 +25,14 @@
 						{name}
 					</a>
 				{/each}
+				<a 
+					href="https://github.com/Auriel-Analytics" 
+					target="_blank" 
+					rel="noopener noreferrer"
+					class="hover:text-neutral-600 transition-colors duration-300 flex items-center"
+				>
+					<Github size={16} />
+				</a>
 			</div>
 		</div>
 	</div>
