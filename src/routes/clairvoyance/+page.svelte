@@ -18,14 +18,6 @@
     } from 'lucide-svelte';
     import { Button } from "$lib/components/ui/button";
 
-    function handleSelfHostClick(e: MouseEvent) {
-        e.preventDefault();
-        toast("Coming Soon", {
-            description: "A self-hosted version of Clairvoyance will be available sometime in Q1 2025",
-            duration: 5000
-        });
-    }
-
     // Clairvoyance features
     let features = [
         {
@@ -118,8 +110,8 @@
         <Button 
             variant="outline"
             size="lg"
+            href="/start"
             class="w-full lg:w-auto font-orbitron tracking-wider"
-            on:click={handleSelfHostClick}
         >
             SELF HOST >>
         </Button>
