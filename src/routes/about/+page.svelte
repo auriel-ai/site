@@ -11,21 +11,21 @@
     OUR MISSION
   </h2>
 
-  <h1 class="text-3xl lg:text-5xl font-orbitron tracking-wider text-neutral-900 text-center mb-10 lg:mb-14">
-    Help Startups Boost Metrics With Data
+  <h1 class="text-3xl font-orbitron tracking-wider text-neutral-900 text-center mb-10 lg:mb-14">
+    Help AI Agents Boost Performance
   </h1>
   
   <div class="space-y-6 text-neutral-700 leading-relaxed px-4 lg:px-0">
     <p>
-      Auriel Analytics helps startups make smarter decisions by transforming complex data into actionable intelligence that can be used to boost their metrics and KPIs.
+      Auriel Analytics empowers AI development teams to observe their agents' behavior and optimize performance through comprehensive data analysis and visualization.
     </p>
 
     <p>
-      At the heart of our approach is <a href="/clairvoyance" class="text-blue-500 hover:text-blue-600 font-medium">Clairvoyance</a>, our open-source BI tool that transforms raw data into actionable insights through custom ontologies, semantic knowledge graphs, and tailored dashboards, helping startups break down data silos and make more informed data-driven decisions.
+      At the heart of our approach is <a href="/clairvoyance" class="text-blue-500 hover:text-blue-600 font-medium">Clairvoyance</a>, our open-source observability platform that transforms raw agent data into actionable insights through custom ontologies, semantic knowledge graphs, and tailored dashboards, helping teams understand exactly how their AI agents operate and where to improve.
     </p>
 
     <p>
-      We believe that data insights should be accessible to every startup, which is why we've made Clairvoyance open-source and entirely free to get started with. But for startups seeking a more tailored solution, we build bespoke Clairvoyance instances. Our team works closely with you to define core KPIs, create custom ontologies, and design analytics dashboards that align perfectly with your business goals - helping you make sense of your customer data and product analytics.
+      We believe that AI observability should be accessible to every development team, which is why we've made Clairvoyance open-source and entirely free to get started with. For teams seeking a more tailored solution, we build bespoke Clairvoyance instances that bridge technical metrics to business outcomes. Our team works closely with you to define key performance indicators, create agent-specific ontologies, and design observability dashboards that reveal the true behavior of your AI systems - helping you move from raw logs to optimized agents with measurable impact.
     </p>
 
     <div class="flex justify-center">

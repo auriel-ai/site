@@ -36,8 +36,8 @@
     >
       <NetworkVisualization />
       
-      <h1 class="text-2xl lg:text-4xl text-neutral-800 font-orbitron tracking-wider text-center -mt-24 lg:-mt-32 max-w-[90%] lg:max-w-3xl">
-        HELPING STARTUPS ANALYZE DATA TO BOOST METRICS
+      <h1 class="text-2xl lg:text-3xl text-neutral-800 font-orbitron tracking-wider text-center -mt-24 lg:-mt-32 max-w-[90%] lg:max-w-3xl">
+        OBSERVE AND OPTIMIZE YOUR AI AGENTS TO BOOST PERFORMANCE
       </h1>
       
       <nav class="flex gap-4 mt-10">

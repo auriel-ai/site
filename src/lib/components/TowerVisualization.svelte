@@ -2,38 +2,38 @@
     const boxes = [
         {
             id: 'analytics',
-            label: 'Analytics & Visualizations',
+            label: 'Performance Optimization',
             color: '#818CF8',
             y: 200,
-            description: 'Build displays of key metrics with bespoke visualizations. Leverage an AI-powered chat interface for natural language queries or use pro-code analysis with SQL for more in-depth visualizations.'
+            description: 'Actionable insights to optimize agent performance. Leverage AI-powered interfaces for natural language queries or use advanced analysis with SQL for deeper performance diagnostics and improvement recommendations.'
         },
         {
             id: 'semantic',
-            label: 'Semantic Knowledge Graphs',
+            label: 'Behavioral Visualization',
             color: '#4ADE80',
             y: 500,
-            description: 'Visualize and explore your data relationships through powerful semantic knowledge graphs, uncovering hidden trends.'
+            description: 'Visualize and explore your agents behavioral patterns through powerful semantic knowledge graphs, revealing hidden relationships between prompts, responses, and performance metrics.'
         },
         {
             id: 'ontology',
-            label: 'Ontology',
+            label: 'Agent Ontologies',
             color: '#60A5FA',
             y: 800,
-            description: 'Custom ontologies define and structure your business logic, ensuring data consistency and meaningful analytics across your startup.'
+            description: 'Agent-specific ontologies define and structure your AIs operating logic, ensuring consistent monitoring of critical behaviors and meaningful performance analysis across different agent versions.'
         },
         {
             id: 'aggregation',
-            label: 'Data Aggregation',
+            label: 'Data Processing',
             color: '#F472B6',
             y: 1100,
-            description: 'Seamlessly aggregate data from multiple sources into a unified view, breaking down silos and enabling comprehensive analysis.'
+            description: 'Process and analyze agent interactions in real-time, transforming raw operational data into structured insights about agent behavior, performance issues, and optimization opportunities.'
         },
         {
             id: 'connectivity',
-            label: 'Connectivity',
+            label: 'Agent Integration',
             color: '#FB923C',
             y: 1400,
-            description: 'Connect to any data source through our flexible integration layer, supporting both batch and real-time data ingestion.'
+            description: 'Connect to any AI platform through our flexible integration layer, supporting both batch and real-time observability for OpenAI, Anthropic, LangChain, and custom agent implementations.'
         }
     ];
 </script>

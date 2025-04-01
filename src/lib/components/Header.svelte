@@ -65,20 +65,20 @@
             >
               <span>GENERAL INFO</span>
             </a>
-            <a
-              href="https://demo.auriel.tech"
-              role="menuitem"
-              class="px-4 py-2 text-sm font-orbitron tracking-wider text-neutral-600 hover:text-neutral-900 flex items-center justify-between gap-3"
-            >
-              <span>LIVE DEMO</span>
-            </a>
             <div
               role="menuitem"
               class="px-4 py-2 text-sm font-orbitron tracking-wider text-neutral-400 cursor-not-allowed flex items-center justify-between gap-3"
             >
-              <span>SELF-HOST</span>
+              <span>LIVE DEMO</span>
               <span class="text-[10px] text-neutral-400 whitespace-nowrap">(COMING SOON)</span>
             </div>
+            <a
+              href="/start"
+              role="menuitem"
+              class="px-4 py-2 text-sm font-orbitron tracking-wider text-neutral-600 hover:text-neutral-900 flex items-center justify-between gap-3"
+            >
+              <span>SELF-HOST</span>
+            </a>
             <div
               role="menuitem"
               class="px-4 py-2 text-sm font-orbitron tracking-wider text-neutral-400 cursor-not-allowed flex items-center justify-between gap-3"
@@ -99,14 +99,6 @@
         COMMUNITY
       </a>
       
-      <a 
-        href="/merch" 
-        class="nav-link text-neutral-600 hover:text-neutral-900 font-orbitron tracking-wider text-sm cursor-not-allowed"
-        aria-disabled="true"
-        on:click|preventDefault
-      >
-        MERCH
-      </a>
     </div>
 
     <!-- Enquire Button -->

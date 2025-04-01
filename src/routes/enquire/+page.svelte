@@ -57,12 +57,12 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-6xl px-6 lg:px-4 py-32 lg:py-40"
 >
-  <h1 class="text-3xl lg:text-2xl lg:text-4xl font-orbitron tracking-wider text-neutral-900 text-center mb-4 lg:mb-6">
-    Schedule a demo
+  <h1 class="text-3xl font-orbitron tracking-wider text-neutral-900 text-center mb-4 lg:mb-6">
+    Get complete visibility into your AI agents
   </h1>
 
-  <p class="space-y-5 text-neutral-700 leading-relaxed text-center font-grotesk mb-8 lg:mb-10 mx-auto max-w-xl px-4 lg:px-0">
-    See firsthand how a custom Clairvoyance instance can transform your startup's unstructured data into clear, actionable insights.
+  <p class="space-y-5 text-neutral-700 leading-relaxed text-center font-grotesk mb-8 lg:mb-10 mx-auto max-w-2xl px-4 lg:px-0">
+    See how our AI observability platform can help you understand, debug, and optimize your agents for better performance and measurable business impact.
   </p>
 
   <div 

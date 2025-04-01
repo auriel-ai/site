@@ -22,73 +22,73 @@
     let features = [
         {
             icon: FileJson,
-            title: 'Custom Ontologies',
-            description: 'Clairvoyance provides pre-made ontology templates alongside the flexibility to customize via JSON, defining your business logic with precision. This ensures your data is structured semantically to reflect how your startup runs, leading to more accurate actionable insights.'
+            title: 'Agent-Specific Ontologies',
+            description: 'Define your AI agents behavior patterns, expected outcomes, and failure modes with customizable ontologies. Map the relationships between prompts, responses, and performance metrics to create a complete picture of your operations.'
         },
         {
             icon: ChartNetwork,
-            title: 'Visualize Your Business',
-            description: 'Explore and visualize aggregated data through an intuitive interface, leveraging Semantic Knowledge Graphs. Simplify complex data relationships to enhance strategic decision-making from a panoramic BI viewpoint.'
+            title: 'Behavioral Visualization',
+            description: 'See how your agents actually behave in production through intuitive knowledge graphs. Identify patterns, anomalies, and edge cases that might be invisible in logs alone, giving you unprecedented visibility into complex AI systems.'
         },
         {
             icon: Grid2X2,
-            title: 'Unified Data, Unified Vision',
-            description: 'Built-in pipelines for data aggregation, supporting CSV uploads and API integrations with continuous delivery from major sources. Break down data silos for a unified view of your business data.'
+            title: 'Comprehensive Data Collection',
+            description: 'Capture every aspect of your agents operations with built-in collectors for prompts, completions, context, tokens, latency, and user interactions.'
         },
         {
             icon: ChartNoAxesCombined,
-            title: 'Metrics That Matter',
-            description: 'Our metrics dashboard displays primary and secondary metrics with customizable widgets, including the ability to create bespoke visualizations. View key metrics at a glance to make informed decisions swiftly and identify sheltered growth opportunities.'
+            title: 'Performance Metrics Dashboard',
+            description: 'Track critical agent metrics like response quality, hallucination rates, token efficiency, and latency through customizable dashboards. Compare performance across versions to precisely measure the impact of your optimizations.'
         },
         {
             icon: Bot,
-            title: 'Chat Powered Queries',
-            description: 'Our AI-powered chat interface lets you query your ontology using natural language, making data analysis accessible and lightning fast.'
+            title: 'Agent Interrogation',
+            description: 'Ask natural language questions about your agents performance and behavior. Our AI-powered interface lets you explore your data without complex queries, making observability accessible to your entire team.'
         },
         {
             icon: NotebookText,
-            title: 'Notebooks: A Deeper Dive into Data',
-            description: 'Use the advanced analytics dashboards built around notebooks to write complex SQL queries and build interactive visualizations and reports to uncover nuanced insights from your ontology.'
+            title: 'Deep Analysis Notebooks',
+            description: 'Use interactive notebooks for advanced analysis when you need to dive deeper. Perform complex queries, build custom visualizations, and create shareable reports that connect technical improvements to business outcomes.'
         }
     ];
 
     const faqs = [
         {
             question: "What is Clairvoyance?",
-            answer: "Clairvoyance is a custom analytics engine for startups developed by Auriel Analytics. It transforms raw data into actionable insights through custom ontologies, semantic knowledge graphs, and tailored dashboards, helping startups make data-driven decisions to boost their metrics."
+            answer: "Clairvoyance is an AI agent observability platform developed by Auriel Analytics. It helps teams observe how their agents behave in production, diagnose issues, and optimize performance through comprehensive data collection, custom ontologies, and actionable visualizations."
         },
         {
-            question: "What is an ontology?",
-            answer: "An ontology is a formal, structured framework that defines the concepts, relationships, and rules within a specific domain. Ontologies are a way of enforcing data consistency that ensures your data is structured according to your unique business logic. By using ontologies to break down data silos and aggregate all business data into one unified database, it results in more accurate insights by providing a complete, contextual view of your business operations and KPIs."
+            question: "How is this different from existing monitoring tools?",
+            answer: "Unlike general monitoring tools, Clairvoyance is built specifically for AI agents with specialized metrics, visualizations, and ontologies that understand the unique relationships between prompts, completions, and performance. We focus on semantic understanding of agent behavior, not just log collection."
         },
         {
-            question: "Can I customize the ontology?",
-            answer: "Yes, Clairvoyance offers pre-made ontology templates for quick setup, and you can further customize these via JSON files to match your startup's specific needs, ensuring your data framework is as unique as your business model."
+            question: "What metrics can I track for my AI agents?",
+            answer: "Clairvoyance tracks both technical metrics (latency, token usage, completion patterns, hallucination rates) and business metrics (user satisfaction, task completion rates, conversion impact) to give you a complete picture of how your agents are performing and where to optimize."
         },
         {
-            question: "What are Semantic Knowledge Graphs?",
-            answer: "Semantic Knowledge Graphs are visual representations of your business's ontology, organizing data into semantic graphs. They simplify understanding complex data relationships, making it easier to see connections and patterns that can drive strategic decisions."
+            question: "How does the ontology system work?",
+            answer: "Our ontologies create a semantic model of your AI agent's behavior, defining the relationships between inputs, outputs, context, and performance. This structured approach helps you understand patterns across thousands of interactions and identify specific scenarios where your agent excels or struggles."
         },
         {
-            question: "How does Clairvoyance handle data aggregation?",
-            answer: "Clairvoyance includes built-in pipelines for aggregating and centralizing data, breaking down data silos. It supports CSV uploads and API integrations for continuous data delivery from major sources, ensuring all your data is in one place for comprehensive analysis."
+            question: "How do you collect agent data?",
+            answer: "Clairvoyance includes lightweight collectors for all major AI platforms (OpenAI, Anthropic, etc.) and frameworks (LangChain, LlamaIndex, etc.), as well as a direct API for custom integrations. The collectors capture prompts, completions, metadata, and performance metrics with minimal overhead."
         },
         {
-            question: "Can I track our latest metrics/KPIs?",
-            answer: "Our metrics dashboard displays custom set primary and secondary metrics through customizable widgets. It allows you to view key metrics at a glance, helping you make informed decisions quickly and identify growth opportunities."
+            question: "Can I connect agent performance to business outcomes?",
+            answer: "Yes, a key feature of Clairvoyance is the ability to correlate technical improvements in your agents with business metrics. Our dashboards and notebooks help you quantify the business impact of your optimization efforts and prioritize improvements with the highest ROI."
         },
         {
-            question: "How does the AI chat interface work?",
-            answer: "The AI-powered chat interface lets you query your data using natural language. This feature provides quick, self-serve data analysis, making it accessible for anyone in your team to get insights fast without needing deep technical knowledge. Please note that for self-hosted Clairvoyance instances you will need to provide an API key in the configuration settings."
+            question: "How does the Agent Interrogation feature work?",
+            answer: "Agent Interrogation allows you to ask natural language questions about your agent's performance and behavior. The system translates your questions into appropriate queries against your data and returns visualizations and insights, making observability accessible without requiring you to write SQL queries."
         },
         {
             question: "Is Clairvoyance open source?",
-            answer: "Yes, Clairvoyance is open source, which means you can freely use, modify, and distribute the core product. This allows for community contributions and self-hosting."
+            answer: "Yes, the core Clairvoyance platform is open source and free to use. We offer enterprise features, support, and custom implementation services for teams that need additional capabilities or assistance with their observability strategy."
         },
         {
-            question: "Do you build custom Clairvoyance instances?",
-            answer: "Yes, Auriel works closely with startups to build bespoke versions of Clairvoyance. This includes defining core KPIs & metrics, setting up custom ontologies, integrating data sources and designing custom dashboards, ensuring your analytics solutions are tailor-made to be precise and effective."
-        },
+            question: "Do you build custom observability solutions?",
+            answer: "Yes, we can work with AI teams to build tailored observability systems for complex agent deployments. Our services include defining critical metrics, creating custom ontologies for specific use cases, integrating with existing systems, and building specialized dashboards that connect technical and business metrics."
+        }
     ];
 </script>
 
@@ -99,11 +99,11 @@
         </div>
     </div>
     
-    <h1 class="text-4xl font-orbitron tracking-wider text-neutral-900 text-center mb-12 lg:mb-8 max-w-4xl mx-auto">
-        An OSS Data Insight Engine For Startups
+    <h1 class="text-3xl font-orbitron tracking-wider text-neutral-900 text-center mb-12 lg:mb-8 max-w-4xl mx-auto">
+        An Open-Source AI Agent Observability Platform
     </h1>
-    <h2 class="text-xl text-neutral-600 text-center mb-10 lg:mb-8 max-w-[90%] lg:max-w-none mx-auto">
-        Transform your startup's siloed data into actionable intelligence
+    <h2 class="text-lg text-neutral-600 text-center mb-10 lg:mb-8 max-w-[90%] lg:max-w-none mx-auto">
+        Observe, understand, and optimize your AI agents with comprehensive data visibility
     </h2>
     
     <div class="flex flex-col lg:flex-row justify-center gap-4 items-center">
@@ -151,7 +151,7 @@
                         </Button>
                     </div>
                     <Card.Description class="text-neutral-600 text-sm leading-relaxed pt-5">
-                        Free and open-source BI engine with flexible deployment options.
+                        Free and open-source observability engine with flexible deployment options.
                     </Card.Description>
                 </Card.Header>
             </Card.Root>

@@ -17,7 +17,7 @@
   let mediaQuery: MediaQueryList;
   let isLargeScreen = false;
   
-  // B2B SaaS Ontology Classes
+  // AI Agent Observability Ontology Classes
   type OntologyCategory = {
     name: string;
     color: string;
@@ -26,71 +26,71 @@
 
   const ontologyCategories: OntologyCategory[] = [
     {
-      name: 'Core Business Entities',
+      name: 'Agent Core Components',
       color: 'bg-blue-100 border-blue-200',
-      classes: ['Customer', 'Product', 'Service', 'Order', 'Subscription', 'Contract']
+      classes: ['Agent', 'LLM', 'Prompt', 'Completion', 'Context', 'Memory']
     },
     {
-      name: 'Customer Interaction',
+      name: 'Agent Behavior',
       color: 'bg-green-100 border-green-200',
-      classes: ['Lead', 'Opportunity', 'CustomerSegment', 'CustomerJourney', 
-               'CustomerTouchpoint', 'CustomerFeedback', 'ChurnEvent']
+      classes: ['ResponsePattern', 'DecisionPath', 'ReasoningChain', 
+               'BehavioralPattern', 'EdgeCase', 'FailureMode']
     },
     {
-      name: 'Sales and Revenue',
+      name: 'Performance Metrics',
       color: 'bg-purple-100 border-purple-200',
-      classes: ['SalesPipeline', 'Deal', 'RevenueStream', 'PricingModel',
-               'Discount', 'Invoice', 'Payment']
+      classes: ['ResponseQuality', 'HallucinationRate', 'FactualAccuracy',
+               'TokenEfficiency', 'LatencyProfile', 'CompletionTime']
     },
     {
-      name: 'Product Performance',
+      name: 'User Interaction',
       color: 'bg-yellow-100 border-yellow-200',
-      classes: ['ProductUsage', 'ServiceUsage', 'FeatureUsage',
-               'ProductPerformance', 'ServicePerformance']
+      classes: ['UserQuery', 'UserFeedback', 'UserSatisfaction',
+               'ConversationFlow', 'InteractionSession']
     },
     {
-      name: 'Customer Metrics',
+      name: 'Agent Capabilities',
       color: 'bg-red-100 border-red-200',
-      classes: ['CustomerLifetimeValue', 'CustomerAcquisitionCost', 'RetentionRate',
-               'ChurnRate', 'NetPromoterScore', 'CustomerSatisfactionScore']
+      classes: ['TaskCompletion', 'ReasoningCapability', 'KnowledgeAccess',
+               'ToolUsage', 'APIInteraction', 'FunctionCalling']
     },
     {
-      name: 'Financial Metrics',
+      name: 'Agent Optimization',
       color: 'bg-emerald-100 border-emerald-200',
-      classes: ['MonthlyRecurringRevenue', 'AnnualRecurringRevenue', 'GrossMargin',
-               'NetProfitMargin', 'RevenueGrowthRate']
+      classes: ['PromptOptimization', 'ContextWindow', 'ParameterTuning',
+               'VersionComparison', 'PerformanceImprovement']
     },
     {
       name: 'Operational Metrics',
       color: 'bg-orange-100 border-orange-200',
-      classes: ['OperationalEfficiency', 'ResourceUtilization',
-               'ProjectCompletionRate', 'TaskCompletionRate']
+      classes: ['TokenUsage', 'APICallVolume',
+               'CostPerCompletion', 'BurstCapacity']
     },
     {
-      name: 'Support Metrics',
+      name: 'Security & Safety',
       color: 'bg-cyan-100 border-cyan-200',
-      classes: ['SupportTicket', 'FirstResponseTime', 'ResolutionTime', 'SLACompliance']
+      classes: ['ContentSafety', 'PromptInjection', 'DataLeakage', 'UserPrivacy']
     },
     {
-      name: 'Marketing Metrics',
+      name: 'Business Impact',
       color: 'bg-pink-100 border-pink-200',
-      classes: ['MarketingCampaign', 'LeadToCustomerConversionRate', 'SalesConversionRate',
-               'CostPerLead', 'MarketingReturnOnInvestment']
+      classes: ['ConversionImpact', 'RetentionEffect', 'UserEngagement',
+               'TimeToValue', 'BusinessOutcome']
     },
     {
-      name: 'Innovation',
+      name: 'Development Workflow',
       color: 'bg-indigo-100 border-indigo-200',
-      classes: ['FeatureFlag', 'InnovationIndex', 'ProductDevelopmentCycle']
+      classes: ['ExperimentTrack', 'ABTest', 'DeploymentStage']
     },
     {
-      name: 'Internal Performance',
+      name: 'Model Analysis',
       color: 'bg-violet-100 border-violet-200',
-      classes: ['EmployeeProductivity', 'TeamPerformance']
+      classes: ['EmbeddingAnalysis', 'ResponseClustering', 'SemanticSimilarity']
     },
     {
-      name: 'System Metrics',
+      name: 'System Integration',
       color: 'bg-slate-100 border-slate-200',
-      classes: ['DataQuality', 'SystemUptime', 'APIResponseTime']
+      classes: ['DataSource', 'AgentPipeline', 'APIGateway']
     }
   ];
 

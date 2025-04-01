@@ -17,14 +17,14 @@
   const deploymentOptions = [
     {
       title: "Fork & Deploy The Pre-Alpha",
-      status: "Available Now",
+      status: "Available Soon",
       description: "Fork our GitHub repository to get started. We've provided a detailed deployment guide for Coolify, making it easy to deploy your instance for free in minutes. The repo includes an example config and best practices for production deployments.",
       command: "https://github.com/Auriel-Analytics/clairvoyance",
       isAvailable: true
     },
     {
       title: "Docker Image",
-      status: "Coming Q1 2025",
+      status: "Coming Q2 2025",
       description: "We're currently working on providing an official Docker image to deploy on any system or server running Docker. Coming Q1 2025.",
       isAvailable: false
     },
@@ -41,12 +41,12 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-2xl px-6 lg:px-4 py-32 lg:py-40"
 >
-  <h1 class="text-3xl lg:text-4xl font-orbitron tracking-wider text-neutral-900 text-center mb-8">
-    Get Started
+  <h1 class="text-3xl lg:text-3xl font-orbitron tracking-wider text-neutral-900 text-center mb-8">
+    Deploy Your Observability Platform
   </h1>
 
   <p class="text-md text-neutral-600 text-center mb-16 max-w-lg mx-auto">
-    Run your own instance of Clairvoyance on your own infrastructure to have complete control over your data.
+    Run your own instance of Clairvoyance on your infrastructure for complete control over your AI agent observability data and customized optimization insights.
   </p>
 
   <div class="grid grid-cols-1 gap-8 mb-20">
