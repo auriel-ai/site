@@ -39,40 +39,42 @@
 
 <div 
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-2xl px-6 lg:px-4 py-32 lg:py-40"
+  class="container mx-auto max-w-2xl px-6 lg:px-4 py-32 lg:py-40 relative"
 >
-  <h1 class="text-3xl lg:text-3xl font-orbitron tracking-wider text-neutral-900 text-center mb-8">
+  <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
+  
+  <h1 class="text-3xl lg:text-3xl font-orbitron tracking-wider text-cyan-400 text-center mb-8 relative">
     Deploy Your Observability Platform
   </h1>
 
-  <p class="text-md text-neutral-600 text-center mb-16 max-w-lg mx-auto">
-    Run your own instance of Clairvoyance on your infrastructure for complete control over your AI agent observability data and customized optimization insights.
+  <p class="text-md text-neutral-300 text-center mb-16 max-w-lg mx-auto relative">
+    Run your own instance of Clairvoyance on your infrastructure for complete control over your AI agent observability data.
   </p>
 
-  <div class="grid grid-cols-1 gap-8 mb-20">
+  <div class="grid grid-cols-1 gap-8 mb-20 relative">
     {#each deploymentOptions as option}
-      <Card.Root class="border-neutral-200">
+      <Card.Root class="border-neutral-800 bg-neutral-900/50 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]">
         <Card.Header class="p-8 pb-0 space-y-5">
           <div class="flex items-start gap-4">
-            <Card.Title class="text-lg font-orbitron text-neutral-900 font-normal tracking-wider">{option.title}</Card.Title>
-            <span class={`text-xs px-2 py-2 rounded-full ${option.isAvailable ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'}`}>
+            <Card.Title class="text-lg font-orbitron text-neutral-200 font-normal tracking-wider">{option.title}</Card.Title>
+            <span class={`text-xs px-2 py-2 rounded-full ${option.isAvailable ? 'bg-cyan-950 text-cyan-400' : 'bg-neutral-800 text-neutral-400'}`}>
               {option.status}
             </span>
           </div>
-          <Card.Description class="text-neutral-600 mt-4">{option.description}</Card.Description>
+          <Card.Description class="text-neutral-400 mt-4">{option.description}</Card.Description>
         </Card.Header>
         <Card.Content class="p-8 pt-6">
           {#if option.command}
             <div class="relative">
-              <code class="bg-neutral-100 px-4 py-3 rounded-lg font-mono text-xs block w-full overflow-x-auto mb-6 pr-12">
+              <code class="bg-neutral-800/60 px-4 py-3 rounded-lg font-mono text-xs block w-full overflow-x-auto mb-6 pr-12 text-cyan-400">
                 {option.command}
               </code>
               <button
-                class="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-neutral-200 rounded-md flex items-center justify-center"
+                class="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-neutral-700 rounded-md flex items-center justify-center text-neutral-400 hover:text-cyan-400 transition-colors"
                 on:click={() => copyText(option.command)}
               >
                 {#if copiedCommand === option.command}
-                  <Check class="h-4 w-4 text-green-600" />
+                  <Check class="h-4 w-4 text-cyan-400" />
                 {:else}
                   <Copy class="h-4 w-4" />
                 {/if}
@@ -83,7 +85,7 @@
                 variant="link" 
                 size="sm"
                 href="#"
-                class="text-xs tracking-wider font-orbitron"
+                class="text-xs tracking-wider font-orbitron text-cyan-400 hover:text-cyan-300"
               >
                 VIEW FULL SETUP GUIDE >>
               </Button>
@@ -93,5 +95,10 @@
       </Card.Root>
     {/each}
   </div>
+</div>
 
-</div> 
+<style>
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+</style> 

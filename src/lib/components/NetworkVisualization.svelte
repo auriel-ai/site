@@ -110,17 +110,17 @@
     
     // Convert Tailwind color classes to hex colors
     const colorMap: { [key: string]: number } = {
-      'bg-blue-100': 0x60A5FA,
-      'bg-green-100': 0x34D399,
-      'bg-purple-100': 0xA78BFA,
-      'bg-yellow-100': 0xFBBF24,
-      'bg-red-100': 0xF87171,
-      'bg-emerald-100': 0x34D399,
-      'bg-orange-100': 0xFB923C,
+      'bg-blue-100': 0x22D3EE,    // Changed to cyan
+      'bg-green-100': 0x22D3EE,    // Changed to cyan
+      'bg-purple-100': 0x22D3EE,   // Changed to cyan
+      'bg-yellow-100': 0x22D3EE,   // Changed to cyan
+      'bg-red-100': 0x22D3EE,      // Changed to cyan
+      'bg-emerald-100': 0x22D3EE,  // Changed to cyan
+      'bg-orange-100': 0x22D3EE,   // Changed to cyan
       'bg-cyan-100': 0x22D3EE,
-      'bg-pink-100': 0xF472B6,
-      'bg-indigo-100': 0x818CF8,
-      'bg-violet-100': 0xA78BFA,
+      'bg-pink-100': 0x22D3EE,     // Changed to cyan
+      'bg-indigo-100': 0x22D3EE,   // Changed to cyan
+      'bg-violet-100': 0x22D3EE,   // Changed to cyan
       'bg-slate-100': 0x94A3B8
     };
 
@@ -450,17 +450,19 @@
           positions[vertexpos++] = particlePositions[j * 3 + 2];
 
           const alpha = 1.0 - dist / (radius * 0.42);
-          const brightBlue = 0.8 * alpha;
-          const midBlue = 0.6 * alpha;
-          const darkBlue = 0.4 * alpha;
           
-          lineColors[colorpos++] = brightBlue;
-          lineColors[colorpos++] = brightBlue;
-          lineColors[colorpos++] = 1.0;
+          // Updated to cyan colors
+          const brightCyan = 0.6 * alpha;
+          const midCyan = 0.8 * alpha;
+          const darkCyan = 0.9 * alpha;
+          
+          lineColors[colorpos++] = 0;
+          lineColors[colorpos++] = brightCyan;
+          lineColors[colorpos++] = darkCyan;
 
-          lineColors[colorpos++] = midBlue;
-          lineColors[colorpos++] = darkBlue;
-          lineColors[colorpos++] = 0.9;
+          lineColors[colorpos++] = 0;
+          lineColors[colorpos++] = midCyan;
+          lineColors[colorpos++] = darkCyan;
 
           numConnected++;
           connectionsForThisNode++;
@@ -509,7 +511,7 @@
 <TooltipProvider>
   <div 
     bind:this={container}
-    class="w-full lg:h-[600px] h-[400px] relative"
+    class="w-full h-full relative"
     on:mouseleave={handleMouseLeave}
   >
     {#if tooltipVisible && currentTooltipIndex !== null}
@@ -525,10 +527,10 @@
       >
         <Tooltip open={true}>
           <TooltipContent
-            class={`backdrop-blur-sm shadow-sm px-2 py-1 ${getCategoryForClass(ontologyClasses[currentTooltipIndex])?.color}`}
+            class="backdrop-blur-md bg-neutral-800/90 border border-cyan-500/50 shadow-[0_0_10px_rgba(34,211,238,0.2)] px-2 py-1"
             sideOffset={5}
           >
-            <div class="text-xs font-medium text-neutral-900 tracking-tight">
+            <div class="text-xs font-medium text-cyan-400 tracking-tight">
               {ontologyClasses[currentTooltipIndex]}
             </div>
           </TooltipContent>

@@ -1,52 +1,199 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
-  import NetworkVisualization from '$lib/components/NetworkVisualization.svelte';
-
-  const FADE_DURATION = 300;
-  const FADE_DELAY = 150;
-
-  const navigationLinks = [
-    {
-      href: '/clairvoyance',
-      text: 'SEE HOW >>',
-      variant: 'light'
-    },
-    {
-      href: '/enquire',
-      text: 'WORK WITH US >>',
-      variant: 'dark'
-    }
-  ] as const;
-
-  const getButtonClass = (variant: 'light' | 'dark') => {
-    const baseClass = 'px-8 py-2 rounded transition-colors font-orbitron text-sm lg:text-base';
-    const variantClass = variant === 'light'
-      ? 'bg-white border border-neutral-200 hover:bg-neutral-50 text-neutral-800 hover:text-neutral-900 shadow-sm'
-      : 'bg-neutral-900 border border-neutral-900 hover:bg-neutral-800 text-white shadow-md';
+  import HeroSection from '$lib/components/sections/HeroSection.svelte';
+  import GetStartedSection from '$lib/components/sections/GetStartedSection.svelte';
+  import FeaturesSection from '$lib/components/sections/FeaturesSection.svelte';
+  import VisualizationSection from '$lib/components/sections/VisualizationSection.svelte';
+  import ArchitectureSection from '$lib/components/sections/ArchitectureSection.svelte';
+  import FAQSection from '$lib/components/sections/FAQSection.svelte';
+  import { visualizations } from '$lib/data/visualizations';
+  
+  let isPageLoaded = false;
+  let activeSection = 'hero';
+  let animatedSections = new Set<string>(['hero']);
+  
+  // Initialize IntersectionObserver on mount
+  onMount(() => {
+    isPageLoaded = true;
     
-    return `${baseClass} ${variantClass}`;
-  };
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          activeSection = id;
+          // Only add hero to animated sections - keep other sections static
+          if (id === 'hero') {
+            animatedSections.add(id);
+            // Force svelte to update the set
+            animatedSections = new Set(animatedSections);
+          }
+        }
+      });
+    }, options);
+    
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    return () => {
+      sections.forEach(section => {
+        observer.unobserve(section);
+      });
+    };
+  });
+
+  // Always return false for non-hero sections
+  $: hasAnimated = (sectionId: string) => sectionId === 'hero' && animatedSections.has(sectionId);
 </script>
 
-<main class="container mx-auto px-4 py-32 lg:py-40">
-  <div class="flex h-full w-full items-center justify-center -mt-20 lg:-mt-28">
-    <div 
-      in:fade={{ duration: FADE_DURATION, delay: FADE_DELAY }}
-      class="flex flex-col items-center"
-    >
-      <NetworkVisualization />
-      
-      <h1 class="text-2xl lg:text-3xl text-neutral-800 font-orbitron tracking-wider text-center -mt-24 lg:-mt-32 max-w-[90%] lg:max-w-3xl">
-        OBSERVE AND OPTIMIZE YOUR AI AGENTS TO BOOST PERFORMANCE
-      </h1>
-      
-      <nav class="flex gap-4 mt-10">
-        {#each navigationLinks as { href, text, variant }}
-          <a {href} class={getButtonClass(variant)}>
-            {text}
-          </a>
-        {/each}
-      </nav>
-    </div>
-  </div>
-</main>
+<svelte:head>
+  <title>Auriel Analytics</title>
+  <meta name="description" content="Auriel Analytics - AI Agent Observability" />
+</svelte:head>
+
+<div class="bg-neutral-950 text-neutral-200 min-h-screen overflow-x-hidden">
+  <HeroSection {isPageLoaded} {activeSection} />
+  
+  <GetStartedSection 
+    {isPageLoaded} 
+    {activeSection} 
+    shouldAnimate={false} 
+  />
+
+  {#each visualizations as vis, index}
+  <VisualizationSection 
+    {isPageLoaded} 
+    {activeSection}
+    visualization={vis}
+    shouldAnimate={false}
+  />
+  
+  <!-- Add spacing between visualization sections but not after the last one -->
+  {#if index < visualizations.length - 1}
+    <div class="h-5"></div>
+  {/if}
+{/each}
+  
+  <FeaturesSection 
+    {isPageLoaded} 
+    {activeSection} 
+    shouldAnimate={false} 
+  />
+  
+  <ArchitectureSection 
+    {isPageLoaded} 
+    {activeSection} 
+    shouldAnimate={false} 
+  />
+  
+  <FAQSection 
+    {isPageLoaded} 
+    {activeSection} 
+    shouldAnimate={false} 
+  />
+</div>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+  
+  :global(body) {
+    @apply bg-neutral-950;
+  }
+  
+  :global(.container) {
+    @apply mx-auto;
+  }
+  
+  :global(.animate-fade-in) {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  :global(.animate-slide-up-1) {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+  }
+  
+  :global(.animate-slide-up-2) {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+  :global(.animate-slide-up-3) {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+  
+  :global(.animate-slide-up-4) {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+  }
+  
+  :global(.animate-slide-up-5) {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  
+  :global(.animate-slide-up-6) {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Custom scrollbar styling */
+  :global(::-webkit-scrollbar) {
+    width: 8px;
+  }
+  
+  :global(::-webkit-scrollbar-track) {
+    background: #0a0a0a;
+  }
+  
+  :global(::-webkit-scrollbar-thumb) {
+    background: #333;
+    border-radius: 4px;
+  }
+  
+  :global(::-webkit-scrollbar-thumb:hover) {
+    background: #555;
+  }
+  
+  /* Gradient backgrounds */
+  :global(.bg-gradient-radial) {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+</style>

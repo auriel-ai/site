@@ -34,12 +34,24 @@
 
 <Toaster />
 
-<div class="flex min-h-screen flex-col bg-gradient-to-b from-white via-neutral-100 to-white">
+<div class="flex min-h-screen flex-col bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
 	<Header />
 	
-	<main class="flex flex-1">
-		{@render children()}
+	<main class="flex flex-1 relative">
+		<div class="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
+		<div class="w-full z-10">
+			{@render children()}
+		</div>
 	</main>
 	
 	<Footer />
 </div>
+
+<style>
+	.bg-grid-pattern {
+		background-image: 
+			linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+			linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+		background-size: 20px 20px;
+	}
+</style>
