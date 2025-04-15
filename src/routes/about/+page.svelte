@@ -5,41 +5,64 @@
 
 <div 
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-2xl px-6 lg:px-0 py-32 lg:py-40 relative"
+  class="container mx-auto max-w-3xl px-6 lg:px-0 py-32 lg:py-40 relative"
 >
   <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
   <h2 class="text-lg lg:text-xl font-orbitron tracking-wider text-cyan-400 text-center mb-4 lg:mb-10 relative">
-    OUR MISSION
+    OUR FOCUS
   </h2>
 
   <h1 class="text-3xl font-orbitron tracking-wider text-neutral-100 text-center mb-10 lg:mb-14 relative">
-    Help AI Agents Boost Performance
+    AI Agent Development & Tooling
   </h1>
   
-  <div class="space-y-6 text-neutral-300 leading-relaxed px-4 lg:px-0 relative backdrop-blur-sm">
-    <p>
-      Auriel Analytics empowers AI development teams to observe their agents' behavior and optimize performance through comprehensive data analysis and visualization.
+  <div class="space-y-8 text-neutral-300 leading-relaxed px-4 lg:px-0 relative backdrop-blur-sm">
+    <p class="text-lg">
+      We operate at the intersection of specialized AI agent development and the open-source tooling required to make them reliable and efficient. We believe powerful AI workflows requires both sophisticated microagents and transparent observability.
     </p>
 
-    <p>
-      At the heart of our approach is <a href="/clairvoyance" class="text-cyan-400 hover:text-cyan-300 font-medium">Clairvoyance</a>, our open-source observability platform that transforms raw agent data into actionable insights through custom ontologies, semantic knowledge graphs, and tailored dashboards, helping teams understand exactly how their AI agents operate and where to improve.
-    </p>
+    <div>
+       <h3 class="text-xl font-medium text-cyan-400 mb-3">Open-Source Observability Tools</h3>
+       <p>
+         We create lightweight, <span class="font-semibold">open-source developer tools</span> 
+         focused on the practical challenges of building with LLMs. Tools like 
+         <a href="/tooling#clairvoyance" class="underline hover:text-cyan-300">Clairvoyance</a> 
+         provide essential capabilities for offline debugging, performance analysis, 
+         and cost tracking, enabling faster iteration and more robust agent deployment.
+       </p>
+    </div>
 
-    <p>
-      We believe that AI observability should be accessible to every development team, which is why we've made Clairvoyance open-source and entirely free to get started with. For teams seeking a more tailored solution, we build bespoke Clairvoyance instances that bridge technical metrics to business outcomes. Our team works closely with you to define key performance indicators, create agent-specific ontologies, and design observability dashboards that reveal the true behavior of your AI systems - helping you move from raw logs to optimized agents with measurable impact.
-    </p>
+    <div>
+      <h3 class="text-xl font-medium text-cyan-400 mb-3">MicroAgent Development</h3>
+      <p>
+        We design and build highly specialized <span class="font-semibold">MicroAgents</span>—modular AI components focused on specific tasks. Like microservices, they offer flexibility, allowing businesses to deploy standalone agents or combine them into powerful, scalable systems tailored to unique needs.
+      </p>
+    </div>
 
-    <div class="flex justify-center">
+    <div>
+       <h3 class="text-xl font-medium text-cyan-400 mb-3">Engagement Models</h3>
+       <p>
+         Developers can leverage our freely available 
+         <span class="font-semibold">Open-Source Tooling</span> to enhance their own agent 
+         development and monitoring workflows. Additionally, we partner with 
+         select businesses through <span class="font-semibold">Forward-Deployed Services</span>, 
+         where our team works directly with yours to design, build, integrate, 
+         and optimize custom MicroAgent solutions into your workflows.
+       </p>
+    </div>
+
+    <div class="pt-8 flex justify-center">
       <Button 
         variant="outline"
         size="lg"
         href="/enquire"
-        class="mt-14 border-cyan-500 bg-transparent hover:bg-cyan-500/10 text-cyan-400 hover:text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all font-orbitron tracking-wider"
+        class="border-cyan-500 bg-transparent hover:bg-cyan-500/10 text-cyan-400 hover:text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all font-orbitron tracking-wider"
       >
-        WORK WITH US >>
+        Contact Us >>
       </Button>
     </div>
+
   </div>
 </div>
 

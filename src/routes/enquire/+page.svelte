@@ -32,20 +32,20 @@
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
     // Initialize Cal.com
-    Cal("init", "clairvoyance-intro", {origin:"https://cal.com"});
+    Cal("init", "15", {origin:"https://cal.com"});
 
     // Setup inline embed
-    Cal.ns["clairvoyance-intro"]("inline", {
+    Cal.ns["15"]("inline", {
       elementOrSelector:"#my-cal-inline",
       config: {
         "layout":"month_view",
         "theme":"dark"
       },
-      calLink: "jackdolbs/clairvoyance-intro",
+      calLink: "jackdolbs/15",
     });
 
     // Setup UI configuration
-    Cal.ns["clairvoyance-intro"]("ui", {
+    Cal.ns["15"]("ui", {
       "theme":"dark",
       "hideEventTypeDetails":false,
       "layout":"month_view"
@@ -60,11 +60,11 @@
   <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
   <h1 class="text-3xl font-orbitron tracking-wider text-cyan-400 text-center mb-4 lg:mb-6 relative">
-    Hire an Agent Expert
+    Need Help Building Agents?
   </h1>
 
   <p class="space-y-5 text-neutral-300 leading-relaxed text-center font-grotesk mb-8 lg:mb-10 mx-auto max-w-4xl px-4 lg:px-10 relative">
-    We build and optimize AI agents for select enterprise teams. Clairvoyance gives you complete visibility into how your agents work, making it easy to improve performance and measure business results.
+    We provide observability tooling and development expertise to help teams build reliable AI systems. Whether you need custom agent development or implementation of monitoring solutions, let's talk.
   </p>
 
   <div 

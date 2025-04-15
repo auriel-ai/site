@@ -9,7 +9,7 @@
 
 <footer class="bg-neutral-900/80 backdrop-blur-md border-t border-neutral-800 text-neutral-400 py-5 relative">
 	<div class="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent opacity-30 pointer-events-none"></div>
-	<div class="container mx-auto max-w-7xl px-6 lg:px-4 relative z-10">
+	<div class="container mx-auto max-w-6xl px-6 lg:px-4 relative z-10">
 		<div class="flex flex-col lg:flex-row lg:justify-between lg:items-center items-center gap-4 lg:gap-0">
 			<div class="flex flex-col lg:flex-row items-center lg:gap-8 text-center lg:text-left">
 				<LogoIcon size="w-6 h-6" class_="stroke-neutral-400 hover:stroke-cyan-400 transition-colors" />
