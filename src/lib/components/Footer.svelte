@@ -28,7 +28,7 @@
 					</a>
 				{/each}
 				<a 
-					href="https://github.com/Auriel-Analytics" 
+					href="https://github.com/auriel-ai" 
 					target="_blank" 
 					rel="noopener noreferrer"
 					class="hover:text-cyan-400 transition-colors duration-300 flex items-center"
