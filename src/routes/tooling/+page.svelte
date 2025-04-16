@@ -23,8 +23,8 @@
 
   const toolList: Tool[] = [
     {
-      id: 'clairvoyance',
-      name: 'Clairvoyance',
+      id: 'agentlens',
+      name: 'AgentLens',
       tagline: "See your agent's future before it fails.",
       description: 'A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline. Debug faster, save API credits.',
       features: ['Offline Replay', 'Failure Analysis', 'Cost Tracking'],

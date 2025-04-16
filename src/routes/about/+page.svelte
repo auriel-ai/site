@@ -27,7 +27,7 @@
        <p>
          We create lightweight, <span class="font-semibold">open-source developer tools</span> 
          focused on the practical challenges of building with LLMs. Tools like 
-         <a href="/tooling#clairvoyance" class="underline hover:text-cyan-300">Clairvoyance</a> 
+         <a href="/tooling" class="underline hover:text-cyan-300">AgentLens</a> 
          provide essential capabilities for offline debugging, performance analysis, 
          and cost tracking, enabling faster iteration and more robust agent deployment.
        </p>
