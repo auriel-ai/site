@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { Button } from "$lib/components/ui/button";
-  import { Terminal, Github } from 'lucide-svelte'; // Icons for tools
+  import { Github } from 'lucide-svelte'; // Icons for tools
 
   let isLoaded = false;
 
@@ -17,7 +17,6 @@
     tagline: string;
     description: string;
     features: string[]; // Key features
-    icon: string | { type: 'lucide'; component: any }; // Allow path data or Lucide component
     githubUrl?: string;
   };
 
@@ -28,8 +27,7 @@
       tagline: "See your agent's future before it fails.",
       description: 'A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline. Debug faster, save API credits.',
       features: ['Offline Replay', 'Failure Analysis', 'Cost Tracking'],
-      icon: { type: 'lucide', component: Terminal }, // Using Lucide Terminal icon
-      githubUrl: '#' // Placeholder - Replace with actual GitHub Repo URL
+      githubUrl: 'https://github.com/auriel-ai/agentlens'
     }
     // Add more tools here later
   ];
