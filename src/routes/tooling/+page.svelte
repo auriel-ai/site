@@ -2,12 +2,29 @@
   import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { Button } from "$lib/components/ui/button";
-  import { Github } from 'lucide-svelte'; // Icons for tools
+  import { Github, Star } from 'lucide-svelte'; // Icons for tools and Star icon
 
   let isLoaded = false;
+  let starCounts: Record<string, number> = {};
 
-  onMount(() => {
+  onMount(async () => {
     isLoaded = true;
+    
+    // Fetch star counts for each tool with a GitHub URL
+    for (const tool of toolList) {
+      if (tool.githubUrl) {
+        try {
+          const repoPath = new URL(tool.githubUrl).pathname.substring(1); // Remove leading slash
+          const response = await fetch(`https://api.github.com/repos/${repoPath}`);
+          if (response.ok) {
+            const data = await response.json();
+            starCounts[tool.id] = data.stargazers_count;
+          }
+        } catch (error) {
+          console.error(`Failed to fetch star count for ${tool.name}:`, error);
+        }
+      }
+    }
   });
 
   // Define Tool type
@@ -75,16 +92,31 @@
           </div>
           <!-- GitHub Link -->
           {#if tool.githubUrl && tool.githubUrl !== '#'}
-            <Button 
-              href={tool.githubUrl}
-              target="_blank"
-              variant="outline"
-              size="sm"
-              class="w-full border-purple-500/80 bg-transparent hover:bg-purple-500/10 text-purple-300 hover:text-purple-200 gap-2 group-hover:border-purple-400"
-            >
-              <Github class="w-4 h-4" />
-              View on GitHub
-            </Button>
+            <div class="flex gap-2">
+              <Button 
+                href={tool.githubUrl}
+                target="_blank"
+                variant="outline"
+                size="sm"
+                class="flex-grow border-purple-500/80 bg-transparent hover:bg-purple-500/10 text-purple-300 hover:text-purple-200 group-hover:border-purple-400"
+              >
+                <div class="flex items-center gap-2">
+                  <Github class="w-4 h-4" />
+                  <span>View on GitHub</span>
+                </div>
+              </Button>
+              
+              {#if starCounts[tool.id]}
+                <a
+                  href={`${tool.githubUrl}/stargazers`}
+                  target="_blank"
+                  class="inline-flex items-center gap-1 py-1 px-2.5 border border-neutral-700 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
+                >
+                  <Star class="w-3.5 h-3.5 fill-yellow-300 text-yellow-300" />
+                  <span class="text-xs font-semibold text-neutral-300">{starCounts[tool.id] >= 1000 ? `${(starCounts[tool.id] / 1000).toFixed(1)}K` : starCounts[tool.id]}</span>
+                </a>
+              {/if}
+            </div>
           {:else}
              <Button 
               disabled
