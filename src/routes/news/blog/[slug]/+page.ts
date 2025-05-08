@@ -11,6 +11,18 @@ interface MdsvexModule {
   };
 }
 
+// This function tells SvelteKit which slugs to prerender
+export const entries = async () => {
+  const posts = import.meta.glob('../_posts/*.md', { eager: true });
+  
+  return Object.keys(posts)
+    .map(path => {
+      const slug = path.split('/').pop()?.replace('.md', '');
+      return slug ? { slug } : null;
+    })
+    .filter((entry): entry is { slug: string } => entry !== null);
+};
+
 export const load: PageLoad = async ({ params }) => {
   // Dynamic import of blog posts
   const posts = import.meta.glob('../_posts/*.md');
