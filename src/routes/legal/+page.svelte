@@ -9,7 +9,7 @@
 >
   <div class="absolute inset-0 bg-gradient-radial from-cyan-500/5 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
   
-  <h1 class="text-2xl lg:text-4xl font-orbitron tracking-wider text-cyan-400 text-center mb-14 lg:mb-20 relative">
+  <h1 class="text-2xl lg:text-4xl font-orbitron tracking-wider text-white text-left mb-14 lg:mb-20 relative">
     Legal
   </h1>
 

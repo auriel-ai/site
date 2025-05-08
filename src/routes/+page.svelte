@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { Button } from "$lib/components/ui/button";
+  import SupportNetworkBanner from '$lib/components/SupportNetworkBanner.svelte';
   
   let isPageLoaded = false;
   
@@ -9,40 +10,33 @@
   });
 </script>
 
-<div class="bg-neutral-950 text-neutral-200 min-h-screen overflow-x-hidden">
-
+<div class="bg-neutral-950 text-neutral-200 min-h-screen overflow-x-hidden">  
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center relative overflow-hidden pt-20">
-    <div class="container mx-auto max-w-6xl px-6 py-24 relative z-10">
-      <div class="max-w-4xl">
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="container mx-auto max-w-6xl px-6 py-20 relative z-10">
+      <!-- Support Network Banner -->
+      <div class="w-full flex justify-center mb-12">
+        <SupportNetworkBanner />
+      </div>
+
+      <div class="max-w-4xl mx-auto text-center">
         <h1 class="text-4xl md:text-5xl font-orbitron text-white leading-tight mb-6 animate-slide-up-1">
           Open source
           <span class="text-cyan-400">observability tooling</span> and 
           <span class="text-cyan-400">AI agent</span> development
         </h1>
         
-        <p class="text-lg font-light text-neutral-300 mb-10 max-w-3xl animate-slide-up-2">
-          We build open-source tools to monitor and optimize LLM applications, and develop modular AI microagents for specialized business needs.
+        <p class="text-xl font-light text-neutral-300 mb-10 max-w-3xl mx-auto animate-slide-up-2">
+          We build open-source tools to monitor and optimize LLM applications, and develop modular AI Agents for specialized business needs.
         </p>
         
-        <div class="flex flex-wrap gap-6 animate-slide-up-3">
-          <Button 
-            variant="default"
-            size="lg"
-            href="/tooling" 
-            class="bg-cyan-500 hover:bg-cyan-600 text-neutral-950 flex items-center gap-2 font-orbitron tracking-wider"
+        <div class="flex flex-wrap gap-6 justify-center animate-slide-up-3">
+          <a 
+            href="/get-started" 
+            class="bg-transparent border border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 px-8 py-2 rounded transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] font-orbitron text-sm lg:text-base"
           >
-            Explore Our DevTools >>
-          </Button>
-          
-          <Button 
-            variant="outline"
-            size="lg"
-            href="/agents" 
-            class="border-cyan-500 bg-transparent hover:bg-cyan-500/10 text-cyan-400 hover:text-cyan-400 flex items-center gap-2 font-orbitron tracking-wider shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
-          >
-            See Our Agents >>
-          </Button>
+            GET STARTED &gt;&gt;
+          </a>
         </div>
       </div>
     </div>
