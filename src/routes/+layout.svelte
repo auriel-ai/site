@@ -8,6 +8,9 @@
 	// Props
 	let { children } = $props();
 	
+	// Check if we're on the get-started route
+	const isGetStartedPage = $derived($page.url.pathname.startsWith('/get-started'));
+	
 	// Font configuration
 	const fonts = [
 		{
@@ -34,18 +37,24 @@
 
 <Toaster />
 
-<div class="flex min-h-screen flex-col bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
-	<Header />
-	
-	<main class="flex flex-1 relative">
-		<div class="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
-		<div class="w-full z-10">
-			{@render children()}
-		</div>
-	</main>
-	
-	<Footer />
-</div>
+{#if isGetStartedPage}
+	<!-- For get-started route, render just the content with no layout -->
+	{@render children()}
+{:else}
+	<!-- For all other routes, render the full layout -->
+	<div class="flex min-h-screen flex-col bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
+		<Header />
+		
+		<main class="flex flex-1 relative">
+			<div class="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
+			<div class="w-full z-10">
+				{@render children()}
+			</div>
+		</main>
+		
+		<Footer />
+	</div>
+{/if}
 
 <style>
 	.bg-grid-pattern {
