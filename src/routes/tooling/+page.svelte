@@ -58,12 +58,12 @@
   <div class="absolute inset-0 bg-gradient-radial from-purple-600/10 via-transparent to-transparent opacity-20 blur-3xl pointer-events-none"></div>
 
   <h1 class="text-3xl md:text-4xl font-orbitron tracking-wider text-neutral-100 text-center mb-8 md:mb-12 relative">
-    Our Open Source DevTools
+    Our Devtools
   </h1>
   
   <div class="text-neutral-300 text-center leading-relaxed mb-12 md:mb-20 max-w-3xl mx-auto">
     <p>
-      We build and maintain open-source observability tools designed to help developers monitor, debug, and optimize their LLM applications and AI agents.
+      We build and maintain open-source observability tools designed to help developers monitor, debug, and optimize their LLM applications and AI agents, in both development and production.
     </p>
   </div>
   

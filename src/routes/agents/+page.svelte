@@ -60,12 +60,12 @@
 
   
   <h1 class="text-3xl md:text-4xl font-orbitron tracking-wider text-neutral-100 text-center mb-8 md:mb-12 relative">
-    Our Specialized MicroAgents
+    Our Agents
   </h1>
   
   <div class="text-neutral-300 text-center leading-relaxed mb-12 md:mb-20 max-w-3xl mx-auto">
     <p>
-      We develop highly specialized AI microagents that excel at specific tasks. These modular components can operate independently or work together as part of larger systems.
+      We develop highly specialized AI Agents that excel at specific tasks. Our agents are made up of modular components that can operate independently or work together as part of larger systems.
     </p>
   </div>
   
@@ -119,9 +119,9 @@
   <div class="bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 rounded-lg border border-neutral-700 p-8 lg:p-12 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-64 h-64 bg-green-500/10 rounded-full filter blur-3xl"></div>
     <div class="relative z-10">
-      <h3 class="text-2xl font-orbitron text-white mb-4">Need help with your AI Agent?</h3>
+      <h3 class="text-2xl font-orbitron text-white mb-4">Want to build an agent together?</h3>
       <p class="text-neutral-300 mb-6 max-w-xl">
-        We design, deploy, and optimize specialized microagents, providing forward-deployed development and fine tuning for select clients.
+        Send us a job posting or idea and we will build a custom agent for it.
       </p>
       <div class="flex flex-wrap gap-4">
         <Button

@@ -22,8 +22,8 @@
     <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v-4m0-4h.01" />
   </svg>
-  <span class="text-center text-sm">
-    Our support network is on the way! Sign up for updates.
+  <span class="text-center text-sm tracking-wide">
+    Our developer support network is on the way! Sign up for updates.
   </span>
 </a>
 

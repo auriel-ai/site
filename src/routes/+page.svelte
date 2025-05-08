@@ -20,14 +20,15 @@
       </div>
 
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-orbitron text-white leading-tight mb-6 animate-slide-up-1">
-          Open source
-          <span class="text-cyan-400">observability tooling</span> and 
-          <span class="text-cyan-400">AI agent</span> development
+        <h1 class="text-4xl md:text-5xl font-orbitron text- tracking-wide mb-6 animate-slide-up-1">
+          We build specialized 
+          <span class="text-cyan-400">AI Agents</span>
+          that work 
+          <span class="text-cyan-400 tracking-widest">24/7/365</span>
         </h1>
         
         <p class="text-xl font-light text-neutral-300 mb-10 max-w-3xl mx-auto animate-slide-up-2">
-          We build open-source tools to monitor and optimize LLM applications, and develop modular AI Agents for specialized business needs.
+          Auriel builds modular AI Agents and open-source tools to monitor and optimize LLM applications, for teams looking to integrate AI into their businesses.
         </p>
         
         <div class="flex flex-wrap gap-6 justify-center animate-slide-up-3">
