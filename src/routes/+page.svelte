@@ -53,7 +53,7 @@
             href="/get-started" 
             class="bg-transparent border border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 px-8 py-2 rounded transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] font-orbitron text-sm lg:text-base"
           >
-            GET STARTED &gt;&gt;
+            EXPLORE
           </a>
         </div>
       </div>

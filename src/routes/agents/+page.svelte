@@ -147,7 +147,7 @@
           href="/enquire" 
           class="bg-green-500 hover:bg-green-600 text-neutral-950 flex items-center gap-2 font-orbitron tracking-wider"
         >
-          Let's talk >>
+          Let's talk
         </Button>
       </div>
     </div>

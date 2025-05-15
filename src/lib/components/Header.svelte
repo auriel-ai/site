@@ -105,7 +105,7 @@
           href="/get-started"
           class="bg-transparent border border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 px-8 py-2 rounded transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] font-orbitron text-sm lg:text-base hidden lg:flex"
       >
-          GET STARTED &gt;&gt;
+          EXPLORE
       </a>
     </div>
 
@@ -188,7 +188,7 @@
           on:click={handleNavClick}
           class="text-cyan-400 hover:text-cyan-300 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
         >
-          GET STARTED >>
+          EXPLORE
         </a>
       </div>
     </div>
