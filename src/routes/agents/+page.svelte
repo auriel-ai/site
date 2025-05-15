@@ -45,6 +45,23 @@
       categoryTags: ['Real Estate', 'Data', 'Analysis'], // Tags
       websiteUrl: 'https://propscan.uk/',
       githubUrl: undefined // No GitHub URL provided
+    },
+    {
+      id: 'sam-agent',
+      title: 'SAM',
+      description: 'An AI assistant for UK firefighters in training to help them ace their operational training phase.',
+      fullDescription: 'SAM helps British Fire and Rescue Service trainees master skills, prepare for assessments, and build confidence throughout their operational training course. It provides specialized guidance on equipment, protocols, and study materials for any British Fire and Rescue Service.',
+      capabilities: [
+        'Training protocol guidance',
+        'Equipment information',
+        'Study material assistance',
+        'Assessment preparation',
+        'Operational training support'
+      ],
+      icon: 'https://samfire.uk/favicon.svg',
+      categoryTags: ['Emergency Services', 'Training', 'Education'],
+      websiteUrl: 'https://samfire.uk',
+      githubUrl: undefined // No GitHub URL provided
     }
   ];
 

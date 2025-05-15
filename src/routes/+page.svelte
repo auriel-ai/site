@@ -4,9 +4,26 @@
   import SupportNetworkBanner from '$lib/components/SupportNetworkBanner.svelte';
   
   let isPageLoaded = false;
+  let specks: { x: number; y: number; size: number; opacity: number }[] = [];
+  
+  // Create random specks
+  function createSpecks() {
+    const numSpecks = Math.floor(Math.random() * 15) + 20; // Between 20-35 specks
+    specks = [];
+    
+    for (let i = 0; i < numSpecks; i++) {
+      specks.push({
+        x: Math.random() * 100, // Random x position (0-100%)
+        y: Math.random() * 100, // Random y position (0-100%)
+        size: Math.random() * 3 + 2, // Random size (2-5px)
+        opacity: Math.random() * 0.3 + 0.15 // Random opacity (0.15-0.45)
+      });
+    }
+  }
   
   onMount(() => {
     isPageLoaded = true;
+    createSpecks();
   });
 </script>
 
@@ -20,7 +37,7 @@
       </div>
 
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-orbitron text- tracking-wide mb-6 animate-slide-up-1">
+        <h1 class="text-4xl md:text-5xl font-orbitron text- tracking-wide mb-6 animate-slide-up-1" style="line-height: 1.25;">
           We build specialized 
           <span class="text-cyan-400">AI Agents</span>
           that work 
@@ -46,6 +63,23 @@
     <div class="absolute inset-0 z-0 opacity-20">
       <div class="absolute top-1/4 right-1/3 w-96 h-96 bg-cyan-500/20 rounded-full filter blur-3xl"></div>
       <div class="absolute bottom-1/3 left-1/4 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"></div>
+    </div>
+    
+    <!-- Light Specks -->
+    <div class="absolute inset-0 z-1 pointer-events-none">
+      {#each specks as speck}
+        <div 
+          class="absolute rounded-full bg-cyan-100"
+          style="
+            left: {speck.x}%; 
+            top: {speck.y}%; 
+            width: {speck.size}px; 
+            height: {speck.size}px; 
+            opacity: {speck.opacity};
+            box-shadow: 0 0 {speck.size * 2}px rgba(165, 243, 252, 0.7);
+          "
+        ></div>
+      {/each}
     </div>
   </section>
 
