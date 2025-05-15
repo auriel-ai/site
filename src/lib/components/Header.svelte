@@ -42,13 +42,6 @@
 
     <!-- Desktop Navigation -->
     <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-      <a 
-        href="/about"
-        class="nav-link text-neutral-100 hover:text-cyan-400 font-orbitron tracking-wider text-sm relative group"
-      >
-        <span>ABOUT</span>
-        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
       
       <!-- Products Flyout -->
       <div class="relative group" on:mouseenter={openProductsMenu} on:mouseleave={closeProductsMenu}>
@@ -140,13 +133,6 @@
   >
     <div class="container mx-auto px-6 py-20">
       <div class="flex flex-col gap-6">
-        <a 
-          href="/about"
-          on:click={handleNavClick}
-          class="text-neutral-300 hover:text-cyan-400 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
-        >
-          ABOUT
-        </a>
         
         <!-- Products group for mobile -->
         <div>
