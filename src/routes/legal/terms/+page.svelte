@@ -7,17 +7,17 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-2xl px-6 lg:px-4 py-28 lg:py-40 relative"
 >
-  <div class="absolute inset-0 bg-gradient-radial from-cyan-500/5 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-neutral-700/5 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
   
   <div class="mb-6 lg:mb-8 relative">
     <a href="/legal">
-      <Button variant="ghost" size="icon" class="hover:bg-neutral-800/60 text-neutral-400 hover:text-cyan-400 transition-colors">
+      <Button variant="ghost" size="icon" class="hover:bg-neutral-800/60 text-neutral-400 hover:text-neutral-200 transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
       </Button>
     </a>
   </div>
 
-  <h2 class="text-xl lg:text-2xl font-orbitron tracking-wider text-cyan-400 mb-3 lg:mb-4 relative">
+  <h2 class="text-xl lg:text-2xl font-orbitron tracking-wider text-white mb-3 lg:mb-4 relative">
     Terms of Service
   </h2>
 
@@ -29,42 +29,42 @@
     </p>
     
     <section>
-      <h3 class="text-base lg:text-lg font-orbitron text-cyan-400 mb-2 lg:mb-3">Use of Our Website</h3>
+      <h3 class="text-base lg:text-lg font-orbitron text-white mb-2 lg:mb-3">Use of Our Website</h3>
       <p>
         You may use our website for lawful purposes and in accordance with these Terms. You agree not to use our website in any way that could damage the site or impair its availability.
       </p>
     </section>
     
     <section>
-      <h3 class="text-base lg:text-lg font-orbitron text-cyan-400 mb-2 lg:mb-3">Our Software</h3>
+      <h3 class="text-base lg:text-lg font-orbitron text-white mb-2 lg:mb-3">Our Software</h3>
       <p>
         Our open-source software is provided under the terms of the MIT License, which allows you to use, modify, and distribute it freely, subject to the conditions specified in the license.
       </p>
     </section>
     
     <section>
-      <h3 class="text-base lg:text-lg font-orbitron text-cyan-400 mb-2 lg:mb-3">Custom Services</h3>
+      <h3 class="text-base lg:text-lg font-orbitron text-white mb-2 lg:mb-3">Custom Services</h3>
       <p>
         For custom implementations or professional services, separate agreements will govern our relationship, including scope of work, deliverables, and fees.
       </p>
     </section>
     
     <section>
-      <h3 class="text-base lg:text-lg font-orbitron text-cyan-400 mb-2 lg:mb-3">Intellectual Property</h3>
+      <h3 class="text-base lg:text-lg font-orbitron text-white mb-2 lg:mb-3">Intellectual Property</h3>
       <p>
         All content on our website, excluding our open-source software, is the property of Auriel Analytics and is protected by copyright, trademark, and other intellectual property laws.
       </p>
     </section>
     
     <section>
-      <h3 class="text-base lg:text-lg font-orbitron text-cyan-400 mb-2 lg:mb-3">Limitation of Liability</h3>
+      <h3 class="text-base lg:text-lg font-orbitron text-white mb-2 lg:mb-3">Limitation of Liability</h3>
       <p>
         Auriel Analytics shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our website or services.
       </p>
     </section>
     
     <section>
-      <h3 class="text-base lg:text-lg font-orbitron text-cyan-400 mb-2 lg:mb-3">Changes to Terms</h3>
+      <h3 class="text-base lg:text-lg font-orbitron text-white mb-2 lg:mb-3">Changes to Terms</h3>
       <p>
         We may revise these terms at any time. By continuing to use our website after changes are made, you accept the revised terms.
       </p>

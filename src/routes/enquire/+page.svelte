@@ -59,12 +59,12 @@
 >
   <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
-  <h1 class="text-3xl font-orbitron tracking-wider text-cyan-400 text-center mb-4 lg:mb-6 relative">
-    Need Help Building Agents?
+  <h1 class="text-3xl font-orbitron tracking-wider text-white text-center mb-4 lg:mb-6 relative">
+    Contact Us
   </h1>
 
   <p class="space-y-5 text-neutral-300 leading-relaxed text-center font-grotesk mb-8 lg:mb-10 mx-auto max-w-4xl px-4 lg:px-10 relative">
-    We provide observability tooling and development expertise to help teams build reliable AI systems. Whether you need custom agent development or implementation of monitoring solutions, let's talk.
+    Schedule a quick call to discuss your ideas. Use the calendar below to find a time that works for you.
   </p>
 
   <div 
