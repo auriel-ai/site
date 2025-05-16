@@ -19,9 +19,9 @@
 		text: "Which best describes you?",
 		options: [
 			"Student or just getting started with AI agents", 
-			"Developer or technical professional", 
+			"Developer", 
 			"Business owner / Startup founder",
-			"Investor interested in our agents"
+			"Investor interested in one of our agents"
 		]
 	};
 
@@ -31,7 +31,7 @@
 		developer: [
 			{
 				id: "developer_need",
-				text: "Are you primarily interested in optimizing your agents or connecting with and learning from other developers?",
+				text: "Are you primarily interested in optimizing your agents or connecting with other developers?",
 				options: [
 					"I am looking for tools to optimize my agents",
 					"I am looking for community and learning resources",
@@ -43,11 +43,11 @@
 		business: [
 			{
 				id: "business_need",
-				text: "What type of services are you most interested in?",
+				text: "What are you most interested in?",
 				options: [
 					"Custom AI agent development for my business",
-					"Observability tools to improve our existing AI systems",
-					"Connecting with other founders building AI solutions"
+					"Observability tools to improve our existing agents/workflows",
+					"Connecting with other founders building with AI"
 				]
 			}
 		],
@@ -56,11 +56,11 @@
 		investor: [
 			{
 				id: "investment_interest",
-				text: "What aspects of AI agents are you most interested in investing in?",
+				text: "What are you most interested in?",
 				options: [
-					"Acquiring developed agents",
-					"Investing in agent development",
-					"Partnership opportunities"
+					"Acquiring one of Auriel's agents or devtools outright",
+					"Investing in the rights to one of Auriel's agents",
+					"General partnership opportunities"
 				]
 			}
 		]
@@ -69,66 +69,66 @@
 	// Result screen content based on user path and answers
 	const resultScreens = {
 		student: {
-			heading: "Start building your AI skills with Agent Alchemy",
+			heading: "Start with Agent Alchemy",
 			subtitle: "It sounds like our support network is the right starting point for you.",
-			description: "Our resources will teach you everything you need to know to get started with building and monetizing AI agents — from basic concepts to practical implementation, best practices, and working with the latest tools.",
-			community: "Connect with other developers in our community and build your skills from scratch — no prior experience required.",
-			buttonText: "Join Agent Alchemy Now",
+			description: "This will show you everything you need to know to get started with building and monetizing AI agents — from basic concepts to practical implementation, best practices, and working with the latest tools.",
+			cta: "Connect with other developers in our community and build your skills from scratch — no prior experience required.",
+			buttonText: "Join Now",
 			destination: "https://network.auriel.tech",
 			newTab: true
 		},
 		developer_tools: {
-			heading: "Optimize your agents with our OS devtools",
+			heading: "Optimize with our open-source devtools",
 			subtitle: "Our observability devtools are designed for developers just like you.",
 			description: "We build specialized tooling to help you build better, more efficient, and more reliable AI agents with powerful observability and debugging capabilities.",
-			community: "Join our community of technical professionals who are pushing the boundaries of what AI agents can do.",
-			buttonText: "Explore Observability Devtools",
-			destination: "/devtools",
+			cta: "Leverage our advanced observability tools to monitor, debug, and optimize your AI agents for peak performance.",
+			buttonText: "Explore Our Devtools",
+			destination: "/tooling",
 			newTab: false
 		},
 		developer_community: {
-			heading: "Connect with the AURIEL™ developer community",
-			subtitle: "Learn, share, and grow with other AI developers.",
+			heading: "Join our developer support network",
+			subtitle: "Learn, share, and grow with other developers building with AI.",
 			description: "Our community platform gives you access to best practices, code examples, and discussions with peers who are building cutting-edge AI agents.",
-			community: "Exchange ideas with experienced developers and stay on top of the latest techniques and approaches in AI agent development.",
-			buttonText: "Join Developer Community",
+			cta: "Exchange ideas with experienced developers and stay on top of the latest techniques and approaches in development.",
+			buttonText: "Join Agent Alchemy",
 			destination: "https://network.auriel.tech",
 			newTab: true
 		},
 		business_development: {
-			heading: "Custom AI agent development for your business",
-			subtitle: "Let our experts build tailored AI solutions.",
-			description: "AURIEL offers end-to-end consulting services to help you identify, develop, and deploy AI agent solutions tailored to your specific business needs.",
-			community: "Our team has delivered successful AI implementations across industries, from startups to enterprise organizations.",
-			buttonText: "Request a Consultation",
-			destination: "/enquire?need=development",
+			heading: "Transform Your Business with Custom AI Agents",
+			subtitle: "Auriel helps select companies build AI Agents that cut costs, boost revenue, and streamline processes.",
+			description: "Send us a job posting and we will build a custom agent for it. Instead of an employee working 40 hours per week, we'll build your team a custom one-time investment AI Agent that works 24/7/365.",
+			cta: "Schedule a call and tell us about your idea.",
+			buttonText: "Schedule a Call",
+			destination: "/enquire",
 			newTab: false
 		},
 		business_tools: {
-			heading: "Improve your AI systems with observability tools",
-			subtitle: "Get deeper insights into your AI agents' performance.",
-			description: "Our observability platform helps businesses monitor, debug and optimize their AI systems for reliability, security, and scalability.",
-			community: "Hundreds of businesses are already using our platform to gain competitive advantage through AI optimization.",
-			buttonText: "Explore Observability Tools",
-			destination: "/devtools?business=true",
+			heading: "Improve your product with custom observability workflows",
+			subtitle: "Get deeper insights into your AI agents' performance and find out how to optimize your agents to boost performance.",
+			description: "Auriel helps select businesses monitor, debug and optimize their products for reliability, security, and scalability.",
+			cta: "Schedule a call and tell us about your product.",
+			buttonText: "Schedule a Call",
+			destination: "/enquire",
 			newTab: false
 		},
 		business_community: {
-			heading: "Connect with other AI-focused founders",
-			subtitle: "Access a network of startup founders building with AI.",
-			description: "Our founder community program provides networking opportunities, learning resources, and direct access to AI expertise.",
-			community: "Stay ahead of the curve by connecting with others who are implementing AI solutions in similar business contexts.",
-			buttonText: "Join Founder Network",
-			destination: "https://network.auriel.tech/founders",
+			heading: "Connect with other founders building with AI",
+			subtitle: "Access a network of vetted startup founders building AI agents and LLM application.",
+			description: "Our founder support network provides networking opportunities, learning resources, and direct access to AI expertise building products on the cutting edge.",
+			cta: "Stay ahead of the curve by connecting with others who are implementing AI solutions in tangential contexts.",
+			buttonText: "Join Agent Alchemy",
+			destination: "https://network.auriel.tech",
 			newTab: true
 		},
 		investor: {
-			heading: "Investment opportunities in AI agents",
-			subtitle: "Discover how you can participate in the future of AI.",
-			description: "AURIEL offers various investment models for those interested in our AI agent technologies, from direct acquisition to partnership arrangements.",
-			community: "Our team can provide detailed information about our agent portfolio and the potential return on investment.",
-			buttonText: "Schedule Investment Discussion",
-			destination: "/enquire?type=investor",
+			heading: "So, you're interested in one of our products?",
+			subtitle: "Our agents are designed to deliver measurable ROI across various industries, with proven track records in efficiency, cost reduction, and revenue generation.",
+			description: "We're happy to provide detailed information about our agent portfolio, performance, and metrics for qualified investors.",
+			cta: "Simply schedule a call and tell us exactly what you're most interested in.",
+			buttonText: "Schedule a Call",
+			destination: "/enquire",
 			newTab: false
 		}
 	};
@@ -156,11 +156,11 @@
 				resultType = "student";
 				currentResult = resultScreens.student;
 				showResultScreen = true;
-			} else if (option === "Developer or technical professional") {
+			} else if (option === "Developer") {
 				currentPath = "developer";
 			} else if (option === "Business owner / Startup founder") {
 				currentPath = "business";
-			} else if (option === "Investor interested in our agents") {
+			} else if (option === "Investor interested in one of our agents") {
 				currentPath = "investor";
 			}
 			
@@ -275,7 +275,7 @@
 						class="text-3xl font-orbitron font-regular mb-5"
 						in:fly={{ y: 20, duration: 700, delay: 200 }}
 					>
-						Need help building AI Agents?
+						Need a hand finding your way around?
 					</h1>
 					
 					<p 
@@ -336,10 +336,10 @@
 					</p>
 					
 					<p 
-						class="text-md mb-12 text-neutral-300" 
+						class="text-md mb-12 text-neutral-300 font-medium" 
 						in:fly={{ y: 20, duration: 700, delay: 400 }}
 					>
-						{currentResult.community}
+						{currentResult.cta}
 					</p>
 					
 					<div class="flex items-center" in:fly={{ y: 20, duration: 700, delay: 500 }}>

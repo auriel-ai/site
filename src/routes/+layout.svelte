@@ -8,8 +8,8 @@
 	// Props
 	let { children } = $props();
 	
-	// Check if we're on the get-started route
-	const isGetStartedPage = $derived($page.url.pathname.startsWith('/get-started'));
+	// Check if we're on the explore route
+	const isGetStartedPage = $derived($page.url.pathname.startsWith('/explore'));
 	
 	// Font configuration
 	const fonts = [
@@ -38,7 +38,7 @@
 <Toaster />
 
 {#if isGetStartedPage}
-	<!-- For get-started route, render just the content with no layout -->
+	<!-- For explore route, render just the content with no layout -->
 	{@render children()}
 {:else}
 	<!-- For all other routes, render the full layout -->
