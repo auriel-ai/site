@@ -18,10 +18,9 @@
 		id: "user_type",
 		text: "Which best describes you?",
 		options: [
-			"Student or just getting started with AI agents", 
-			"Developer", 
 			"Business owner / Startup founder",
-			"Investor interested in one of our agents"
+			"Developer or AI engineer", 
+			"Student or just getting started with AI agents"
 		]
 	};
 
@@ -46,24 +45,10 @@
 				text: "What are you most interested in?",
 				options: [
 					"Custom AI agent development for my business",
-					"Observability tools to improve our existing agents/workflows",
 					"Connecting with other founders building with AI"
 				]
 			}
 		],
-		
-		// Investor path
-		investor: [
-			{
-				id: "investment_interest",
-				text: "What are you most interested in?",
-				options: [
-					"Acquiring one of Auriel's agents or devtools outright",
-					"Investing in the rights to one of Auriel's agents",
-					"General partnership opportunities"
-				]
-			}
-		]
 	};
 
 	// Result screen content based on user path and answers
@@ -83,7 +68,7 @@
 			description: "We build specialized tooling to help you build better, more efficient, and more reliable AI agents with powerful observability and debugging capabilities.",
 			cta: "Leverage our advanced observability tools to monitor, debug, and optimize your AI agents for peak performance.",
 			buttonText: "Explore Our Devtools",
-			destination: "/tooling",
+			destination: "/projects",
 			newTab: false
 		},
 		developer_community: {
@@ -104,15 +89,6 @@
 			destination: "/enquire",
 			newTab: false
 		},
-		business_tools: {
-			heading: "Improve your product with custom observability workflows",
-			subtitle: "Get deeper insights into your AI agents' performance and find out how to optimize your agents to boost performance.",
-			description: "Auriel helps select businesses monitor, debug and optimize their products for reliability, security, and scalability.",
-			cta: "Schedule a call and tell us about your product.",
-			buttonText: "Schedule a Call",
-			destination: "/enquire",
-			newTab: false
-		},
 		business_community: {
 			heading: "Connect with other founders building with AI",
 			subtitle: "Access a network of vetted startup founders building AI agents and LLM application.",
@@ -121,15 +97,6 @@
 			buttonText: "Join Agent Alchemy",
 			destination: "https://network.auriel.tech",
 			newTab: true
-		},
-		investor: {
-			heading: "So, you're interested in one of our products?",
-			subtitle: "Our agents are designed to deliver measurable ROI across various industries, with proven track records in efficiency, cost reduction, and revenue generation.",
-			description: "We're happy to provide detailed information about our agent portfolio, performance, and metrics for qualified investors.",
-			cta: "Simply schedule a call and tell us exactly what you're most interested in.",
-			buttonText: "Schedule a Call",
-			destination: "/enquire",
-			newTab: false
 		}
 	};
 
@@ -156,12 +123,10 @@
 				resultType = "student";
 				currentResult = resultScreens.student;
 				showResultScreen = true;
-			} else if (option === "Developer") {
+			} else if (option === "Developer or AI engineer") {
 				currentPath = "developer";
 			} else if (option === "Business owner / Startup founder") {
 				currentPath = "business";
-			} else if (option === "Investor interested in one of our agents") {
-				currentPath = "investor";
 			}
 			
 			// Reset step counter for the new path
@@ -194,16 +159,10 @@
 			if (answers.business_need === "Custom AI agent development for my business") {
 				resultType = "business_development";
 				currentResult = resultScreens.business_development;
-			} else if (answers.business_need === "Observability tools to improve our existing AI systems") {
-				resultType = "business_tools";
-				currentResult = resultScreens.business_tools;
 			} else {
 				resultType = "business_community";
 				currentResult = resultScreens.business_community;
 			}
-		} else if (currentPath === "investor") {
-			resultType = "investor";
-			currentResult = resultScreens.investor;
 		}
 		
 		// Show the result screen
@@ -247,13 +206,13 @@
 	});
 </script>
 
-<div class="flex flex-col items-center justify-center min-h-screen bg-black text-white">
+<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
 	{#if loading}
 		<!-- Loading State -->
 		<div transition:fade={{ duration: 200 }}>
 			<div class="relative w-12 h-12">
-				<div class="animate-ping absolute inset-0 bg-cyan-500 opacity-30 rounded-full"></div>
-				<div class="relative rounded-full w-12 h-12 border-2 border-t-cyan-500 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
+				<div class="animate-ping absolute inset-0 bg-white opacity-30 rounded-full"></div>
+				<div class="relative rounded-full w-12 h-12 border-2 border-t-white border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
 			</div>
 		</div>
 	{:else}
@@ -290,7 +249,7 @@
 						in:fly={{ y: 20, duration: 700, delay: 600 }}
 					>
 						<button 
-							class="bg-transparent hover:bg-neutral-800 text-white font-medium py-2 px-4 border border-neutral-700 hover:border-cyan-500 transition-all duration-200 rounded-md"
+							class="bg-transparent hover:bg-slate-700 text-white font-medium py-2 px-4 border border-slate-600 hover:border-white transition-all duration-200 rounded-md"
 							on:click={handleStart}
 						>
 							Start
@@ -344,7 +303,7 @@
 					
 					<div class="flex items-center" in:fly={{ y: 20, duration: 700, delay: 500 }}>
 						<button 
-							class="bg-white text-black font-orbitron font-medium py-3 px-8 rounded-md hover:bg-cyan-500 hover:text-white transition-all duration-300"
+							class="bg-white text-black font-orbitron font-medium py-3 px-8 rounded-md hover:bg-gray-100 transition-all duration-300"
 							on:click={handleCTA}
 						>
 							{currentResult.buttonText}
@@ -368,7 +327,7 @@
 						<div class="flex flex-col gap-3">
 							{#each currentQuestion.options as option, i}
 								<button 
-									class="bg-transparent hover:bg-neutral-800 text-white text-left font-light py-3 px-6 border border-neutral-700 hover:border-cyan-500 transition-all duration-200 rounded-md"
+									class="bg-transparent hover:bg-slate-700 text-white text-left font-light py-3 px-6 border border-slate-600 hover:border-white transition-all duration-200 rounded-md"
 									on:click={() => handleAnswer(option)}
 									in:fly={{ y: 20, duration: 400, delay: 100 + (i * 100) }}
 								>

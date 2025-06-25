@@ -12,11 +12,11 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-3xl px-6 lg:px-4 py-32 lg:py-36 relative"
 >
-  <div class="absolute inset-0 bg-gradient-radial from-purple-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-amber-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
   <!-- Back Link -->
   <div class="mb-8">
-    <a href="/news" class="flex items-center text-neutral-400 hover:text-purple-400 transition-colors text-sm">
+    <a href="/news" class="flex items-center text-neutral-400 hover:text-amber-400 transition-colors text-sm">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m15 18-6-6 6-6"/></svg>
       Back to News
     </a>
@@ -25,10 +25,10 @@
   <!-- Article Header -->
   <header class="mb-10">
     <div class="flex items-center gap-2 mb-4">
-      <div class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center">
+      <div class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"></path><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"></path><path d="m7 21 5-5 5 5"></path></svg>
       </div>
-      <span class="text-xs text-purple-400 uppercase tracking-wider font-medium">Case Study</span>
+      <span class="text-xs text-amber-400 uppercase tracking-wider font-medium">Case Study</span>
     </div>
     
     <h1 class="text-3xl lg:text-4xl font-orbitron text-white mb-4">
@@ -47,7 +47,7 @@
   </header>
   
   <!-- Article Content - Markdown gets inserted here -->
-  <article class="prose prose-invert prose-purple max-w-none">
+  <article class="prose prose-invert prose-amber max-w-none">
     <!-- Markdown content from the .md file gets injected here -->
     <slot />
   </article>
@@ -92,7 +92,7 @@
   }
   
   :global(.prose a) {
-    color: rgb(168, 85, 247);
+    color: rgb(245, 158, 11);
     text-decoration: underline;
     font-weight: 500;
   }

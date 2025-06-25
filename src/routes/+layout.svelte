@@ -9,7 +9,7 @@
 	let { children } = $props();
 	
 	// Check if we're on the explore route
-	const isGetStartedPage = $derived($page.url.pathname.startsWith('/explore'));
+	const isGetStartedPage = $derived($page.url.pathname.startsWith('/get-started'));
 	
 	// Font configuration
 	const fonts = [
@@ -42,7 +42,7 @@
 	{@render children()}
 {:else}
 	<!-- For all other routes, render the full layout -->
-	<div class="flex min-h-screen flex-col bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
+	<div class="flex min-h-screen flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
 		<Header />
 		
 		<main class="flex flex-1 relative">

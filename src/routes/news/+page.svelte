@@ -27,7 +27,7 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-2xl px-6 lg:px-4 py-32 lg:py-36 relative"
 >
-  <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-amber-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
   <!-- Page Header -->
   <div class="relative mb-16">
@@ -38,52 +38,52 @@
     <!-- Filter Tabs -->
     <div class="flex justify-start gap-5 mb-2">
       <button 
-        class="text-sm transition-colors {selectedFilter === 'All' ? 'text-cyan-400' : 'text-neutral-400 hover:text-neutral-200'}"
+        class="text-sm transition-colors {selectedFilter === 'All' ? 'text-white' : 'text-neutral-400 hover:text-neutral-200'}"
         on:click={() => selectedFilter = 'All'}
       >
         <div class="flex items-center gap-2">
-          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'All' ? 'bg-cyan-900/50 border-cyan-500' : ''}">
+          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'All' ? 'bg-amber-900/50 border-amber-500' : ''}">
             {#if selectedFilter === 'All'}
-              <div class="w-2 h-2 bg-cyan-400 rounded-sm"></div>
+              <div class="w-2 h-2 bg-amber-400 rounded-sm"></div>
             {/if}
           </div>
           All
         </div>
       </button>
       <button 
-        class="text-sm transition-colors {selectedFilter === 'Blog' ? 'text-cyan-400' : 'text-neutral-400 hover:text-neutral-200'}"
+        class="text-sm transition-colors {selectedFilter === 'Blog' ? 'text-white' : 'text-neutral-400 hover:text-neutral-200'}"
         on:click={() => selectedFilter = 'Blog'}
       >
         <div class="flex items-center gap-2">
-          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'Blog' ? 'bg-cyan-900/50 border-cyan-500' : ''}">
+          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'Blog' ? 'bg-amber-900/50 border-amber-500' : ''}">
             {#if selectedFilter === 'Blog'}
-              <div class="w-2 h-2 bg-cyan-400 rounded-sm"></div>
+              <div class="w-2 h-2 bg-amber-400 rounded-sm"></div>
             {/if}
           </div>
           Blog
         </div>
       </button>
       <button 
-        class="text-sm transition-colors {selectedFilter === 'Press' ? 'text-cyan-400' : 'text-neutral-400 hover:text-neutral-200'}"
+        class="text-sm transition-colors {selectedFilter === 'Press' ? 'text-white' : 'text-neutral-400 hover:text-neutral-200'}"
         on:click={() => selectedFilter = 'Press'}
       >
         <div class="flex items-center gap-2">
-          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'Press' ? 'bg-cyan-900/50 border-cyan-500' : ''}">
+          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'Press' ? 'bg-amber-900/50 border-amber-500' : ''}">
             {#if selectedFilter === 'Press'}
-              <div class="w-2 h-2 bg-cyan-400 rounded-sm"></div>
+              <div class="w-2 h-2 bg-amber-400 rounded-sm"></div>
             {/if}
           </div>
           Press
         </div>
       </button>
       <button 
-        class="text-sm transition-colors {selectedFilter === 'Case Study' ? 'text-cyan-400' : 'text-neutral-400 hover:text-neutral-200'}"
+        class="text-sm transition-colors {selectedFilter === 'Case Study' ? 'text-white' : 'text-neutral-400 hover:text-neutral-200'}"
         on:click={() => selectedFilter = 'Case Study'}
       >
         <div class="flex items-center gap-2">
-          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'Case Study' ? 'bg-cyan-900/50 border-cyan-500' : ''}">
+          <div class="w-4 h-4 rounded-sm flex items-center justify-center border border-neutral-700 {selectedFilter === 'Case Study' ? 'bg-amber-900/50 border-amber-500' : ''}">
             {#if selectedFilter === 'Case Study'}
-              <div class="w-2 h-2 bg-cyan-400 rounded-sm"></div>
+              <div class="w-2 h-2 bg-amber-400 rounded-sm"></div>
             {/if}
           </div>
           Case Studies
@@ -126,7 +126,7 @@
           >
             <div class="flex flex-col">
               <!-- Title with different sizes based on featured status -->
-              <h3 class="{article.featured ? 'text-2xl font-medium' : 'text-xl font-normal'} text-white group-hover:text-cyan-400 transition-colors mb-2">
+              <h3 class="{article.featured ? 'text-2xl font-medium' : 'text-xl font-normal'} text-white group-hover:underline transition-colors mb-2">
                 {article.title}
               </h3>
               

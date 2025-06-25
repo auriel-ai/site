@@ -15,7 +15,7 @@
 </script>
 
 <header 
-  class="fixed top-0 left-0 right-0 z-40 py-4 px-6 {isMobileMenuOpen ? 'bg-neutral-900 border-transparent' : 'bg-neutral-950/80 border-neutral-800'} backdrop-blur-md border-b"
+  class="fixed top-0 left-0 right-0 z-40 py-6 px-6 {isMobileMenuOpen ? 'bg-slate-800 border-transparent' : 'bg-slate-900/80 border-slate-700'} backdrop-blur-md border-b"
 >
   <nav class="container mx-auto max-w-6xl flex items-center justify-between relative">
     <!-- Logo container -->
@@ -31,52 +31,44 @@
     <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
 
       <a 
-        href="/agents"
-        class="nav-link text-neutral-100 hover:text-cyan-400 font-orbitron tracking-wider text-sm relative group"
+        href="https://solutions.auriel.tech"
+        target="_blank"
+        class="nav-link text-neutral-100 hover:text-white font-orbitron tracking-wider text-sm relative group"
       >
-        <span>AGENTS</span>
-        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      
-      <a 
-        href="/tooling"
-        class="nav-link text-neutral-100 hover:text-cyan-400 font-orbitron tracking-wider text-sm relative group"
-      >
-        <span>DEVTOOLS</span>
-        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+        <span>SERVICES</span>
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
       </a>
 
       <a 
-        href="https://network.auriel.tech"
-        target="_blank"
-        class="nav-link text-neutral-100 hover:text-cyan-400 font-orbitron tracking-wider text-sm relative group"
+        href="/projects"
+        class="nav-link text-neutral-100 hover:text-white font-orbitron tracking-wider text-sm relative group"
       >
-        <span>NETWORK</span>
-        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+        <span>PROJECTS</span>
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
       </a>
       
       <a 
         href="/news"
-        class="nav-link text-neutral-100 hover:text-cyan-400 font-orbitron tracking-wider text-sm relative group"
+        class="nav-link text-neutral-100 hover:text-white font-orbitron tracking-wider text-sm relative group"
       >
         <span>NEWS</span>
-        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
       </a>
     </div>
 
     <!-- Enquire Button -->
     <div class="ml-auto">
       <a 
-          href="/explore"
-          class="bg-transparent border border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 px-8 py-2 rounded transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] font-orbitron text-sm lg:text-base hidden lg:flex"
-      >
-          EXPLORE
+          href="/get-started"
+          class="bg-white text-black font-orbitron font-medium py-3 px-5 rounded-full hover:bg-gray-100 transition-all duration-300"
+          >
+          GET STARTED
       </a>
     </div>
 
     <!-- Mobile Menu Trigger -->
     <button
-      class="lg:hidden w-10 h-10 rounded-full border border-neutral-700 ml-auto flex items-center justify-center {isMobileMenuOpen ? 'border-cyan-500 bg-cyan-500/10' : ''} transition-all"
+      class="lg:hidden w-10 h-10 rounded-full border border-neutral-700 ml-auto flex items-center justify-center {isMobileMenuOpen ? 'border-white bg-white/10' : ''} transition-all"
       on:click={() => isMobileMenuOpen = !isMobileMenuOpen}
     >
       <div class="relative w-5 h-5">
@@ -89,7 +81,7 @@
         <div class="absolute inset-0 transition-opacity duration-300" class:opacity-0={!isMobileMenuOpen}>
           <X 
             size={20} 
-            class="text-cyan-400" 
+            class="text-white" 
           />
         </div>
       </div>
@@ -100,50 +92,43 @@
 <!-- Mobile Navigation Menu -->
 {#if isMobileMenuOpen}
   <div
-    class="fixed inset-0 z-30 bg-neutral-900/95 backdrop-blur-md pt-5"
+    class="fixed inset-0 z-30 bg-slate-800/95 backdrop-blur-md pt-5"
     transition:fly={{ y: -100, duration: 300 }}
   >
     <div class="container mx-auto px-6 py-20">
       <div class="flex flex-col gap-6">
         
         <a 
-          href="/agents"
+          href="https://solutions.auriel.tech"
+          target="_blank"
           on:click={handleNavClick}
-          class="text-neutral-300 hover:text-cyan-400 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
+          class="text-neutral-300 hover:text-white font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
         >
-          AGENTS
+          SERVICES
         </a>
-        
+
         <a 
-          href="/tooling"
+          href="/projects"
           on:click={handleNavClick}
-          class="text-neutral-300 hover:text-cyan-400 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
+          class="text-neutral-300 hover:text-white font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
         >
-          DEVTOOLS
-        </a>
-        
-        <a 
-          href="https://network.auriel.tech"
-          on:click={handleNavClick}
-          class="text-neutral-300 hover:text-cyan-400 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
-        >
-          NETWORK
+          PROJECTS
         </a>
 
         <a 
           href="/news"
           on:click={handleNavClick}
-          class="text-neutral-300 hover:text-cyan-400 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
+          class="text-neutral-300 hover:text-white font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
         >
           NEWS
         </a>
 
         <a 
-          href="/explore"
+          href="/get-started"
           on:click={handleNavClick}
-          class="text-cyan-400 hover:text-cyan-300 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
+          class="text-white hover:text-neutral-300 font-orbitron tracking-wider text-lg py-4 border-b border-neutral-800 transition-colors"
         >
-          EXPLORE
+          GET STARTED
         </a>
       </div>
     </div>

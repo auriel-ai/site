@@ -27,33 +27,26 @@
   });
 </script>
 
-<div class="bg-neutral-950 text-neutral-200 min-h-screen overflow-x-hidden">  
+<div class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-neutral-200 min-h-screen overflow-x-hidden">  
   <!-- Hero Section -->
   <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-    <div class="container mx-auto max-w-6xl px-6 py-20 relative z-10">
-      <!-- Support Network Banner -->
-      <div class="w-full flex justify-center mb-12">
-        <SupportNetworkBanner />
-      </div>
+    <div class="container mx-auto max-w-6xl px-6 relative z-10">
 
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-orbitron text- tracking-wide mb-6 animate-slide-up-1" style="line-height: 1.25;">
-          We build specialized 
-          <span class="text-cyan-400">AI Agents</span>
-          that work 
-          <span class="text-cyan-400 tracking-widest">24/7/365</span>
+      <div class="max-w-3xl mx-auto text-center mt-10">
+        <h1 class="text-3xl md:text-5xl font-orbitron tracking-wide mb-6 animate-slide-up-1 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-100 bg-clip-text text-transparent" style="line-height: 1.3;">
+          Smarter <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">AI Agents</span> for Smarter <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Small Businesses</span>
         </h1>
         
         <p class="text-xl font-light text-neutral-300 mb-10 max-w-3xl mx-auto animate-slide-up-2">
-          Auriel builds modular AI Agents and open-source tools to monitor and optimize LLM applications, for teams looking to integrate AI into their businesses.
+          Auriel builds modular AI agents, workflows, and observability dev tools for teams and professionals looking to integrate AI into their businesses.
         </p>
         
         <div class="flex flex-wrap gap-6 justify-center animate-slide-up-3">
           <a 
-            href="/explore" 
-            class="bg-transparent border border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 px-8 py-2 rounded transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] font-orbitron text-sm lg:text-base"
-          >
-            EXPLORE OUR WORK
+            href="/get-started" 
+            class="bg-white text-black font-orbitron font-medium py-3 px-5 rounded-full hover:bg-gray-100 transition-all duration-300"
+            >
+            GET STARTED
           </a>
         </div>
       </div>
@@ -61,7 +54,7 @@
     
     <!-- Decorative Background Elements -->
     <div class="absolute inset-0 z-0 opacity-20">
-      <div class="absolute top-1/4 right-1/3 w-96 h-96 bg-cyan-500/20 rounded-full filter blur-3xl"></div>
+      <div class="absolute top-1/4 right-1/3 w-96 h-96 bg-amber-500/20 rounded-full filter blur-3xl"></div>
       <div class="absolute bottom-1/3 left-1/4 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"></div>
     </div>
     
@@ -69,14 +62,14 @@
     <div class="absolute inset-0 z-1 pointer-events-none">
       {#each specks as speck}
         <div 
-          class="absolute rounded-full bg-cyan-100"
+          class="absolute rounded-full bg-amber-100"
           style="
             left: {speck.x}%; 
             top: {speck.y}%; 
             width: {speck.size}px; 
             height: {speck.size}px; 
             opacity: {speck.opacity};
-            box-shadow: 0 0 {speck.size * 2}px rgba(165, 243, 252, 0.7);
+            box-shadow: 0 0 {speck.size * 2}px rgba(254, 243, 199, 0.7);
           "
         ></div>
       {/each}
@@ -91,7 +84,7 @@
   }
   
   :global(body) {
-    @apply bg-neutral-950;
+    @apply bg-slate-900;
   }
   
   :global(.container) {

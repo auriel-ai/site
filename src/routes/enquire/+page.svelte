@@ -57,7 +57,7 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-6xl px-6 lg:px-4 py-32 lg:py-40 relative"
 >
-  <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-amber-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
   <h1 class="text-3xl font-orbitron tracking-wider text-white text-center mb-4 lg:mb-6 relative">
     Contact Us
@@ -69,7 +69,7 @@
 
   <div 
     id="my-cal-inline" 
-    class="mx-auto my-20 relative bg-neutral-900/50 py-10 rounded-lg border border-neutral-800 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+    class="mx-auto my-20 relative bg-neutral-900/50 py-10 rounded-lg border border-neutral-800 shadow-[0_0_30px_rgba(245,158,11,0.15)]"
   />
 </div>
 
@@ -80,7 +80,7 @@
   
   /* Custom styles for Cal.com embed to match our design */
   :global(.cal-embed) {
-    --cal-brand: rgb(34, 211, 238) !important; /* Cyan-400 */
+    --cal-brand: rgb(245, 158, 11) !important; /* Amber-400 */
     --cal-border-color: rgba(38, 38, 38, 0.5) !important; /* neutral-800 */
     --cal-text: rgb(212, 212, 212) !important; /* neutral-300 */
   }

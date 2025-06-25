@@ -11,11 +11,11 @@
   in:fade={{ duration: 300, delay: 150 }}
   class="container mx-auto max-w-3xl px-6 lg:px-4 py-32 lg:py-36 relative"
 >
-  <div class="absolute inset-0 bg-gradient-radial from-cyan-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-radial from-amber-500/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
   
   <!-- Back Link -->
   <div class="mb-8">
-    <a href="/news" class="flex items-center text-neutral-400 hover:text-cyan-400 transition-colors text-sm">
+    <a href="/news" class="flex items-center text-neutral-400 hover:text-white transition-colors text-sm">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m15 18-6-6 6-6"/></svg>
       Back to News
     </a>
@@ -42,7 +42,7 @@
   </header>
   
   <!-- Article Content - Markdown gets inserted here -->
-  <article class="prose prose-invert prose-cyan max-w-none">
+  <article class="prose prose-invert prose-amber max-w-none">
     <!-- Markdown content from the .md file gets injected here -->
     <slot />
   </article>
@@ -87,7 +87,7 @@
   }
   
   :global(.prose a) {
-    color: rgb(34, 211, 238);
+    color: rgb(245, 158, 11);
     text-decoration: underline;
     font-weight: 500;
   }
