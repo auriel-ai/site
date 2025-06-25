@@ -5,6 +5,7 @@
   import { Button } from "$lib/components/ui/button";
   import * as AlertDialog from "$lib/components/ui/alert-dialog";
   import { ExternalLink, Github, Star } from 'lucide-svelte';
+  import LogoIcon from '$lib/components/LogoIcon.svelte';
 
   let isLoaded = false;
   const selectedProject = writable<Project | null>(null);
@@ -66,6 +67,42 @@
       githubUrl: undefined
     },
     {
+      id: 'support-network',
+      title: "Auriel's Support Network",
+      description: 'A developer support network for building and monetizing AI agents with community resources.',
+      fullDescription: "Auriel's Support Network is our developer support network that provides everything you need to build and monetize AI agents. From basic concepts to practical implementation, best practices, and working with the latest tools - all in one community platform.",
+      capabilities: [
+        'Community learning resources',
+        'Best practices sharing',
+        'Code examples and tutorials',
+        'Networking with developers',
+        'Monetization strategies'
+      ],
+      icon: 'logo',
+      categoryTags: ['Community', 'Resources', 'Networking'],
+      projectType: 'tool',
+      websiteUrl: 'https://network.auriel.tech',
+      githubUrl: undefined
+    },
+    {
+      id: 'agentlens',
+      title: 'Agent Lens',
+      description: "See your agent's future before it fails. A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline.",
+      fullDescription: 'Agent Lens is a lightweight, open-source Python package designed to record, replay, and analyze AI agent runs offline. Debug faster and save API credits with comprehensive observability tools for your LLM applications and AI agents.',
+      capabilities: [
+        'Offline Replay',
+        'Failure Analysis', 
+        'Cost Tracking',
+        'Agent Debugging',
+        'Performance Monitoring'
+      ],
+      icon: '🔍',
+      categoryTags: ['DevTools', 'Observability', 'Open Source'],
+      projectType: 'tool',
+      websiteUrl: undefined,
+      githubUrl: 'https://github.com/auriel-ai/agentlens'
+    },
+    {
       id: 'sam-agent',
       title: 'SAM',
       description: 'An AI assistant for UK firefighters in training to help them ace their operational training phase.',
@@ -81,42 +118,6 @@
       categoryTags: ['Emergency Services', 'Training', 'Education'],
       projectType: 'agent',
       websiteUrl: 'https://samfire.uk',
-      githubUrl: undefined
-    },
-    {
-      id: 'agentlens',
-      title: 'AgentLens',
-      description: "See your agent's future before it fails. A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline.",
-      fullDescription: 'AgentLens is a lightweight, open-source Python package designed to record, replay, and analyze AI agent runs offline. Debug faster and save API credits with comprehensive observability tools for your LLM applications and AI agents.',
-      capabilities: [
-        'Offline Replay',
-        'Failure Analysis', 
-        'Cost Tracking',
-        'Agent Debugging',
-        'Performance Monitoring'
-      ],
-      icon: '🔍',
-      categoryTags: ['DevTools', 'Observability', 'Open Source'],
-      projectType: 'tool',
-      websiteUrl: undefined,
-      githubUrl: 'https://github.com/auriel-ai/agentlens'
-    },
-    {
-      id: 'agent-alchemy',
-      title: 'Agent Alchemy',
-      description: 'A developer support network for building and monetizing AI agents with community resources.',
-      fullDescription: 'Agent Alchemy is our developer support network that provides everything you need to build and monetize AI agents. From basic concepts to practical implementation, best practices, and working with the latest tools - all in one community platform.',
-      capabilities: [
-        'Community learning resources',
-        'Best practices sharing',
-        'Code examples and tutorials',
-        'Networking with developers',
-        'Monetization strategies'
-      ],
-      icon: '⚗️',
-      categoryTags: ['Community', 'Education', 'Networking'],
-      projectType: 'tool',
-      websiteUrl: 'https://network.auriel.tech',
       githubUrl: undefined
     }
   ];
@@ -150,7 +151,9 @@
       >
         <div class="flex justify-between items-start mb-4">
           <div class="bg-slate-700 p-3 rounded-lg group-hover:bg-amber-500/10 transition-all">
-            {#if project.icon.startsWith('http')}
+            {#if project.icon === 'logo'}
+              <LogoIcon size="w-8 h-8" class_="stroke-neutral-100" />
+            {:else if project.icon.startsWith('http')}
               <img src={project.icon} alt="{project.title} icon" class="w-8 h-8 object-contain" /> 
             {:else}
               <span class="text-2xl">{project.icon}</span>
@@ -212,7 +215,9 @@
         <div class="flex items-start gap-6 mb-4">
           <!-- Icon -->
           <div class="bg-slate-600 p-3 rounded-lg mt-1 flex-shrink-0">
-            {#if project.icon.startsWith('http')}
+            {#if project.icon === 'logo'}
+              <LogoIcon size="w-10 h-10" class_="stroke-neutral-100" />
+            {:else if project.icon.startsWith('http')}
               <img src={project.icon} alt="{project.title} icon" class="w-10 h-10 object-contain" />
             {:else}
               <span class="text-3xl">{project.icon}</span>
