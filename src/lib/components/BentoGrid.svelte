@@ -7,7 +7,7 @@
 
 <div class="w-full grid grid-cols-3 grid-rows-2 gap-6 bg-transparent max-w-7xl mx-auto my-24">
   <!-- Special Card: Your 24/7 Digital Workforce (wide, split layout) -->
-  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[260px] shadow-sm col-span-2 row-span-1">
+  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[260px] shadow-sm col-span-2 row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
     <div class="flex flex-col md:flex-row h-full gap-8">
       <!-- Left: Heading and Subtext -->
       <div class="flex-1 flex flex-col justify-start">
@@ -23,7 +23,7 @@
   </div>
 
   <!-- Module 2: Automated Workflows -->
-  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[260px] shadow-sm col-span-1 row-span-1">
+  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[260px] shadow-sm col-span-1 row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
     <div class="mb-4">
       <Settings class="w-8 h-8 text-neutral-700 mb-3" />
       <h3 class="font-regular text-lg text-neutral-700 mb-2">Streamline Your Operations</h3>
@@ -39,7 +39,7 @@
   </div>
 
   <!-- Module 3: Gain Real-Time Insights -->
-  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm col-span-1 row-span-1">
+  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm col-span-1 row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
     <div class="mb-4">
       <ChartNetwork class="w-8 h-8 text-neutral-700 mb-3" />
       <h3 class="font-regular text-lg text-neutral-700 mb-2">Gain Real-Time Insights</h3>
@@ -66,7 +66,7 @@
   </div>
 
   <!-- Module 4: Connect Your Tools -->
-  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm col-span-1 row-span-1">
+  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm col-span-1 row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
     <div class="mb-4">
       <Plug class="w-8 h-8 text-neutral-700 mb-3" />
       <h3 class="font-regular text-lg text-neutral-700 mb-2">Connect Your Tools</h3>
@@ -76,7 +76,7 @@
   </div>
 
   <!-- Module 5: Top Notch Security -->
-  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm col-span-1 row-span-1">
+  <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm col-span-1 row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
     <div class="mb-4">
       <div class="mb-4">
         <ShieldCheck class="w-8 h-8 text-neutral-700 mb-3" />

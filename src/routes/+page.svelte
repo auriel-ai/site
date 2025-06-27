@@ -3,6 +3,7 @@
   import { fade, fly } from 'svelte/transition';
   import { onMount } from 'svelte';
   import BentoGrid from '$lib/components/BentoGrid.svelte';
+  import FaqSection from '$lib/components/FaqSection.svelte';
   
   let mounted = false;
   
@@ -53,6 +54,7 @@
   </section>
 
   <BentoGrid />
+  <FaqSection />
 
 </div>
 
