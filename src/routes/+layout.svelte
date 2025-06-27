@@ -24,7 +24,7 @@
 		},
 		{
 			rel: 'stylesheet',
-			href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap'
+			href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap'
 		}
 	] as const;
 </script>
@@ -42,7 +42,7 @@
 	{@render children()}
 {:else}
 	<!-- For all other routes, render the full layout -->
-	<div class="flex min-h-screen flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+	<div class="flex min-h-screen flex-col bg-[#f7f9f8]">
 		<Header />
 		
 		<main class="flex flex-1 relative">

@@ -206,17 +206,17 @@
 	});
 </script>
 
-<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
+<div class="flex flex-col items-center justify-center min-h-screen bg-[#f7f9f8] text-neutral-900 font-sans">
 	{#if loading}
 		<!-- Loading State -->
 		<div transition:fade={{ duration: 200 }}>
 			<div class="relative w-12 h-12">
-				<div class="animate-ping absolute inset-0 bg-white opacity-30 rounded-full"></div>
-				<div class="relative rounded-full w-12 h-12 border-2 border-t-white border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
+				<div class="animate-ping absolute inset-0 bg-neutral-300 opacity-30 rounded-full"></div>
+				<div class="relative rounded-full w-12 h-12 border-2 border-t-neutral-900 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
 			</div>
+			<div class="text-neutral-700 text-sm mt-10">Loading...</div>
 		</div>
 	{:else}
-		<!-- Logo positioned absolutely in the page -->
 		{#if contentVisible}
 			<div 
 				class="fixed top-10 left-10 z-10" 
@@ -225,40 +225,36 @@
 				<Logo size="text-xl" />
 			</div>
 		{/if}
-		
 		{#if !started}
 			<!-- Initial welcome screen -->
 			<div class="max-w-3xl flex flex-col items-start text-left">
 				{#if contentVisible}
 					<h1 
-						class="text-3xl font-orbitron font-regular mb-5"
+						class="text-3xl font-sans font-semibold mb-5 text-neutral-900"
 						in:fly={{ y: 20, duration: 700, delay: 200 }}
 					>
 						Need a hand finding your way around?
 					</h1>
-					
 					<p 
-						class="text-neutral-300 text-lg mb-5"
+						class="text-neutral-700 text-lg mb-5 font-sans"
 						in:fly={{ y: 20, duration: 700, delay: 400 }}
 					>
 						Answer two quick questions, and we'll instantly direct you to the right resources.
 					</p>
-					
 					<div 
 						class="flex items-center"
 						in:fly={{ y: 20, duration: 700, delay: 600 }}
 					>
 						<button 
-							class="bg-transparent hover:bg-slate-700 text-white font-medium py-2 px-4 border border-slate-600 hover:border-white transition-all duration-200 rounded-md"
+							class="bg-neutral-900 text-white font-medium py-2 px-4 border border-neutral-900 hover:bg-neutral-800 hover:border-neutral-800 transition-all duration-200 rounded-md font-sans"
 							on:click={handleStart}
 						>
 							Start
 						</button>
 						<span class="text-xs text-neutral-500 ml-3">press Enter ↵</span>
 					</div>
-					
 					<div 
-						class="flex items-center mt-5 text-xs text-neutral-300"
+						class="flex items-center mt-5 text-xs text-neutral-500"
 						in:fade={{ duration: 700, delay: 800 }}
 					>
 						<svg class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -274,36 +270,32 @@
 			<div class="max-w-3xl" in:fade={{ duration: 300 }}>
 				<div class="flex flex-col items-start text-left">
 					<h1 
-						class="text-3xl font-orbitron mb-6" 
+						class="text-3xl font-sans font-semibold mb-6 text-neutral-900" 
 						in:fly={{ y: 20, duration: 700 }}
 					>
 						{currentResult.heading}
 					</h1>
-					
 					<p 
-						class="text-lg mb-8 text-neutral-300" 
+						class="text-lg mb-8 text-neutral-700 font-sans" 
 						in:fly={{ y: 20, duration: 700, delay: 200 }}
 					>
 						{currentResult.subtitle}
 					</p>
-					
 					<p 
-						class="text-md mb-8 text-neutral-300" 
+						class="text-md mb-8 text-neutral-700 font-sans" 
 						in:fly={{ y: 20, duration: 700, delay: 300 }}
 					>
 						{currentResult.description}
 					</p>
-					
 					<p 
-						class="text-md mb-12 text-neutral-300 font-medium" 
+						class="text-md mb-12 text-neutral-500 font-medium font-sans" 
 						in:fly={{ y: 20, duration: 700, delay: 400 }}
 					>
 						{currentResult.cta}
 					</p>
-					
 					<div class="flex items-center" in:fly={{ y: 20, duration: 700, delay: 500 }}>
 						<button 
-							class="bg-white text-black font-orbitron font-medium py-3 px-8 rounded-md hover:bg-gray-100 transition-all duration-300"
+							class="bg-neutral-900 text-white font-medium py-3 px-8 rounded-md hover:bg-neutral-800 transition-all duration-300 font-sans"
 							on:click={handleCTA}
 						>
 							{currentResult.buttonText}
@@ -318,16 +310,15 @@
 				{#key currentQuestion.id}
 					<div class="flex flex-col">
 						<h2 
-							class="text-2xl font-light text-left mb-10"
+							class="text-2xl font-sans font-light text-left mb-10 text-neutral-900"
 							in:fly={{ y: -20, duration: 400 }}
 						>
 							{currentQuestion.text}
 						</h2>
-						
 						<div class="flex flex-col gap-3">
 							{#each currentQuestion.options as option, i}
 								<button 
-									class="bg-transparent hover:bg-slate-700 text-white text-left font-light py-3 px-6 border border-slate-600 hover:border-white transition-all duration-200 rounded-md"
+									class="bg-white hover:bg-neutral-100 text-neutral-900 text-left font-sans font-light py-3 px-6 border border-neutral-200 hover:border-neutral-300 transition-all duration-200 rounded-md"
 									on:click={() => handleAnswer(option)}
 									in:fly={{ y: 20, duration: 400, delay: 100 + (i * 100) }}
 								>

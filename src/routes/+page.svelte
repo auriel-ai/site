@@ -1,78 +1,33 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { Button } from "$lib/components/ui/button";
-  import SupportNetworkBanner from '$lib/components/SupportNetworkBanner.svelte';
-  
-  let isPageLoaded = false;
-  let specks: { x: number; y: number; size: number; opacity: number }[] = [];
-  
-  // Create random specks
-  function createSpecks() {
-    const numSpecks = Math.floor(Math.random() * 15) + 20; // Between 20-35 specks
-    specks = [];
-    
-    for (let i = 0; i < numSpecks; i++) {
-      specks.push({
-        x: Math.random() * 100, // Random x position (0-100%)
-        y: Math.random() * 100, // Random y position (0-100%)
-        size: Math.random() * 3 + 2, // Random size (2-5px)
-        opacity: Math.random() * 0.3 + 0.15 // Random opacity (0.15-0.45)
-      });
-    }
-  }
-  
-  onMount(() => {
-    isPageLoaded = true;
-    createSpecks();
-  });
+  import HeroBackground2 from '$lib/components/HeroBackground2.svelte';
 </script>
 
-<div class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-neutral-200 min-h-screen overflow-x-hidden">  
-  <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-    <div class="container mx-auto max-w-6xl px-6 relative z-10">
-
-      <div class="max-w-3xl mx-auto text-center mt-10">
-        <h1 class="text-3xl md:text-5xl font-orbitron tracking-wide mb-6 animate-slide-up-1 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-100 bg-clip-text text-transparent" style="line-height: 1.3;">
-          Smarter <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">AI Agents</span> for Smarter <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Small Businesses</span>
-        </h1>
-        
-        <p class="text-xl font-light text-neutral-300 mb-10 max-w-3xl mx-auto animate-slide-up-2">
-          Auriel builds modular AI agents, workflows, and observability dev tools for teams and professionals looking to integrate AI into their businesses.
-        </p>
-        
-        <div class="flex flex-wrap gap-6 justify-center animate-slide-up-3">
+<!-- PAGE BACKGROUND -->
+<div class="bg-[#f7f9f8] min-h-screen overflow-x-hidden">
+  
+  <!-- HERO SECTION -->
+  <section id="hero" class="min-h-[70vh] flex justify-center relative">
+    <div class="container mx-auto max-w-7xl flex flex-col items-center justify-center min-h-[70vh]">
+      
+      <!-- Image and Content Wrapper -->
+      <div class="w-full max-w-7xl flex flex-col items-center justify-center gap-8 bg-white rounded-3xl shadow-md border border-[#ececec] relative overflow-hidden min-h-[500px]">
+        <HeroBackground2 />
+        <!-- Content on top of SVG -->
+        <div class="max-w-3xl relative z-10 flex flex-col items-center justify-center gap-8 py-28 w-full">
+          <h1 class="text-3xl leading-normal md:text-6xl md:leading-tight tracking-wide text-white text-center">
+            Custom AI Agents That Work 24/7/365
+          </h1>
+          <h2 class="text-lg md:text-2xl font-light text-white text-center max-w-3xl">
+            Modular AI agents, workflows, and observability tools to help businesses cut costs, boost revenue, and streamline operations.
+          </h2>
           <a 
             href="/get-started" 
-            class="bg-white text-black font-orbitron font-medium py-3 px-5 rounded-full hover:bg-gray-100 transition-all duration-300"
-            >
-            GET STARTED
+            class="bg-white text-sm text-neutral-900 font-normal py-3 px-6 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-100 hover:border-neutral-300 transition-all duration-200 flex items-center"
+          >
+            Get Started
           </a>
         </div>
       </div>
-    </div>
-    
-    <!-- Decorative Background Elements -->
-    <div class="absolute inset-0 z-0 opacity-20">
-      <div class="absolute top-1/4 right-1/3 w-96 h-96 bg-amber-500/20 rounded-full filter blur-3xl"></div>
-      <div class="absolute bottom-1/3 left-1/4 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"></div>
-    </div>
-    
-    <!-- Light Specks -->
-    <div class="absolute inset-0 z-1 pointer-events-none">
-      {#each specks as speck}
-        <div 
-          class="absolute rounded-full bg-amber-100"
-          style="
-            left: {speck.x}%; 
-            top: {speck.y}%; 
-            width: {speck.size}px; 
-            height: {speck.size}px; 
-            opacity: {speck.opacity};
-            box-shadow: 0 0 {speck.size * 2}px rgba(254, 243, 199, 0.7);
-          "
-        ></div>
-      {/each}
     </div>
   </section>
 
@@ -82,59 +37,10 @@
   :global(html) {
     scroll-behavior: smooth;
   }
-  
   :global(body) {
-    @apply bg-slate-900;
+    @apply bg-[#f7f9f8];
   }
-  
   :global(.container) {
     @apply mx-auto;
-  }
-  
-  :global(.animate-slide-up-1) {
-    animation: slideUp 0.8s ease-out forwards;
-    animation-delay: 0.1s;
-    opacity: 0;
-  }
-  
-  :global(.animate-slide-up-2) {
-    animation: slideUp 0.8s ease-out forwards;
-    animation-delay: 0.2s;
-    opacity: 0;
-  }
-  
-  :global(.animate-slide-up-3) {
-    animation: slideUp 0.8s ease-out forwards;
-    animation-delay: 0.3s;
-    opacity: 0;
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Custom scrollbar styling */
-  :global(::-webkit-scrollbar) {
-    width: 8px;
-  }
-  
-  :global(::-webkit-scrollbar-track) {
-    background: #0a0a0a;
-  }
-  
-  :global(::-webkit-scrollbar-thumb) {
-    background: #333;
-    border-radius: 4px;
-  }
-  
-  :global(::-webkit-scrollbar-thumb:hover) {
-    background: #555;
   }
 </style>

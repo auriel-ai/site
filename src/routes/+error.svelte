@@ -4,28 +4,20 @@
 
 <div 
   in:fade={{ duration: 300, delay: 150 }}
-  class="mx-auto max-w-2xl px-4 py-40 text-center"
-  style="display: flex; justify-content: center; align-items: center; height: 100vh;"
+  class="bg-[#f7f9f8] flex items-center justify-center min-h-[60vh] px-4"
 >
-  <div class="relative">
-    <div class="absolute -inset-10 bg-gradient-radial from-cyan-500/10 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-    <h1 class="text-4xl font-orbitron tracking-wider text-white mb-4 relative">
+  <div class="text-center">
+    <h1 class="text-7xl font-bold text-neutral-900 mb-4">
       404
     </h1>
-    <p class="text-neutral-300 mb-8 relative">
-      The page you're looking for doesn't exist.
+    <p class="text-lg text-neutral-600 mb-6">
+      Page not found
     </p>
-      <a 
-        href="/" 
-        class="bg-white text-black font-orbitron font-medium py-3 px-5 rounded-full hover:bg-gray-100 transition-all duration-300"
-        >
-        GO HOME
-      </a>
+    <a 
+      href="/" 
+      class="bg-neutral-900 text-xs text-white font-medium py-3 px-6 rounded-lg hover:bg-black transition-colors"
+    >
+      Go Home
+    </a>
   </div>
 </div>
-
-<style>
-  .bg-gradient-radial {
-    background-image: radial-gradient(var(--tw-gradient-stops));
-  }
-</style> 
