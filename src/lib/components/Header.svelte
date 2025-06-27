@@ -32,16 +32,16 @@
 
     <!-- Nav Links (Center, Desktop) -->
     <div class="hidden lg:flex items-center gap-5 absolute left-1/2 -translate-x-1/2">
-      <a href="/projects" class="nav-link text-neutral-800 hover:text-black font-medium tracking-wide text-base relative group">
+      <a href="/projects" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
         <span>Projects</span>
       </a>
-      <a href="https://network.auriel.tech" class="nav-link text-neutral-800 hover:text-black font-medium tracking-wide text-base relative group" target="_blank">
+      <a href="https://network.auriel.tech" class="nav-link text-neutral-700 hover:text-black font-noramal tracking-wide text-base relative group" target="_blank">
         <span>Network</span>
       </a>
-      <a href="/news" class="nav-link text-neutral-800 hover:text-black font-medium tracking-wide text-base relative group">
+      <a href="/news" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
         <span>News</span>
       </a>
-      <a href="/contact" class="nav-link text-neutral-800 hover:text-black font-medium tracking-wide text-base relative group">
+      <a href="/contact" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
         <span>Contact</span>
       </a>
     </div>
@@ -76,19 +76,19 @@
   <div class="fixed inset-0 z-30 bg-[#f7f9f8]/95 backdrop-blur-md pt-5" transition:fly={{ y: -100, duration: 300 }}>
     <div class="container mx-auto px-6 py-20">
       <div class="flex flex-col gap-6">
-        <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-medium tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+        <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           Projects
         </a>
-        <a href="/network" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-medium tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+        <a href="/network" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           Network
         </a>
-        <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-medium tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+        <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           News
         </a>
-        <a href="/contact" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-medium tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+        <a href="/contact" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           Contact
         </a>
-        <a href="/get-started" on:click={handleNavClick} class="bg-white text-neutral-900 font-medium py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 mt-4 text-center flex items-center justify-center gap-2">
+        <a href="/get-started" on:click={handleNavClick} class="bg-white text-neutral-900 font-normal py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 mt-4 text-center flex items-center justify-center gap-2">
           Request Project
           <ArrowRight size={18} class="ml-1" />
         </a>
