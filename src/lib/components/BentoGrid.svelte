@@ -81,7 +81,7 @@
       <div class="mb-4">
         <ShieldCheck class="w-8 h-8 text-neutral-700 mb-3" />
         <h3 class="font-regular text-lg text-neutral-700 mb-2 mt-2">Top Notch Security</h3>
-        <p class="text-neutral-600 font-light mb-4">We'll deploy our agents on your own servers or private cloud for maximum control. Our agents support on-premises hosting, so your data never leaves your environment—ensuring compliance, privacy, and peace of mind.</p>
+        <p class="text-neutral-600 font-light mb-4">We'll deploy on your servers or private cloud infrastructure for maximum control. Our agents support on-premises hosting, so your data never leaves your environment—ensuring compliance, privacy, and peace of mind.</p>
       </div>
     </div>
     <div class="flex justify-center w-full mb-2">

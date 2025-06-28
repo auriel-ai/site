@@ -1,0 +1,81 @@
+<script lang="ts">
+  import { fade } from 'svelte/transition';
+  const agentTypes = [
+    {
+      key: 'monolithic',
+      label: 'Monolithic Agents',
+      description: 'A single, unified AI system designed to handle complex tasks independently.',
+      features: [
+        'Simplified deployment with a single, unified system',
+        'Streamlined development for complex, singular tasks',
+        'Consistent performance with integrated functionality',
+      ]
+    },
+    {
+      key: 'microagents',
+      label: 'Modular Microagents',
+      description: 'A collection of specialized, small, specialized AI components that collaborate to perform flexible, targeted functions.',
+      features: [
+        'Task-specific agents for granular control',
+        'Easy to update, replace, or scale individual modules',
+        'Enhanced resilience with independent, fault-tolerant modules'
+      ]
+    },
+    {
+      key: 'workflows',
+      label: 'Workflows',
+      description: 'AI-powered workflows that automate and coordinate multi-step business processes, performing actions without manual effort.',
+      features: [
+        'Streamline repetitive tasks by automating sequential processes',
+        'Enhance efficiency with predefined rules and minimal human intervention',
+        'Improve accuracy by reducing manual errors in task execution',
+      ]
+    }
+  ];
+  let selected = agentTypes[0].key;
+  $: current = agentTypes.find(a => a.key === selected) || agentTypes[0];
+  let visibleKey = current ? current.key : agentTypes[0].key;
+  $: if (current && current.key !== visibleKey) {
+    visibleKey = current.key;
+  }
+</script>
+
+<section class="w-full bg-neutral-50 py-10">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center space-y-12 mb-12">
+        <p class="text-lg text-neutral-400 font-light">What We Build</p>
+      <h2 class="text-5xl font-light mb-2 text-neutral-900">AI Agents, Any Architecture</h2>
+    </div>
+    <div class="flex justify-center gap-2 mb-20 flex-wrap">
+      {#each agentTypes as agent}
+        <button
+          class="px-3 py-2 rounded-full transition font-regular text-sm focus:outline-none
+            {selected === agent.key ? 'bg-white border-neutral-300 text-neutral-900' : 'bg-neutral-100 border-transparent text-neutral-500 hover:text-black'}"
+          on:click={() => selected = agent.key}
+        >
+          {agent.label}
+        </button>
+      {/each}
+    </div>
+    <div class="flex flex-col md:flex-row items-stretch gap-0 transition-all duration-300 bg-white rounded-2xl shadow overflow-hidden max-h-[300px] md:max-h-[450px]">
+      <div class="flex-1 min-w-0 p-6 md:p-16 flex flex-col justify-center"
+        in:fade={{ duration: 250 }} out:fade={{ duration: 250 }}>
+        {#if current && visibleKey === current.key}
+          <h3 class="text-3xl font-regular mb-10 text-neutral-800">{current.label}</h3>
+          <p class="text-neutral-600 text-lg font-light mb-10">{current.description}</p>
+          <ul class="space-y-2">
+            {#each current.features as feature}
+              <li class="flex items-start gap-2 text-neutral-600 font-light">
+                <svg class="w-5 h-5 text-green-500 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>{feature}</span>
+              </li>
+            {/each}
+          </ul>
+        {/if}
+      </div>
+      <div class="flex-1 min-w-[220px] h-full">
+        <img src="/gggrain (1).svg" alt="" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section> 

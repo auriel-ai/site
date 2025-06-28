@@ -4,6 +4,7 @@
   import { onMount } from 'svelte';
   import BentoGrid from '$lib/components/BentoGrid.svelte';
   import FaqSection from '$lib/components/FaqSection.svelte';
+  import AgentTypesSection from '$lib/components/AgentTypesSection.svelte';
   
   let mounted = false;
   
@@ -13,7 +14,7 @@
 </script>
 
 <!-- PAGE BACKGROUND -->
-<div class="bg-[#f7f9f8] min-h-screen overflow-x-hidden">
+<div class="bg-neutral-50 min-h-screen overflow-x-hidden">
   
   <!-- HERO SECTION -->
   <section id="hero" class="min-h-[70vh] flex justify-center relative">
@@ -54,6 +55,7 @@
   </section>
 
   <BentoGrid />
+  <AgentTypesSection />
   <FaqSection />
 
 </div>
