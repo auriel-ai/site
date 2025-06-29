@@ -1,5 +1,6 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import AgentArchitectureDiagram from './AgentArchitectureDiagram.svelte';
   const agentTypes = [
     {
       key: 'monolithic',
@@ -40,7 +41,7 @@
   }
 </script>
 
-<section class="w-full bg-neutral-50 py-10">
+<section class="w-full bg-neutral-50 py-10 my-24">
   <div class="max-w-7xl mx-auto">
     <div class="text-center space-y-12 mb-12">
         <p class="text-lg text-neutral-400 font-light">What We Build</p>
@@ -57,7 +58,7 @@
         </button>
       {/each}
     </div>
-    <div class="flex flex-col md:flex-row items-stretch gap-0 transition-all duration-300 bg-white rounded-2xl shadow overflow-hidden max-h-[300px] md:max-h-[450px]">
+    <div class="flex flex-col md:flex-row items-stretch gap-0 transition-all duration-300 bg-white rounded-2xl shadow overflow-hidden min-h-[300px] md:min-h-[450px] relative">
       <div class="flex-1 min-w-0 p-6 md:p-16 flex flex-col justify-center"
         in:fade={{ duration: 250 }} out:fade={{ duration: 250 }}>
         {#if current && visibleKey === current.key}
@@ -73,8 +74,13 @@
           </ul>
         {/if}
       </div>
-      <div class="flex-1 min-w-[220px] h-full">
-        <img src="/gggrain (1).svg" alt="" class="w-full h-full object-cover" />
+      <div class="flex-1 min-w-[220px] relative p-8 md:p-12 flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+          <img src="/gggrain (1).svg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="relative z-10 w-5/6 h-5/6 flex items-center justify-center">
+          <AgentArchitectureDiagram type={selected as 'monolithic' | 'microagents' | 'workflows'} />
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import LogoIcon from './LogoIcon.svelte';
-	import { Github, Twitter } from 'lucide-svelte';
+	import { Github, ExternalLink } from 'lucide-svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	
@@ -66,19 +66,11 @@
 					href="https://github.com/auriel-ai"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-neutral-700 hover:text-black transition-colors duration-200 flex items-center"
+					class="text-neutral-700 hover:text-black transition-colors duration-200 flex items-center gap-1 group"
 					aria-label="Auriel GitHub"
 				>
-					<Github size={16} />
-				</a>
-				<a
-					href="https://x.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="text-neutral-700 hover:text-black transition-colors duration-200 flex items-center"
-					aria-label="Auriel Twitter"
-				>
-					<Twitter size={16} />
+					<Github size={18} class="group-hover:scale-110 transition-transform duration-200" />
+					<ExternalLink size={14} class="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 				</a>
 			</div>
 		</div>

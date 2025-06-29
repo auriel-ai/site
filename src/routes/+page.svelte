@@ -5,6 +5,8 @@
   import BentoGrid from '$lib/components/BentoGrid.svelte';
   import FaqSection from '$lib/components/FaqSection.svelte';
   import AgentTypesSection from '$lib/components/AgentTypesSection.svelte';
+  import CTA from '$lib/components/CTA.svelte';
+  import BrandFooter from '$lib/components/BrandFooter.svelte';
   
   let mounted = false;
   
@@ -56,7 +58,9 @@
 
   <BentoGrid />
   <AgentTypesSection />
+  <CTA />
   <FaqSection />
+  <BrandFooter />
 
 </div>
 
