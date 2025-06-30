@@ -4,18 +4,35 @@
   import LogoIcon from './LogoIcon.svelte';
   import { Plus, X, ArrowRight } from 'lucide-svelte';
   import { fade, fly } from 'svelte/transition';
+  import ContactPopup from './ContactPopup.svelte';
 
   // State
-  let isClairvoyanceOpen = false;
+  let isPopupOpen = false;
   let isMobileMenuOpen = false;
   let isMobileClairvoyanceOpen = false;
+  let currentFormId = 'sb7xbw2f';
 
   // Handlers
   function handleNavClick() {
     isMobileMenuOpen = false;
     isMobileClairvoyanceOpen = false;
   }
+
+  function openPopup(formId: string) {
+    currentFormId = formId;
+    isPopupOpen = true;
+    if (isMobileMenuOpen) {
+      handleNavClick();
+    }
+  }
 </script>
+
+<!-- Contact Popup -->
+<ContactPopup 
+  isOpen={isPopupOpen}
+  onClose={() => isPopupOpen = false}
+  formId={currentFormId}
+/>
 
 <!-- HEADER -->
 <header class="py-12 bg-[#f7f9f8] backdrop-blur-md">
@@ -41,17 +58,21 @@
       <a href="/news" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
         <span>News</span>
       </a>
-      <a href="/contact" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
+      <button 
+        on:click={() => openPopup('sb7xbw2f')}
+        class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group cursor-pointer">
         <span>Contact</span>
-      </a>
+      </button>
     </div>
 
     <!-- CTA (Right) -->
     <div class="ml-auto">
-      <a href="/get-started" class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-full border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
+      <button 
+        on:click={() => openPopup('lyjf2sfh')}
+        class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-full border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
         Request A Project
         <ArrowRight size={18} class="ml-1" />
-      </a>
+      </button>
     </div>
 
     <!-- Mobile Menu Trigger (Right) -->
@@ -85,13 +106,17 @@
         <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           News
         </a>
-        <a href="/contact" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+        <button 
+          on:click={() => openPopup('sb7xbw2f')}
+          class="text-left w-full text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors cursor-pointer">
           Contact
-        </a>
-        <a href="/get-started" on:click={handleNavClick} class="bg-white text-neutral-900 font-normal py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 mt-4 text-center flex items-center justify-center gap-2">
+        </button>
+        <button 
+          on:click={() => openPopup('lyjf2sfh')}
+          class="bg-white text-neutral-900 font-normal py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 mt-4 text-center flex items-center justify-center gap-2">
           Request Project
           <ArrowRight size={18} class="ml-1" />
-        </a>
+        </button>
       </div>
     </div>
   </div>
