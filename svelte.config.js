@@ -15,8 +15,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				blog: path.resolve(__dirname, './src/routes/news/blog/_layout.svelte'),
-				'case-study': path.resolve(__dirname, './src/routes/news/case-study/_layout.svelte')
+				blog: path.resolve(__dirname, './src/routes/news/blog/_layout.svelte')
 			}
 		})
 	],
