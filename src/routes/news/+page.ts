@@ -3,13 +3,12 @@ import type { Article } from '$lib/data/news';
 import { calculateReadingTime } from '$lib/utils';
 
 export const load: PageLoad = async () => {
-  // Import all blog posts and case studies
-  const blogPosts = import.meta.glob('./blog/_posts/*.md', { eager: true });
-  const caseStudies = import.meta.glob('./case-study/_posts/*.md', { eager: true });
+  // Import all posts (blog posts, case studies, etc)
+  const posts = import.meta.glob('./blog/_posts/*.md', { eager: true });
   
-  // Load blog post metadata
-  const blogArticles = await Promise.all(
-    Object.entries(blogPosts).map(async ([path, post]: [string, any]) => {
+  // Load post metadata
+  const articles = await Promise.all(
+    Object.entries(posts).map(async ([path, post]: [string, any]) => {
       const slug = path.split('/').pop()?.replace('.md', '') || '';
       
       return {
@@ -17,25 +16,7 @@ export const load: PageLoad = async () => {
         title: post.metadata.title,
         date: post.metadata.date,
         author: post.metadata.author || "Auriel Team",
-        category: "Blog" as const,
-        featured: post.metadata.featured || false,
-        description: post.metadata.description,
-        readingTime: calculateReadingTime(post.metadata.description + ' ' + post.content)
-      };
-    })
-  );
-  
-  // Load case study metadata
-  const caseStudyArticles = await Promise.all(
-    Object.entries(caseStudies).map(async ([path, post]: [string, any]) => {
-      const slug = path.split('/').pop()?.replace('.md', '') || '';
-      
-      return {
-        slug,
-        title: post.metadata.title,
-        date: post.metadata.date,
-        author: post.metadata.author || "Auriel Team",
-        category: "Case Study" as const,
+        category: post.metadata.category || "Blog" as const,
         featured: post.metadata.featured || false,
         company: post.metadata.company,
         description: post.metadata.description,
@@ -60,8 +41,7 @@ export const load: PageLoad = async () => {
   
   // Combine all article types
   const allArticles = [
-    ...blogArticles,
-    ...caseStudyArticles,
+    ...articles,
     ...pressArticles
   ];
   

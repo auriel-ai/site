@@ -24,7 +24,7 @@
     <h1 class="text-3xl md:text-4xl font-medium text-neutral-900 text-left">
       News
     </h1>
-    <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl">
+    <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
       Compiled notes from the team
     </p>
   </div>

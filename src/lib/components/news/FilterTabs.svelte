@@ -9,7 +9,7 @@
 <div class="flex justify-start gap-3 mt-5 mb-2">
   {#each categories as category}
     <button 
-      class="text-sm px-4 py-2 rounded-full border border-neutral-200 bg-white text-neutral-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-300 {selectedCategory === category ? 'ring-2 ring-neutral-900' : 'hover:bg-neutral-100'}"
+      class="text-sm px-4 py-2 rounded-full border border-neutral-200 bg-white text-neutral-700 font-medium transition-colors focus:outline-none {selectedCategory === category ? 'ring-1 ring-neutral-800' : 'hover:bg-neutral-100'}"
       on:click={() => selectedCategory = category}
     >
       {category === 'Case Study' ? 'Case Studies' : category}

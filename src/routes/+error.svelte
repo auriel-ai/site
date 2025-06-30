@@ -13,11 +13,5 @@
     <p class="text-lg text-neutral-600 mb-6">
       Page not found
     </p>
-    <a 
-      href="/" 
-      class="bg-neutral-900 text-xs text-white font-medium py-3 px-6 rounded-lg hover:bg-black transition-colors"
-    >
-      Go Home
-    </a>
   </div>
 </div>

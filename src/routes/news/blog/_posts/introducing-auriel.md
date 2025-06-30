@@ -1,12 +1,10 @@
 ---
-title: Introducing Auriel Analytics
+title: Introducing Auriel
 date: May 8, 2023
 author: Jack Dolby
 featured: true
-description: A suite of open-source developer tools designed to bring clarity and control to LLM applications and AI agents.
+description: Custom AI Agents and Workflows for Modern Businesses.
 ---
-
-# Introducing Auriel: Building in the Age of AI
 
 We're thrilled to announce the launch of **Auriel** - a suite of open-source developer tools designed to bring clarity and control to LLM applications and AI agents. In a world where AI is becoming increasingly complex and unpredictable, we're building the tools developers need to build, monitor, and optimize their AI applications with confidence.
 

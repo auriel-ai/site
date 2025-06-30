@@ -9,7 +9,7 @@
     if (article.category === 'Press' && article.url) {
       return article.url;
     }
-    return `/news/${article.category.toLowerCase().replace(' ', '-')}/${article.slug}`;
+    return `/news/blog/${article.slug}`;
   }
 </script>
 
@@ -20,27 +20,29 @@
   rel={article.category === 'Press' ? 'noopener noreferrer' : undefined}
 >
   <div class="bg-white rounded-lg p-6 h-full border border-neutral-200 transition-all duration-300 hover:border-neutral-400">
-    <article class="space-y-4">
-      <!-- Category Badge -->
-      <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {
-        article.category === 'Blog' ? 'bg-emerald-50 text-emerald-700' :
-        article.category === 'Press' ? 'bg-blue-50 text-blue-700' :
-        'bg-purple-50 text-purple-700'
-      }">
-        {article.category}
+    <article class="flex flex-col h-full">
+      <div class="space-y-4 flex-grow">
+        <!-- Category Badge -->
+        <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {
+          article.category === 'Blog' ? 'bg-emerald-50 text-emerald-700' :
+          article.category === 'Press' ? 'bg-blue-50 text-blue-700' :
+          'bg-purple-50 text-purple-700'
+        }">
+          {article.category}
+        </div>
+        
+        <h2 class="text-xl font-medium text-neutral-900 group-hover:text-neutral-700">
+          {article.title}
+        </h2>
+        
+        {#if article.description}
+          <p class="text-neutral-700 line-clamp-2 text-sm font-light">
+            {article.description}
+          </p>
+        {/if}
       </div>
-      
-      <h2 class="text-xl font-medium text-neutral-900 group-hover:text-neutral-700">
-        {article.title}
-      </h2>
-      
-      {#if article.description}
-        <p class="text-neutral-700 line-clamp-2 text-sm font-light">
-          {article.description}
-        </p>
-      {/if}
-      
-      <div class="pt-10 flex items-center gap-3 text-sm text-neutral-600">
+
+      <div class="mt-10 flex items-center gap-3 text-sm text-neutral-600">
         {#if authors[article.author]?.avatar}
           <img 
             src={authors[article.author].avatar} 
