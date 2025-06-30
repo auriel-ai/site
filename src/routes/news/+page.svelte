@@ -17,14 +17,14 @@
 
 <div 
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-7xl py-8 pb-60"
+  class="container mx-auto max-w-7xl px-4 py-8 pb-40 md:pb-60"
 >
   <!-- Page Header -->
-  <div class="mb-12 space-y-5">
+  <div class="mb-10 md:mb-12 space-y-4 md:space-y-5">
     <h1 class="text-3xl md:text-4xl font-medium text-neutral-900 text-left">
       News
     </h1>
-    <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
+    <p class="text-base md:text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
       Compiled notes from the team
     </p>
   </div>
@@ -33,7 +33,7 @@
   <FilterTabs bind:selectedCategory />
 
   <!-- Articles Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-10">
     {#if filteredArticles.length === 0}
       <EmptyState />
     {:else}

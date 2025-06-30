@@ -19,9 +19,9 @@
   target={article.category === 'Press' ? '_blank' : undefined} 
   rel={article.category === 'Press' ? 'noopener noreferrer' : undefined}
 >
-  <div class="bg-white rounded-lg p-6 h-full border border-neutral-200 transition-all duration-300 hover:border-neutral-400">
+  <div class="bg-white rounded-lg p-5 md:p-6 h-full border border-neutral-200 transition-all duration-300 hover:border-neutral-400">
     <article class="flex flex-col h-full">
-      <div class="space-y-4 flex-grow">
+      <div class="space-y-3 md:space-y-4 flex-grow">
         <!-- Category Badge -->
         <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {
           article.category === 'Blog' ? 'bg-emerald-50 text-emerald-700' :
@@ -31,7 +31,7 @@
           {article.category}
         </div>
         
-        <h2 class="text-xl font-medium text-neutral-900 group-hover:text-neutral-700">
+        <h2 class="text-lg md:text-xl font-medium text-neutral-900 group-hover:text-neutral-700">
           {article.title}
         </h2>
         
@@ -42,19 +42,19 @@
         {/if}
       </div>
 
-      <div class="mt-10 flex items-center gap-3 text-sm text-neutral-600">
+      <div class="mt-8 md:mt-10 flex items-center gap-3 text-sm text-neutral-600">
         {#if authors[article.author]?.avatar}
           <img 
             src={authors[article.author].avatar} 
             alt={authors[article.author].name}
-            class="w-8 h-8 rounded-full object-cover"
+            class="w-7 h-7 md:w-8 md:h-8 rounded-full object-cover"
           />
         {:else if article.author === "Auriel Blog" || article.author === "Case Study"}
-          <div class="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center">
-            <LogoIcon size="w-5 h-5" class_="!stroke-neutral-50" />
+          <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-neutral-900 flex items-center justify-center">
+            <LogoIcon size="w-4 h-4 md:w-5 md:h-5" class_="!stroke-neutral-50" />
           </div>
         {:else}
-          <div class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-xs font-medium">
+          <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-neutral-100 flex items-center justify-center text-xs font-medium">
             {article.author[0]}
           </div>
         {/if}

@@ -44,20 +44,20 @@
 
 <div
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-7xl py-8"
+  class="container mx-auto max-w-7xl px-4 py-8"
 >
   <!-- Page Header -->
-  <div class="mb-12 space-y-5">
+  <div class="mb-10 md:mb-12 space-y-4 md:space-y-5">
     <h1 class="text-3xl md:text-4xl font-medium text-neutral-900 text-left">
       Projects
     </h1>
-    <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
+    <p class="text-base md:text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
       A collection of AI agents and tools we've built to solve real problems.
     </p>
   </div>
 
   <!-- Project Card Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
     {#each projects as project (project.id)}
       <ProjectCard 
         {project} 
@@ -75,10 +75,10 @@
   </div>
 
   <!-- Custom Project Development Section -->
-  <div class="bg-white rounded-lg border border-neutral-200 p-8 lg:p-12 mt-10 mb-40">
-    <h3 class="text-xl font-medium text-neutral-900 mb-4">Submit a project request</h3>
-    <p class="text-neutral-600 mb-6 font-light leading-relaxed">
-      Tell us what you're working on or send us a job post or idea and we will build a custom agent/workflow for it.
+  <div class="bg-white rounded-lg border border-neutral-200 p-6 md:p-8 lg:p-12 mt-10 mb-20 md:mb-40">
+    <h3 class="text-lg md:text-xl font-medium text-neutral-900 mb-3 md:mb-4">Submit a project request</h3>
+    <p class="text-base text-neutral-600 mb-6 font-light leading-relaxed">
+      Send us a job post or tell us about an idea and we will build a custom agent/workflow for it.
     </p>
     <div class="flex max-w-lg">
       <button 

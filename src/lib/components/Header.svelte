@@ -5,6 +5,10 @@
   import { Menu, X, ArrowRight } from 'lucide-svelte';
   import { fade, fly } from 'svelte/transition';
   import ContactPopup from './ContactPopup.svelte';
+  import { getContext } from 'svelte';
+
+  // Get hideBackground from context, defaulting to false if not set
+  const hideBackground = getContext('hideHeaderBackground') ?? false;
 
   // State
   let isPopupOpen = false;
@@ -36,11 +40,9 @@
 
 <!-- HEADER -->
 <header 
-  class="py-10 md:py-12 z-40 relative"
-  class:bg-[#f7f9f8]={!isMobileMenuOpen}
-  class:backdrop-blur-md={!isMobileMenuOpen}
+  class="py-10 md:py-12 z-40"
 >
-  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-4">
+  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-4 clickable">
     
     <!-- Logo (Left) -->
     <div class="flex-shrink-0 z-50">
@@ -106,13 +108,13 @@
 
 <!-- MOBILE NAVIGATION MENU -->
 {#if isMobileMenuOpen}
-  <div class="fixed inset-0 z-30 bg-[#f7f9f8]/95 backdrop-blur-md pt-5" transition:fly={{ y: -100, duration: 300 }}>
+  <div class="fixed inset-0 z-30 bg-[#f7f9f8]/95 backdrop-blur-md pt-5 pointer-events-auto" transition:fly={{ y: -100, duration: 300 }}>
     <div class="container mx-auto px-6 py-20">
       <div class="flex flex-col gap-6">
         <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           Projects
         </a>
-        <a href="/network" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+        <a href="https://network.auriel.tech" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
           Network
         </a>
         <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
@@ -133,13 +135,3 @@
     </div>
   </div>
 {/if}
-
-<style>
-  /* Close dropdown when clicking outside */
-  :global(body:has(.relative button[aria-expanded="true"])) {
-    pointer-events: none;
-  }
-  .relative {
-    pointer-events: auto;
-  }
-</style> 

@@ -15,7 +15,7 @@
 
 <div 
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-4xl px-4 py-8"
+  class="container mx-auto max-w-4xl px-5 md:px-4 py-8"
 >
   <!-- Back Link -->
   <div class="mb-12">

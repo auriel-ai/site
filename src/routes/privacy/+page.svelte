@@ -3,7 +3,7 @@
 </script>
 
 <div class="bg-[#f7f9f8] min-h-screen pb-20">
-  <div class="container mx-auto max-w-5xl px-4 py-10">
+  <div class="container mx-auto max-w-5xl px-5 md:px-4 py-10">
     <h1 class="text-5xl font-medium text-neutral-900 mb-10">Privacy Policy</h1>
     <p class="text-sm text-neutral-600 font-light mb-10">Last updated: January 14, 2024</p>
     <div class="space-y-10 text-neutral-800 text-base border-t pt-10">

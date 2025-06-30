@@ -68,9 +68,6 @@
   :global(html) {
     scroll-behavior: smooth;
   }
-  :global(body) {
-    @apply bg-[#f7f9f8];
-  }
   :global(.container) {
     @apply mx-auto;
   }

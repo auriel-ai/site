@@ -28,8 +28,8 @@
       description: 'AI-powered workflows that automate and coordinate multi-step business processes, performing actions without manual effort.',
       features: [
         'Streamline repetitive tasks by automating sequential processes',
-        'Enhance efficiency with predefined rules and minimal human intervention',
         'Improve accuracy by reducing manual errors in task execution',
+        'Enhance efficiency with predefined rules and minimal human intervention',
       ]
     }
   ];

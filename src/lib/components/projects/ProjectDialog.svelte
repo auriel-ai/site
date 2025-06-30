@@ -2,7 +2,7 @@
   import * as AlertDialog from "$lib/components/ui/alert-dialog";
   import { ExternalLink, Github, Star, X } from 'lucide-svelte';
   import LogoIcon from '$lib/components/LogoIcon.svelte';
-  import { onDestroy } from 'svelte';
+  import { onDestroy, setContext } from 'svelte';
   
   export let project: {
     id: string;
@@ -19,6 +19,9 @@
   export let starCount: number | undefined = undefined;
   export let open: boolean;
   export let onOpenChange: (open: boolean) => void;
+
+  // Set context for header background
+  $: setContext('hideHeaderBackground', open);
 
   // Clean up any scroll locks when the component is destroyed
   onDestroy(() => {
@@ -40,7 +43,7 @@
 
 <AlertDialog.Root {open} onOpenChange={handleOpenChange}>
   <AlertDialog.Overlay />
-  <AlertDialog.Content class="bg-white border border-neutral-200 text-neutral-900 max-w-2xl p-0 overflow-hidden rounded-xl shadow-xl">
+  <AlertDialog.Content class="bg-[#f7f9f8]/95 backdrop-blur-md border border-neutral-200 text-neutral-900 max-w-2xl p-0 overflow-hidden rounded-xl shadow-xl">
     <!-- Close Button -->
     <button 
       class="absolute right-4 top-4 z-10 p-2 rounded-full hover:bg-neutral-100 transition-colors"
@@ -50,7 +53,7 @@
     </button>
 
     <!-- Header Section -->
-    <div class="p-8 md:p-10 bg-neutral-50 border-b border-neutral-200">
+    <div class="p-8 md:p-10 bg-white/50 border-b border-neutral-200">
       <div class="flex items-start gap-6">
         <!-- Icon -->
         <div class="bg-neutral-100 p-3 rounded-lg mt-1 flex-shrink-0">
@@ -104,11 +107,11 @@
     <!-- Body Section -->
     <div class="px-10 py-5 pb-20">
       <div class="max-w-none">
-        <p class="text-neutral-600 text-md mb-8">{project.fullDescription}</p>
-        <h4 class="text-lg font-medium text-neutral-900 mb-4">Capabilities</h4>
+        <p class="text-neutral-600 mb-8 font-light">{project.fullDescription}</p>
+        <h4 class="text-md font-medium text-neutral-900 mb-4">Capabilities</h4>
         <ul class="list-none p-0 space-y-2">
           {#each project.capabilities as capability}
-            <li class="flex items-center gap-2 text-neutral-600 font-light">
+            <li class="flex items-center gap-2 text-neutral-600 font-light text-sm">
               <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               {capability}
             </li>
