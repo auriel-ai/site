@@ -227,7 +227,7 @@
 	{:else}
 		{#if contentVisible}
 			<div 
-				class="fixed top-10 left-10 z-10" 
+				class="fixed left-5 top-10 md:left-10 z-10" 
 				in:fly={{ y: -20, duration: 700 }}
 			>
 				<Logo size="text-xl" />
@@ -235,10 +235,10 @@
 		{/if}
 		{#if !started}
 			<!-- Initial welcome screen -->
-			<div class="max-w-3xl flex flex-col items-start text-left">
+			<div class="max-w-3xl flex flex-col items-start text-left px-5">
 				{#if contentVisible}
 					<h1 
-						class="text-3xl font-sans font-medium mb-5 text-neutral-900"
+						class="text-2xl md:text-3xl font-sans font-medium mb-5 text-neutral-900"
 						in:fly={{ y: 20, duration: 700, delay: 200 }}
 					>
 						Need a hand finding your way around?
@@ -275,10 +275,10 @@
 			</div>
 		{:else if showResultScreen}
 			<!-- Dynamic result screen based on user path -->
-			<div class="max-w-3xl" in:fade={{ duration: 300 }}>
+			<div class="max-w-3xl px-5" in:fade={{ duration: 300 }}>
 				<div class="flex flex-col items-start text-left">
 					<h1 
-						class="text-2xl font-sans font-medium mb-5 text-neutral-800" 
+						class="text-xl md:text-2xl font-sans font-medium mb-5 text-neutral-800" 
 						in:fly={{ y: 20, duration: 700 }}
 					>
 						{currentResult.heading}
