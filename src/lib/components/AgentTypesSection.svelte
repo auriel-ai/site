@@ -44,7 +44,7 @@
 <section class="w-full bg-neutral-50 py-10 my-24">
   <div class="max-w-7xl mx-auto">
     <div class="text-center space-y-12 mb-12">
-        <p class="text-lg text-neutral-400 font-light">What We Build</p>
+        <p class="text-lg text-neutral-400 font-light font-orbitron tracking-wide">WHAT WE BUILD</p>
       <h2 class="text-5xl font-light mb-2 text-neutral-900">AI Agents, Any Architecture</h2>
     </div>
     <div class="flex justify-center gap-2 mb-20 flex-wrap">
