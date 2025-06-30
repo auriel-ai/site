@@ -59,7 +59,7 @@
       {/each}
     </div>
     <div class="flex flex-col md:flex-row items-stretch gap-0 transition-all duration-300 bg-white rounded-2xl shadow overflow-hidden min-h-[300px] md:min-h-[450px] relative">
-      <div class="flex-1 min-w-0 p-6 md:p-16 flex flex-col justify-center"
+      <div class="md:flex-[1.3] flex-1 min-w-0 p-6 md:p-16 flex flex-col justify-center"
         in:fade={{ duration: 250 }} out:fade={{ duration: 250 }}>
         {#if current && visibleKey === current.key}
           <h3 class="text-3xl font-regular mb-10 text-neutral-800">{current.label}</h3>
