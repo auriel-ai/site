@@ -3,6 +3,7 @@
 	import { fade, fly, scale } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import ContactPopup from '$lib/components/ContactPopup.svelte';
 
 	let loading = true;
 	let started = false;
@@ -12,14 +13,15 @@
 	let currentPath = "initial"; // Tracks which question path we're on
 	let showResultScreen = false; // Whether to show custom result screen
 	let resultType = ""; // Type of result to show
+	let showContactPopup = false;
 
 	// The first question is common to all users
 	const initialQuestion = {
 		id: "user_type",
 		text: "Which best describes you?",
 		options: [
-			"Business owner / Startup founder",
-			"Developer or AI engineer", 
+			"Business owner or founder",
+			"Developer or professional engineer", 
 			"Student or just getting started with AI agents"
 		]
 	};
@@ -32,8 +34,8 @@
 				id: "developer_need",
 				text: "Are you primarily interested in optimizing your agents or connecting with other developers?",
 				options: [
+					"I am looking for community resources",
 					"I am looking for tools to optimize my agents",
-					"I am looking for community and learning resources",
 				]
 			}
 		],
@@ -54,19 +56,19 @@
 	// Result screen content based on user path and answers
 	const resultScreens = {
 		student: {
-			heading: "Start with Agent Alchemy",
+			heading: "Start with our support network",
 			subtitle: "It sounds like our support network is the right starting point for you.",
-			description: "This will show you everything you need to know to get started with building and monetizing AI agents — from basic concepts to practical implementation, best practices, and working with the latest tools.",
-			cta: "Connect with other developers in our community and build your skills from scratch — no prior experience required.",
+			description: "This will show you everything you need to know to get started with building and monetizing AI agents, from basic concepts to practical implementations, best practices, and working with the latest tools.",
+			cta: "Connect with other developers in our community and build your skills from scratch. No prior experience required.",
 			buttonText: "Join Now",
 			destination: "https://network.auriel.tech",
 			newTab: true
 		},
 		developer_tools: {
-			heading: "Optimize with our open-source devtools",
+			heading: "Checkout our open-source devtools",
 			subtitle: "Our observability devtools are designed for developers just like you.",
 			description: "We build specialized tooling to help you build better, more efficient, and more reliable AI agents with powerful observability and debugging capabilities.",
-			cta: "Leverage our advanced observability tools to monitor, debug, and optimize your AI agents for peak performance.",
+			cta: "Leverage these tools to monitor, debug, and optimize your AI agents for peak performance.",
 			buttonText: "Explore Our Devtools",
 			destination: "/projects",
 			newTab: false
@@ -74,27 +76,27 @@
 		developer_community: {
 			heading: "Join our developer support network",
 			subtitle: "Learn, share, and grow with other developers building with AI.",
-			description: "Our community platform gives you access to best practices, code examples, and discussions with peers who are building cutting-edge AI agents.",
+			description: "Our support network gives you access to best practices, code examples, and discussions with peers who are building cutting-edge AI agents.",
 			cta: "Exchange ideas with experienced developers and stay on top of the latest techniques and approaches in development.",
-			buttonText: "Join Agent Alchemy",
+			buttonText: "Join Now",
 			destination: "https://network.auriel.tech",
 			newTab: true
 		},
 		business_development: {
-			heading: "Transform Your Business with Custom AI Agents",
+			heading: "Automate Workflows in Weeks Not Quarters",
 			subtitle: "Auriel helps select companies build AI Agents that cut costs, boost revenue, and streamline processes.",
-			description: "Send us a job posting and we will build a custom agent for it. Instead of an employee working 40 hours per week, we'll build your team a custom one-time investment AI Agent that works 24/7/365.",
-			cta: "Schedule a call and tell us about your idea.",
-			buttonText: "Schedule a Call",
+			description: "Tell us your idea or send us a job posting and we will build a custom agent for it. Instead of an employee working 40 hours per week, we'll build you a custom AI Agent that works 24/7/365.",
+			cta: "",
+			buttonText: "Tell us about your idea",
 			destination: "/enquire",
 			newTab: false
 		},
 		business_community: {
 			heading: "Connect with other founders building with AI",
-			subtitle: "Access a network of vetted startup founders building AI agents and LLM application.",
-			description: "Our founder support network provides networking opportunities, learning resources, and direct access to AI expertise building products on the cutting edge.",
-			cta: "Stay ahead of the curve by connecting with others who are implementing AI solutions in tangential contexts.",
-			buttonText: "Join Agent Alchemy",
+			subtitle: "Access a network of vetted startup founders building AI agents and LLM applications.",
+			description: "Our support network provides networking opportunities, learning resources, and direct access to experts building cutting edge products.",
+			cta: "Stay ahead of the curve by connecting with others who are the next generation of applications.",
+			buttonText: "Join Now",
 			destination: "https://network.auriel.tech",
 			newTab: true
 		}
@@ -123,9 +125,9 @@
 				resultType = "student";
 				currentResult = resultScreens.student;
 				showResultScreen = true;
-			} else if (option === "Developer or AI engineer") {
+			} else if (option === "Developer or professional engineer") {
 				currentPath = "developer";
-			} else if (option === "Business owner / Startup founder") {
+			} else if (option === "Business owner or founder") {
 				currentPath = "business";
 			}
 			
@@ -170,11 +172,17 @@
 	}
 
 	function handleCTA() {
-		if (currentResult.newTab) {
+		if (resultType === 'business_development') {
+			showContactPopup = true;
+		} else if (currentResult.newTab) {
 			window.open(currentResult.destination, '_blank');
 		} else {
 			goto(currentResult.destination);
 		}
+	}
+
+	function handleClosePopup() {
+		showContactPopup = false;
 	}
 
 	// Handle keyboard shortcuts
@@ -214,7 +222,7 @@
 				<div class="animate-ping absolute inset-0 bg-neutral-300 opacity-30 rounded-full"></div>
 				<div class="relative rounded-full w-12 h-12 border-2 border-t-neutral-900 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
 			</div>
-			<div class="text-neutral-700 text-sm mt-10">Loading...</div>
+			<div class="text-neutral-500 font-light text-sm mt-10">Loading...</div>
 		</div>
 	{:else}
 		{#if contentVisible}
@@ -230,13 +238,13 @@
 			<div class="max-w-3xl flex flex-col items-start text-left">
 				{#if contentVisible}
 					<h1 
-						class="text-3xl font-sans font-semibold mb-5 text-neutral-900"
+						class="text-3xl font-sans font-medium mb-5 text-neutral-900"
 						in:fly={{ y: 20, duration: 700, delay: 200 }}
 					>
 						Need a hand finding your way around?
 					</h1>
 					<p 
-						class="text-neutral-700 text-lg mb-5 font-sans"
+						class="text-neutral-700 text-lg mb-5 font-light"
 						in:fly={{ y: 20, duration: 700, delay: 400 }}
 					>
 						Answer two quick questions, and we'll instantly direct you to the right resources.
@@ -246,7 +254,7 @@
 						in:fly={{ y: 20, duration: 700, delay: 600 }}
 					>
 						<button 
-							class="bg-neutral-900 text-white font-medium py-2 px-4 border border-neutral-900 hover:bg-neutral-800 hover:border-neutral-800 transition-all duration-200 rounded-md font-sans"
+							class="bg-white text-neutral-900 font-medium py-2 px-4 border border-neutral-700 hover:bg-neutral-100 hover:border-neutral-800 transition-all duration-200 rounded-md font-sans"
 							on:click={handleStart}
 						>
 							Start
@@ -254,7 +262,7 @@
 						<span class="text-xs text-neutral-500 ml-3">press Enter ↵</span>
 					</div>
 					<div 
-						class="flex items-center mt-5 text-xs text-neutral-500"
+						class="flex items-center mt-5 text-xs text-neutral-400"
 						in:fade={{ duration: 700, delay: 800 }}
 					>
 						<svg class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -270,33 +278,33 @@
 			<div class="max-w-3xl" in:fade={{ duration: 300 }}>
 				<div class="flex flex-col items-start text-left">
 					<h1 
-						class="text-3xl font-sans font-semibold mb-6 text-neutral-900" 
+						class="text-2xl font-sans font-medium mb-5 text-neutral-800" 
 						in:fly={{ y: 20, duration: 700 }}
 					>
 						{currentResult.heading}
 					</h1>
 					<p 
-						class="text-lg mb-8 text-neutral-700 font-sans" 
+						class="text-md mb-8 text-neutral-700 font-light" 
 						in:fly={{ y: 20, duration: 700, delay: 200 }}
 					>
 						{currentResult.subtitle}
 					</p>
 					<p 
-						class="text-md mb-8 text-neutral-700 font-sans" 
-						in:fly={{ y: 20, duration: 700, delay: 300 }}
+					class="text-md mb-8 text-neutral-700 font-light" 
+					in:fly={{ y: 20, duration: 700, delay: 300 }}
 					>
 						{currentResult.description}
 					</p>
 					<p 
-						class="text-md mb-12 text-neutral-500 font-medium font-sans" 
-						in:fly={{ y: 20, duration: 700, delay: 400 }}
+					class="text-md mb-8 text-neutral-700 font-light" 
+					in:fly={{ y: 20, duration: 700, delay: 400 }}
 					>
 						{currentResult.cta}
 					</p>
 					<div class="flex items-center" in:fly={{ y: 20, duration: 700, delay: 500 }}>
 						<button 
-							class="bg-neutral-900 text-white font-medium py-3 px-8 rounded-md hover:bg-neutral-800 transition-all duration-300 font-sans"
-							on:click={handleCTA}
+						class="bg-white text-neutral-900 font-medium py-2 px-4 border border-neutral-700 hover:bg-neutral-100 hover:border-neutral-800 transition-all duration-200 rounded-md font-sans"
+						on:click={handleCTA}
 						>
 							{currentResult.buttonText}
 						</button>
@@ -310,7 +318,7 @@
 				{#key currentQuestion.id}
 					<div class="flex flex-col">
 						<h2 
-							class="text-2xl font-sans font-light text-left mb-10 text-neutral-900"
+							class="text-2xl font-normal text-left mb-8 text-neutral-900"
 							in:fly={{ y: -20, duration: 400 }}
 						>
 							{currentQuestion.text}
@@ -318,7 +326,7 @@
 						<div class="flex flex-col gap-3">
 							{#each currentQuestion.options as option, i}
 								<button 
-									class="bg-white hover:bg-neutral-100 text-neutral-900 text-left font-sans font-light py-3 px-6 border border-neutral-200 hover:border-neutral-300 transition-all duration-200 rounded-md"
+									class="bg-white hover:bg-neutral-100 text-neutral-900 text-left font-light py-3 px-6 border border-neutral-200 hover:border-neutral-300 transition-all duration-200 rounded-lg"
 									on:click={() => handleAnswer(option)}
 									in:fly={{ y: 20, duration: 400, delay: 100 + (i * 100) }}
 								>
@@ -331,4 +339,10 @@
 			</div>
 		{/if}
 	{/if}
-</div> 
+</div>
+
+<ContactPopup 
+	isOpen={showContactPopup} 
+	onClose={handleClosePopup}
+	formId="lyjf2sfh"
+/> 
