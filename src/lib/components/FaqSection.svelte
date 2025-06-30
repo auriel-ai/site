@@ -25,52 +25,54 @@
   }
 </script>
 
-<div class="w-full max-w-7xl mx-auto my-24 rounded-2xl overflow-hidden bg-white shadow flex flex-col md:flex-row items-stretch">
-  <!-- Left: SVG background, fills column -->
-  <div class="relative flex-1 min-h-[340px] md:min-h-[440px]">
-    <img src="/gggrain.svg" alt="" class="absolute inset-0 w-full h-full object-cover" />
-  </div>
-  <!-- Right: Custom FAQ Accordion -->
-  <div class="flex-1 p-4 sm:p-20 flex flex-col justify-center">
-    <h2 class="text-3xl font-normal mb-10 text-neutral-700">Questions? Answered.</h2>
-    <div class="space-y-2">
-      {#each faqs as faq, i}
-        <div
-          class="border-b border-neutral-200 cursor-pointer select-none px-0 sm:px-2"
-          on:click={() => toggle(i)}
-          tabindex="0"
-          on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggle(i)}
-          aria-expanded={openIndex === i}
-          aria-controls={`faq-answer-${i}`}
-        >
-          <div class="flex items-center justify-between py-5">
-            <span class="font-normal text-neutral-700 text-lg">{faq.question}</span>
-            <span class="ml-4 flex items-center justify-center">
-              <svg
-                class="w-5 h-5 text-neutral-900 transition-transform duration-200"
-                style="transform: rotate({openIndex === i ? 45 : 0}deg);"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-              </svg>
-            </span>
-          </div>
-          {#if openIndex === i}
-            <div
-              class="text-neutral-500 text-md font-light pb-5 pl-0 sm:pl-1 pr-8"
-              id={`faq-answer-${i}`}
-              transition:slide
-            >
-              {faq.answer}
+<div class="w-full max-w-7xl mx-auto my-24 px-4">
+  <div class="rounded-2xl overflow-hidden bg-white shadow flex flex-col md:flex-row items-stretch">
+    <!-- Left: SVG background, fills column -->
+    <div class="relative flex-1 min-h-[340px] md:min-h-[440px]">
+      <img src="/gggrain.svg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    </div>
+    <!-- Right: Custom FAQ Accordion -->
+    <div class="flex-1 px-6 py-10 md:p-20 flex flex-col justify-center">
+      <h2 class="text-2xl md:text-3xl font-normal mb-10 text-neutral-700">Questions? Answered.</h2>
+      <div class="space-y-2">
+        {#each faqs as faq, i}
+          <div
+            class="border-b border-neutral-200 cursor-pointer select-none px-0 md:px-2"
+            on:click={() => toggle(i)}
+            tabindex="0"
+            on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggle(i)}
+            aria-expanded={openIndex === i}
+            aria-controls={`faq-answer-${i}`}
+          >
+            <div class="flex items-center justify-between py-5">
+              <span class="font-normal text-neutral-700 text-lg">{faq.question}</span>
+              <span class="ml-4 flex items-center justify-center">
+                <svg
+                  class="w-5 h-5 text-neutral-900 transition-transform duration-200"
+                  style="transform: rotate({openIndex === i ? 45 : 0}deg);"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
             </div>
-          {/if}
-        </div>
-      {/each}
+            {#if openIndex === i}
+              <div
+                class="text-neutral-500 text-md font-light pb-5 pl-0 md:pl-1 pr-4 md:pr-8"
+                id={`faq-answer-${i}`}
+                transition:slide
+              >
+                {faq.answer}
+              </div>
+            {/if}
+          </div>
+        {/each}
+      </div>
     </div>
   </div>
 </div> 

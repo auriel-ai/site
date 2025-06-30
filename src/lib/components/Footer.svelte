@@ -40,14 +40,14 @@
 		in:fly={{ y: 50, duration: 800 }}
 		class="bg-white border-t border-neutral-100 text-neutral-700 py-8"
 	>
-		<div class="container mx-auto max-w-7xl px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+		<div class="container mx-auto max-w-7xl px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-y-4">
 			<!-- Left: Logo and company info -->
-			<div class="flex items-center gap-3">
+			<div class="flex items-center gap-3 justify-center">
 				<LogoIcon size="w-6 h-6" class_="stroke-neutral-700" />
-				<span class="text-xs">Auriel Analytics Ltd. 11502141. All rights reserved.</span>
+				<span class="text-xs text-center">Auriel Analytics Ltd. 11502141. All rights reserved.</span>
 			</div>
 			<!-- Right: Links -->
-			<div class="flex gap-6 text-xs items-center">
+			<div class="flex gap-6 text-xs items-center justify-center">
 				<a
 					href="/terms"
 					class="relative text-neutral-700 hover:text-black transition-colors duration-200 group no-underline"

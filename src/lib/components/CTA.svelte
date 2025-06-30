@@ -12,13 +12,13 @@
 />
 
 <section class="w-full bg-neutral-50 my-20">
-  <div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="text-center space-y-12 mb-12 max-w-2xl mx-auto">
-      <p class="text-lg text-neutral-400 font-light font-orbitron tracking-wide">READY TO SCALE</p>
-      <h2 class="text-5xl font-light mb-2 text-neutral-900 leading-snug">Transform Any Job Posting Into a 24/7 AI Agent</h2>
-      <p class="text-neutral-600 text-lg font-light">Stop hiring for repetitive tasks. Send us a job posting and we'll build a custom AI agent that works around the clock, never takes breaks, and scales instantly.</p>
+      <p class="text-base md:text-lg text-neutral-400 font-light font-orbitron tracking-wide">READY TO SCALE</p>
+      <h2 class="text-3xl md:text-5xl font-light mb-2 text-neutral-900 leading-snug px-2 md:px-0">Transform Any Job Posting Into a 24/7 AI Agent</h2>
+      <p class="text-base md:text-lg text-neutral-600 font-light">Stop hiring for repetitive tasks. Send us a job posting and we'll build a custom AI agent that works around the clock, never takes breaks, and scales instantly.</p>
     </div>
-    <div class="flex justify-center gap-2 mb-40 flex-wrap">
+    <div class="flex justify-center gap-2 mb-20 md:mb-40 flex-wrap">
       <button 
         on:click={() => isPopupOpen = true}
         class="bg-white border-neutral-300 text-neutral-900 px-6 py-3 rounded-full transition text-sm focus:outline-none flex items-center gap-2 hover:bg-neutral-50 hover:border-neutral-400">

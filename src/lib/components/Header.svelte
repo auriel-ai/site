@@ -2,7 +2,7 @@
   // Imports
   import Logo from './Logo.svelte';
   import LogoIcon from './LogoIcon.svelte';
-  import { Plus, X, ArrowRight } from 'lucide-svelte';
+  import { Menu, X, ArrowRight } from 'lucide-svelte';
   import { fade, fly } from 'svelte/transition';
   import ContactPopup from './ContactPopup.svelte';
 
@@ -35,16 +35,22 @@
 />
 
 <!-- HEADER -->
-<header class="py-12 bg-[#f7f9f8] backdrop-blur-md">
-  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative">
+<header 
+  class="py-10 md:py-12 z-40 relative"
+  class:bg-[#f7f9f8]={!isMobileMenuOpen}
+  class:backdrop-blur-md={!isMobileMenuOpen}
+>
+  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-4">
     
     <!-- Logo (Left) -->
-    <div class="absolute left-0 top-1/2 -translate-y-1/2 z-50">
-      {#if isMobileMenuOpen}
-        <LogoIcon size="w-8 h-8" class_="stroke-black" />
-      {:else}
-        <Logo />
-      {/if}
+    <div class="flex-shrink-0 z-50">
+      <a href="/" aria-label="Home">
+        {#if isMobileMenuOpen}
+          <LogoIcon size="w-8 h-8" class_="stroke-black" />
+        {:else}
+          <Logo />
+        {/if}
+      </a>
     </div>
 
     <!-- Nav Links (Center, Desktop) -->
@@ -65,30 +71,36 @@
       </button>
     </div>
 
-    <!-- CTA (Right) -->
-    <div class="ml-auto">
-      <button 
-        on:click={() => openPopup('lyjf2sfh')}
-        class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-full border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
-        Request A Project
-        <ArrowRight size={18} class="ml-1" />
+    <!-- Right-side container -->
+    <div class="flex items-center gap-4">
+      <!-- CTA (Right) -->
+      <div class="hidden lg:block">
+        <button 
+          on:click={() => openPopup('lyjf2sfh')}
+          class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-full border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
+          Request A Project
+          <ArrowRight size={18} class="ml-1" />
+        </button>
+      </div>
+
+      <!-- Mobile Menu Trigger (Right) -->
+      <button
+        class="lg:hidden p-2 z-50 text-neutral-800"
+        on:click={() => isMobileMenuOpen = !isMobileMenuOpen}
+        aria-label="Toggle menu"
+        aria-expanded={isMobileMenuOpen}
+      >
+        {#if isMobileMenuOpen}
+          <div in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
+            <X size={24} />
+          </div>
+        {:else}
+          <div in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
+            <Menu size={24} />
+          </div>
+        {/if}
       </button>
     </div>
-
-    <!-- Mobile Menu Trigger (Right) -->
-    <button
-      class="lg:hidden w-10 h-10 rounded-full border border-neutral-300 ml-auto flex items-center justify-center bg-white transition-all"
-      on:click={() => isMobileMenuOpen = !isMobileMenuOpen}
-    >
-      <div class="relative w-5 h-5">
-        <div class="absolute inset-0 transition-opacity duration-300" class:opacity-0={isMobileMenuOpen}>
-          <Plus size={20} class="text-gray-500" />
-        </div>
-        <div class="absolute inset-0 transition-opacity duration-300" class:opacity-0={!isMobileMenuOpen}>
-          <X size={20} class="text-black" />
-        </div>
-      </div>
-    </button>
   </nav>
 </header>
 
