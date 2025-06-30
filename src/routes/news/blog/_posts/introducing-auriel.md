@@ -3,6 +3,7 @@ title: Introducing Auriel Analytics
 date: May 8, 2023
 author: Jack Dolby
 featured: true
+description: A suite of open-source developer tools designed to bring clarity and control to LLM applications and AI agents.
 ---
 
 # Introducing Auriel: Building in the Age of AI

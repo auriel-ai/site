@@ -9,6 +9,8 @@ export interface Article {
   featured?: boolean;
   url?: string; // External URL for press mentions
   company?: string; // For case studies
+  description?: string; // Short description of the article
+  readingTime?: string; // Estimated reading time
 }
 
 // Collection of all articles

@@ -126,7 +126,7 @@
 
 <div
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-6xl px-4 py-16"
+  class="container mx-auto max-w-7xl py-16"
 >
   <!-- Project Card Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-24">
