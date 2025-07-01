@@ -87,20 +87,16 @@
 
       <!-- Mobile Menu Trigger (Right) -->
       <button
-        class="lg:hidden p-2 z-50 text-neutral-800"
+        class="lg:hidden p-2 z-50 text-neutral-800 relative w-[24px] h-[24px]"
         on:click={() => isMobileMenuOpen = !isMobileMenuOpen}
         aria-label="Toggle menu"
         aria-expanded={isMobileMenuOpen}
       >
-        {#if isMobileMenuOpen}
-          <div in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
-            <X size={24} />
-          </div>
-        {:else}
-          <div in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
-            <Menu size={24} />
-          </div>
-        {/if}
+        <div class="hamburger-menu">
+          <span class="line line-1" class:open={isMobileMenuOpen}></span>
+          <span class="line line-2" class:open={isMobileMenuOpen}></span>
+          <span class="line line-3" class:open={isMobileMenuOpen}></span>
+        </div>
       </button>
     </div>
   </nav>
@@ -135,3 +131,48 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .hamburger-menu {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .line {
+    width: 24px;
+    height: 2px;
+    background-color: #171717;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-1 {
+    transform: translateY(-8px);
+  }
+
+  .line-2 {
+    opacity: 1;
+  }
+
+  .line-3 {
+    transform: translateY(8px);
+  }
+
+  .line-1.open {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .line-2.open {
+    opacity: 0;
+  }
+
+  .line-3.open {
+    transform: translateY(0) rotate(-45deg);
+  }
+</style>
