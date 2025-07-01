@@ -1,5 +1,6 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import { ArrowUpRight } from 'lucide-svelte';
   import AgentArchitectureDiagram from './AgentArchitectureDiagram.svelte';
   const agentTypes = [
     {
@@ -64,14 +65,21 @@
         {#if current && visibleKey === current.key}
           <h3 class="text-2xl md:text-3xl font-regular mb-10 text-neutral-800">{current.label}</h3>
           <p class="text-base md:text-lg text-neutral-600 font-light mb-10">{current.description}</p>
-          <ul class="space-y-2">
+          <ul class="space-y-2 mb-8">
             {#each current.features as feature}
-              <li class="flex items-start gap-2 text-neutral-600 text-base md:text-lg font-light">
+              <li class="flex items-start gap-2 text-neutral-600 text-base md:text-md font-light">
                 <svg class="w-5 h-5 text-green-500 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 <span>{feature}</span>
               </li>
             {/each}
           </ul>
+          <a 
+            href="/news/blog/agent-architectures" 
+            class="px-2 inline-flex items-center gap-2 text-neutral-700 hover:text-neutral-900 font-medium text-sm transition-colors duration-200"
+          >
+            Learn more
+            <ArrowUpRight class="w-4 h-4" />
+          </a>
         {/if}
       </div>
       <div class="flex-1 min-w-[220px] relative p-8 md:p-12 flex items-center justify-center">

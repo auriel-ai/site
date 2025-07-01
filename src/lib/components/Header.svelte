@@ -95,7 +95,7 @@
 
       <!-- Mobile Menu Trigger (Right) -->
       <button
-        class="lg:hidden p-2 z-50 text-neutral-800 relative w-[24px] h-[24px]"
+        class="lg:hidden p-2 mx-3 z-50 text-neutral-800 relative w-[24px] h-[24px]"
         on:click={() => isMobileMenuOpen = !isMobileMenuOpen}
         aria-label="Toggle menu"
         aria-expanded={isMobileMenuOpen}
