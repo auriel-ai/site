@@ -29,6 +29,14 @@
       handleNavClick();
     }
   }
+
+  $: {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }
 </script>
 
 <!-- Contact Popup -->
@@ -104,29 +112,35 @@
 
 <!-- MOBILE NAVIGATION MENU -->
 {#if isMobileMenuOpen}
-  <div class="fixed inset-0 z-30 bg-[#f7f9f8]/95 backdrop-blur-md pt-5 pointer-events-auto" transition:fly={{ y: -100, duration: 300 }}>
-    <div class="container mx-auto px-6 py-20">
-      <div class="flex flex-col gap-6">
-        <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
-          Projects
-        </a>
-        <a href="https://network.auriel.tech" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
-          Network
-        </a>
-        <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
-          News
-        </a>
-        <button 
-          on:click={() => openPopup('sb7xbw2f')}
-          class="text-left w-full text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors cursor-pointer">
-          Contact
-        </button>
-        <button 
-          on:click={() => openPopup('lyjf2sfh')}
-          class="bg-white text-neutral-900 font-normal py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 mt-4 text-center flex items-center justify-center gap-2">
-          Request Project
-          <ArrowRight size={18} class="ml-1" />
-        </button>
+  <div 
+    class="fixed inset-0 z-30 bg-[#f7f9f8]/95 backdrop-blur-md pointer-events-auto overflow-hidden" 
+    transition:fly={{ y: -100, duration: 300 }}
+    style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;"
+  >
+    <div class="h-full overflow-auto">
+      <div class="container mx-auto px-6 py-20">
+        <div class="flex flex-col gap-6">
+          <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+            Projects
+          </a>
+          <a href="https://network.auriel.tech" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+            Network
+          </a>
+          <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors">
+            News
+          </a>
+          <button 
+            on:click={() => openPopup('sb7xbw2f')}
+            class="text-left w-full text-neutral-900 hover:text-black font-normal tracking-wide text-lg py-4 border-b border-[#ececec] transition-colors cursor-pointer">
+            Contact
+          </button>
+          <button 
+            on:click={() => openPopup('lyjf2sfh')}
+            class="bg-white text-neutral-900 font-normal py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 mt-4 text-center flex items-center justify-center gap-2">
+            Request Project
+            <ArrowRight size={18} class="ml-1" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -174,5 +188,11 @@
 
   .line-3.open {
     transform: translateY(0) rotate(-45deg);
+  }
+
+  :global(body.menu-open) {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 </style>
