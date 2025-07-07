@@ -5,7 +5,7 @@
   import { Menu, X, ArrowRight } from 'lucide-svelte';
   import { fade, fly } from 'svelte/transition';
   import ContactPopup from './ContactPopup.svelte';
-  import { getContext } from 'svelte';
+  import { getContext, onMount } from 'svelte';
 
   // Get hideBackground from context, defaulting to false if not set
   const hideBackground = getContext('hideHeaderBackground') ?? false;
@@ -15,6 +15,19 @@
   let isMobileMenuOpen = false;
   let isMobileClairvoyanceOpen = false;
   let currentFormId = 'sb7xbw2f';
+  let hasScrolled = false;
+
+  // Scroll handler
+  function handleScroll() {
+    hasScrolled = window.scrollY > 10;
+  }
+
+  onMount(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 
   // Handlers
   function handleNavClick() {
@@ -48,10 +61,9 @@
 
 <!-- HEADER -->
 <header 
-  class="py-10 md:py-12 z-40"
+  class="sticky top-0 py-5 px-5 md:px-24 md:py-5 z-40 flex items-center"
 >
-  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-4 clickable">
-    
+  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-2 py-3 rounded-2xl clickable transition-colors duration-200 {hasScrolled ? 'bg-white shadow-sm' : ''}">
     <!-- Logo (Left) -->
     <div class="flex-shrink-0 z-50">
       <a href="/" aria-label="Home">
@@ -83,7 +95,7 @@
       <div class="hidden lg:block">
         <button 
           on:click={() => openPopup('lyjf2sfh')}
-          class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-full border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
+          class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
           Request A Project
           <ArrowRight size={18} class="ml-1" />
         </button>
@@ -91,7 +103,7 @@
 
       <!-- Mobile Menu Trigger (Right) -->
       <button
-        class="lg:hidden p-2 mx-3 z-50 text-neutral-800 relative w-[24px] h-[24px]"
+        class="lg:hidden flex items-center justify-center z-50 text-neutral-800 relative w-[24px] h-[24px] pr-8"
         on:click={() => isMobileMenuOpen = !isMobileMenuOpen}
         aria-label="Toggle menu"
         aria-expanded={isMobileMenuOpen}
@@ -109,12 +121,12 @@
 <!-- MOBILE NAVIGATION MENU -->
 {#if isMobileMenuOpen}
   <div 
-    class="fixed inset-0 z-20 bg-[#f7f9f8]/95 backdrop-blur-md pointer-events-auto overflow-hidden" 
+    class="fixed inset-0 z-20 bg-[#f7f9f8]/95 backdrop-blur-md pointer-events-auto" 
     transition:fly={{ y: -100, duration: 300 }}
     style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;"
   >
-    <div class="h-full overflow-auto">
-      <div class="container mx-auto px-6 pt-28 pb-5 h-full flex flex-col">
+    <div class="h-full overflow-y-auto">
+      <div class="container mx-auto px-6 pt-32 pb-5 h-full flex flex-col">
         <div class="flex flex-col gap-6 flex-grow">
           <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
             Projects
@@ -144,8 +156,8 @@
 
 <style>
   .hamburger-menu {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
