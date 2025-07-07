@@ -86,7 +86,7 @@
         <div class="absolute inset-0 z-0">
           <img src="/gggrain (1).svg" alt="" class="w-full h-full object-cover" />
         </div>
-        <div class="relative z-10 w-5/6 h-5/6 flex items-center justify-center">
+        <div class="relative z-10 w-full h-[300px] md:w-5/6 md:h-5/6 flex items-center justify-center">
           <AgentArchitectureDiagram type={selected as 'monolithic' | 'microagents' | 'workflows'} />
         </div>
       </div>

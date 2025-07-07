@@ -83,8 +83,7 @@
     <div class="flex max-w-lg">
       <button 
         on:click={() => isPopupOpen = true}
-        class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-full border border-neutral-200 hover:border-neutral-400 transition-all duration-300 flex items-center gap-2"
-      >
+        class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
         Request A Project
         <ArrowRight size={18} class="ml-1" />
       </button>

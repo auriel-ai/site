@@ -4,7 +4,7 @@
 
 {#if type === 'monolithic'}
   <!-- Redesigned Monolithic Agent SVG -->
-  <svg viewBox="0 0 420 210" height="100%" style="width:auto;display:block;margin:0 auto;" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 420 210" class="w-full h-full" style="max-height: 100%; display: block;" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <!-- Master Agent -->
     <rect x="135" y="20" width="150" height="48" rx="18" fill="#fffbe8" stroke="#fbbf24" stroke-width="2.5" filter="url(#shadow)"/>
     <text x="210" y="50" text-anchor="middle" font-size="18" font-weight="bold" fill="#b45309" font-family="'Orbitron', monospace">Master Agent</text>
@@ -30,7 +30,7 @@
   </svg>
 {:else if type === 'microagents'}
   <!-- Redesigned Microagents SVG -->
-  <svg viewBox="0 0 420 240" height="100%" style="width:auto;display:block;margin:0 auto;" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 420 240" class="w-full h-full" style="max-height: 100%; display: block;" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <!-- Master Agent -->
     <rect x="135" y="20" width="150" height="48" rx="18" fill="#fffbe8" stroke="#fbbf24" stroke-width="2.5" filter="url(#shadow)"/>
     <text x="210" y="50" text-anchor="middle" font-size="18" font-weight="bold" fill="#b45309" font-family="'Orbitron', monospace">Master Agent</text>
@@ -69,7 +69,7 @@
   </svg>
 {:else if type === 'workflows'}
   <!-- Redesigned Workflows SVG - V2 -->
-  <svg viewBox="0 0 420 220" height="100%" style="width:auto;display:block;margin:0 auto;" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 420 220" class="w-full h-full" style="max-height: 100%; display: block;" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <!-- Nodes -->
     <g filter="url(#shadow)">
       <rect x="20" y="30" width="120" height="52" rx="20" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>

@@ -21,7 +21,7 @@
     <div class="flex justify-center gap-2 mb-20 md:mb-40 flex-wrap">
       <button 
         on:click={() => isPopupOpen = true}
-        class="bg-white border-neutral-300 text-neutral-900 px-6 py-3 rounded-full transition text-sm focus:outline-none flex items-center gap-2 hover:bg-neutral-50 hover:border-neutral-400">
+        class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
         Request A Custom Agent
         <ArrowRight class="w-4 h-4"/>
       </button>
