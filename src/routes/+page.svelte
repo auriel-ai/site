@@ -33,7 +33,7 @@
           <div class="max-w-3xl relative z-10 flex flex-col items-center justify-center gap-8 py-20 md:py-28 w-full px-4 md:px-0">
             <h1 
               in:fly={{ y: 30, duration: 800, delay: 200 }}
-              class="text-4xl px-4 md:px-0 leading-normal md:text-6xl md:leading-tight tracking-wide text-white text-center font-orbitron"
+              class="text-4xl px-2 md:px-0 leading-normal md:text-6xl md:leading-tight tracking-wide text-white text-center font-orbitron"
             >
               Custom AI Agents That Work 24/7/365
             </h1>
