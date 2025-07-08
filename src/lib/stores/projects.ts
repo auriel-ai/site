@@ -9,7 +9,7 @@ export interface Project {
     width?: number;
     height?: number;
     darkMode?: string;
-    component?: 'propscan' | 'sam';
+    component?: 'propscan' | 'sam' | 'support-network';
     includesTitle?: boolean;
   };
   projectType: 'agent' | 'tool';
@@ -42,22 +42,43 @@ export const projects: Project[] = [
   {
     id: 'sam-agent',
     title: 'SAM',
-    description: 'An AI assistant for UK firefighters in training to help them ace their operational training phase.',
-    fullDescription: 'SAM helps British Fire andRescue Service trainees master skills, prepare for assessments, and build confidence throughout their operational training course. It provides specialized guidance on equipment, protocols, and study materials for any British Fire and Rescue Service.',
+    description:
+      'The future of enterprise learning. An AI-powered learning experience platform for modern teams.',
+    fullDescription:
+      "SAM is the future of enterprise learning and development. It's a personal AI tutor for enterprise-grade employee training and upskilling. SAM provides a modern learning experience for employers to onboard and train new hires, and help employees brush up on enterprise-level SOPs, compliance, and more.",
     capabilities: [
-      'Training protocol guidance',
-      'Equipment information',
-      'Study material assistance',
-      'Assessment preparation',
-      'Operational training support'
+      'Personalized AI Tutoring',
+      'Employee Onboarding',
+      'Corporate Training',
+      'Compliance & SOPs',
+      'Upskilling & Reskilling'
     ],
     logo: {
       component: 'sam',
-      includesTitle: true,
+      includesTitle: true
     },
-    categoryTags: ['Emergency Services', 'Training', 'Education'],
+    categoryTags: ['Enterprise', 'L&D', 'EdTech', 'AI'],
     projectType: 'agent',
     websiteUrl: 'https://samfire.uk',
+    githubUrl: undefined
+  },
+  {
+    id: 'raceai-telemetry',
+    title: 'RaceAI',
+    description:
+      'Enabling motorsport teams to monitor telemetry, predict failures, and optimize strategy.',
+    fullDescription:
+      'RaceAI provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, RaceAI uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing performance and competitiveness.',
+    capabilities: [
+      'Predictive Failure Detection',
+      'Real-Time Anomaly Alerts',
+      'AI Race Strategy Optimization',
+      'Telemetry Visualization',
+      'Hands-Free Voice Queries'
+    ],
+    categoryTags: ['Motorsport', 'Telemetry', 'Observability'],
+    projectType: 'agent',
+    websiteUrl: 'https://comingsoon.com',
     githubUrl: undefined
   },
   {
@@ -72,6 +93,10 @@ export const projects: Project[] = [
       'Networking with developers',
       'Monetization strategies'
     ],
+    logo: {
+      component: 'support-network',
+      includesTitle: true
+    },
     categoryTags: ['Community', 'Resources', 'Networking'],
     projectType: 'tool',
     websiteUrl: 'https://network.auriel.tech',

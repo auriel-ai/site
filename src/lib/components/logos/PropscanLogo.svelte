@@ -7,7 +7,7 @@
 
   <div class={`flex items-center gap-1 ${className}`}>
     {#if showText}
-      <span class="font-semibold text-black text-lg">
+      <span class="font-medium text-black text-lg">
         propscan
       </span>
     {/if}

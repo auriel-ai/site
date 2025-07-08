@@ -1,25 +1,15 @@
-<!-- src/lib/components/Logo.svelte -->
+<!-- src/lib/components/logos/SamLogo.svelte -->
 <script lang="ts">
-  // Props could be added later for size, color, etc.
+	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
+
+	const sizeStyles = {
+		sm: { text: 'text-3xl' },
+		md: { text: 'text-4xl' },
+		lg: { text: 'text-5xl' },
+		xl: { text: 'text-6xl' }
+	};
 </script>
 
-<div class="flex items-center gap-3">
-  <!-- Favicon as logo icon -->
-  <img 
-    src="/favicon.svg" 
-    alt="SAM Logo icon" 
-    class="w-6 h-6" 
-  />
-
-  <div class="flex items-center gap-1.5">
-    <span class="text-xl font-bold font-display text-white bg-red-600 px-1.5 py-0.5 rounded">
-      S
-    </span>
-    <span class="text-xl font-bold font-display text-white bg-red-600 px-1.5 py-0.5 rounded">
-      A
-    </span>
-    <span class="text-xl font-bold font-display text-white bg-red-600 px-1.5 py-0.5 rounded">
-      M
-    </span>
-  </div>
+<div class="flex items-center">
+	<span class="font-playwrite-au font-medium {sizeStyles[size].text}">Sam</span>
 </div> 

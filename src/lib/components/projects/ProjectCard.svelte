@@ -1,21 +1,10 @@
 <script lang="ts">
   import PropscanLogo from '$lib/components/logos/PropscanLogo.svelte';
   import SamLogo from '$lib/components/logos/SamLogo.svelte';
+  import SupportNetworkLogo from '$lib/components/logos/SupportNetworkLogo.svelte';
+  import type { Project } from '$lib/stores/projects';
   
-  export let project: {
-    id: string;
-    title: string;
-    description: string;
-    logo?: {
-      src?: string;
-      width?: number;
-      height?: number;
-      darkMode?: string;
-      component?: 'propscan' | 'sam';
-    };
-    projectType: 'agent' | 'tool';
-    categoryTags: string[];
-  };
+  export let project: Project;
   
   export let onClick: () => void;
 </script>
@@ -36,6 +25,8 @@
             <PropscanLogo showIcon={true} showText={true} className="h-8" />
           {:else if project.logo?.component === 'sam'}
             <SamLogo />
+          {:else if project.logo?.component === 'support-network'}
+            <SupportNetworkLogo />
           {:else if project.logo?.src}
             <img 
               src={project.logo.src}
@@ -47,7 +38,7 @@
             />
           {:else}
             <div class="h-8 flex items-center">
-              <span class="text-lg font-medium text-neutral-900">{project.title}</span>
+              <span class="text-lg font-orbitron font-medium text-neutral-900">{project.title}</span>
             </div>
           {/if}
         </div>
