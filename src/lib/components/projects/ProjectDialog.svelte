@@ -1,8 +1,9 @@
 <script lang="ts">
   import * as AlertDialog from "$lib/components/ui/alert-dialog";
   import { ExternalLink, Github, Star, X } from 'lucide-svelte';
-  import LogoIcon from '$lib/components/LogoIcon.svelte';
   import { onDestroy, setContext } from 'svelte';
+  import PropscanLogo from '$lib/components/logos/PropscanLogo.svelte';
+  import SamLogo from '$lib/components/logos/SamLogo.svelte';
   
   export let project: {
     id: string;
@@ -10,7 +11,14 @@
     description: string;
     fullDescription: string;
     capabilities: string[];
-    icon: string;
+    logo?: {
+      src?: string;
+      width?: number;
+      height?: number;
+      darkMode?: string;
+      component?: 'propscan' | 'sam';
+      includesTitle?: boolean; // Added this property
+    };
     projectType: 'agent' | 'tool';
     categoryTags: string[];
     websiteUrl?: string;
@@ -54,37 +62,50 @@
 
     <!-- Header Section -->
     <div class="p-8 md:p-10 bg-white/50 border-b border-neutral-200">
-      <div class="flex items-start gap-6">
-        <!-- Icon -->
-        <div class="bg-neutral-100 p-3 rounded-lg mt-1 flex-shrink-0">
-          {#if project.icon === 'logo'}
-            <LogoIcon size="w-10 h-10" class_="stroke-neutral-900" />
-          {:else if project.icon.startsWith('http')}
-            <img src={project.icon} alt="{project.title} icon" class="w-10 h-10 object-contain" />
-          {:else}
-            <span class="text-3xl">{project.icon}</span>
+      <div class="flex flex-col items-start gap-5">
+        <!-- Logo and Title Row -->
+        <div class="flex items-center gap-4">
+          {#if project.logo}
+            <div class="bg-neutral-100 px-2 rounded-lg flex-shrink-0">
+              {#if project.logo.component === 'propscan'}
+                <PropscanLogo showIcon={true} showText={true} className="h-10" />
+              {:else if project.logo.component === 'sam'}
+                <SamLogo />
+              {:else if project.logo.src}
+                <img 
+                  src={project.logo.src} 
+                  alt="{project.title} logo" 
+                  class="h-10 w-auto object-contain" 
+                />
+              {/if}
+            </div>
+          {/if}
+
+          <!-- Show title unless the logo component already includes it -->
+          {#if !project.logo?.includesTitle}
+            <h3 class="text-2xl font-semibold text-neutral-900">{project.title}</h3>
           {/if}
         </div>
-        <!-- Title, Tags, Links -->
-        <div class="flex-grow">
-          <AlertDialog.Title class="text-2xl font-semibold text-neutral-900 mb-3">{project.title}</AlertDialog.Title>
-          <!-- Tags/Subtitle -->
+
+        <!-- Tags and Links Container -->
+        <div class="w-full pl-1">
+           <!-- Tags -->
           <div class="flex flex-wrap items-center gap-2 mb-5">
             {#each project.categoryTags as tag}
                <span class="text-xs bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded font-medium border border-neutral-200">{tag}</span>
             {/each}
           </div>
            <!-- Links -->
-           <div class="flex flex-wrap items-center gap-4 text-sm text-neutral-500 mt-5">
+           <div class="flex flex-wrap items-center gap-4 text-sm text-neutral-500">
              {#if project.websiteUrl && project.websiteUrl !== '#'}
-               <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 hover:text-neutral-900 transition-colors">
+               <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-neutral-900 transition-colors">
                  <ExternalLink class="w-4 h-4" />
                  Visit Website
                </a>
              {/if}
              {#if project.githubUrl && project.githubUrl !== '#'}
                <div class="flex items-center gap-2">
-                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 hover:text-neutral-900 transition-colors">
+                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-neutral-900 transition-colors">
                    <Github class="w-4 h-4" />
                    GitHub
                  </a>
@@ -105,9 +126,9 @@
       </div>
     </div>
     <!-- Body Section -->
-    <div class="px-10 py-5 pb-20">
+    <div class="px-10 py-5 pb-10">
       <div class="max-w-none">
-        <p class="text-neutral-600 mb-8 font-light">{project.fullDescription}</p>
+        <p class="text-neutral-600 mb-8 font-light leading-relaxed text-sm">{project.fullDescription}</p>
         <h4 class="text-md font-medium text-neutral-900 mb-4">Capabilities</h4>
         <ul class="list-none p-0 space-y-2">
           {#each project.capabilities as capability}

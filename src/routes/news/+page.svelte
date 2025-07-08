@@ -17,14 +17,14 @@
 
 <div 
   in:fade={{ duration: 300, delay: 150 }}
-  class="container mx-auto max-w-7xl px-4 py-8 pb-40 md:pb-60"
+  class="container mx-auto max-w-7xl px-4 md:px-10 py-8 pb-40 md:pb-60"
 >
   <!-- Page Header -->
   <div class="mb-10 md:mb-12 space-y-4 md:space-y-5">
-    <h1 class="text-3xl md:text-4xl font-medium text-neutral-900 text-left">
+    <h1 class="text-4xl md:text-4xl font-semibold text-neutral-900 text-center md:text-left font-orbitron">
       News
     </h1>
-    <p class="text-base md:text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
+    <p class="text-center md:text-left text-base md:text-lg text-neutral-600 leading-relaxed max-w-2xl font-light">
       Compiled notes from the team
     </p>
   </div>

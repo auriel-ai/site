@@ -4,9 +4,16 @@ export interface Project {
   description: string;
   fullDescription: string;
   capabilities: string[];
-  icon: string;
-  categoryTags: string[];
+  logo?: {
+    src?: string;
+    width?: number;
+    height?: number;
+    darkMode?: string;
+    component?: 'propscan' | 'sam';
+    includesTitle?: boolean;
+  };
   projectType: 'agent' | 'tool';
+  categoryTags: string[];
   websiteUrl?: string;
   githubUrl?: string;
 }
@@ -15,15 +22,18 @@ export const projects: Project[] = [
   {
     id: 'propscan-agent', 
     title: 'Propscan',
-    description: 'An AI agent for property investors that aggregates data and analyzes profitability.',
-    fullDescription: 'Analyze deals faster with AI-powered analysis, without spending hours on manual research. Propscan offers intelligent property analysis at scale.',
+    description: 'The analytical AI assistant for property investors. Analyse any property deal in seconds.',
+    fullDescription: 'Propscan enables property investors to transform Rightmove listings into comprehensive investment reports in seconds. It instantly analyzes property data, market trends, and risk factors to provides investors a complete investment picture in one place. This way, hours of manual research and data aggregation can be automated by AI in seconds',
     capabilities: [
       'AI property analysis', 
       'Real estate deal screening', 
       'Automated research',
       'Market data integrations'
     ],
-    icon: 'https://propscan.uk/propscan-icon.svg',
+    logo: {
+      component: 'propscan',
+      includesTitle: true,
+    },
     categoryTags: ['Real Estate', 'Data', 'Analysis'],
     projectType: 'agent',
     websiteUrl: 'https://propscan.uk/',
@@ -33,7 +43,7 @@ export const projects: Project[] = [
     id: 'sam-agent',
     title: 'SAM',
     description: 'An AI assistant for UK firefighters in training to help them ace their operational training phase.',
-    fullDescription: 'SAM helps British Fire and Rescue Service trainees master skills, prepare for assessments, and build confidence throughout their operational training course. It provides specialized guidance on equipment, protocols, and study materials for any British Fire and Rescue Service.',
+    fullDescription: 'SAM helps British Fire andRescue Service trainees master skills, prepare for assessments, and build confidence throughout their operational training course. It provides specialized guidance on equipment, protocols, and study materials for any British Fire and Rescue Service.',
     capabilities: [
       'Training protocol guidance',
       'Equipment information',
@@ -41,7 +51,10 @@ export const projects: Project[] = [
       'Assessment preparation',
       'Operational training support'
     ],
-    icon: 'https://samfire.uk/favicon.svg',
+    logo: {
+      component: 'sam',
+      includesTitle: true,
+    },
     categoryTags: ['Emergency Services', 'Training', 'Education'],
     projectType: 'agent',
     websiteUrl: 'https://samfire.uk',
@@ -59,7 +72,6 @@ export const projects: Project[] = [
       'Networking with developers',
       'Monetization strategies'
     ],
-    icon: 'logo',
     categoryTags: ['Community', 'Resources', 'Networking'],
     projectType: 'tool',
     websiteUrl: 'https://network.auriel.tech',
@@ -77,7 +89,6 @@ export const projects: Project[] = [
       'Agent Debugging',
       'Performance Monitoring'
     ],
-    icon: '🔍',
     categoryTags: ['DevTools', 'Observability', 'Open Source'],
     projectType: 'tool',
     websiteUrl: undefined,

@@ -61,9 +61,9 @@
 
 <!-- HEADER -->
 <header 
-  class="sticky top-0 py-5 px-5 md:px-24 md:py-5 z-40 flex items-center"
+  class="sticky top-0 py-5 px-5 md:px-24 md:py-5 z-30 flex items-center {hideBackground ? 'pointer-events-none' : ''}"
 >
-  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-2 py-3 rounded-2xl clickable transition-colors duration-200 {hasScrolled ? 'bg-white shadow-sm' : ''}">
+  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-2 py-3 rounded-2xl clickable transition-colors duration-200 {hasScrolled && !hideBackground ? 'bg-white shadow-sm' : ''} {hideBackground ? 'opacity-0' : 'opacity-100'}">
     <!-- Logo (Left) -->
     <div class="flex-shrink-0 z-50">
       <a href="/" aria-label="Home">
@@ -76,11 +76,11 @@
       <a href="/projects" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
         <span>Projects</span>
       </a>
-      <a href="https://network.auriel.tech" class="nav-link text-neutral-700 hover:text-black font-noramal tracking-wide text-base relative group" target="_blank">
-        <span>Network</span>
-      </a>
       <a href="/news" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
         <span>News</span>
+      </a>
+      <a href="https://network.auriel.tech" class="nav-link text-neutral-700 hover:text-black font-noramal tracking-wide text-base relative group" target="_blank">
+        <span>Network</span>
       </a>
       <button 
         on:click={() => openPopup('sb7xbw2f')}
@@ -131,11 +131,11 @@
           <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
             Projects
           </a>
-          <a href="https://network.auriel.tech" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
-            Network
-          </a>
           <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
             News
+          </a>
+          <a href="https://network.auriel.tech" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
+            Network
           </a>
           <button 
             on:click={() => openPopup('sb7xbw2f')}

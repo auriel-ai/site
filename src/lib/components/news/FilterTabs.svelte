@@ -6,7 +6,7 @@
   const categories: ('All' | ArticleCategory)[] = ['All', 'Blog', 'Press', 'Case Study'];
 </script>
 
-<div class="flex justify-start gap-3 mt-5 mb-2">
+<div class="flex justify-center md:justify-start gap-3 mt-5 mb-2">
   {#each categories as category}
     <button 
       class="text-sm px-4 py-2 rounded-full border border-neutral-200 bg-white text-neutral-700 font-medium transition-colors focus:outline-none {selectedCategory === category ? 'ring-1 ring-neutral-800' : 'hover:bg-neutral-100'}"

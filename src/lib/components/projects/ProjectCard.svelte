@@ -1,11 +1,18 @@
 <script lang="ts">
-  import LogoIcon from '$lib/components/LogoIcon.svelte';
+  import PropscanLogo from '$lib/components/logos/PropscanLogo.svelte';
+  import SamLogo from '$lib/components/logos/SamLogo.svelte';
   
   export let project: {
     id: string;
     title: string;
     description: string;
-    icon: string;
+    logo?: {
+      src?: string;
+      width?: number;
+      height?: number;
+      darkMode?: string;
+      component?: 'propscan' | 'sam';
+    };
     projectType: 'agent' | 'tool';
     categoryTags: string[];
   };
@@ -24,14 +31,23 @@
   <div class="flex flex-col h-full">
     <div class="flex-grow space-y-6">
       <div class="flex justify-between items-start">
-        <div class="bg-neutral-100 p-4 rounded-xl group-hover:bg-neutral-200 transition-all">
-          {#if project.icon === 'logo'}
-            <LogoIcon size="w-10 h-10" class_="stroke-neutral-900" />
-          {:else if project.icon.startsWith('http')}
-            <img src={project.icon} alt="" aria-hidden="true" class="w-10 h-10 object-contain" /> 
+        <div class="p-4 rounded-xl">
+          {#if project.logo?.component === 'propscan'}
+            <PropscanLogo showIcon={true} showText={true} className="h-8" />
+          {:else if project.logo?.component === 'sam'}
+            <SamLogo />
+          {:else if project.logo?.src}
+            <img 
+              src={project.logo.src}
+              alt={`${project.title} logo`}
+              width={project.logo.width} 
+              height={project.logo.height}
+              class="h-8 w-auto object-contain" 
+              loading="lazy"
+            />
           {:else}
-            <div class="w-10 h-10 bg-gradient-to-br from-neutral-900 to-neutral-700 rounded-lg flex items-center justify-center">
-              <span class="text-2xl text-white font-medium" aria-hidden="true">{project.icon[0].toUpperCase()}</span>
+            <div class="h-8 flex items-center">
+              <span class="text-lg font-medium text-neutral-900">{project.title}</span>
             </div>
           {/if}
         </div>
@@ -43,10 +59,6 @@
           {project.projectType[0].toUpperCase() + project.projectType.slice(1)}
         </span>
       </div>
-      
-      <h3 class="text-xl font-medium text-neutral-900 group-hover:text-neutral-700">
-        {project.title}
-      </h3>
       
       <p class="text-neutral-700 text-sm font-light line-clamp-2">
         {project.description}
