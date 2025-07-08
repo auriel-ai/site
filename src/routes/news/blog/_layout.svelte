@@ -53,13 +53,13 @@
     <div class="text-neutral-400 text-sm tracking-wide font-mono">{date}</div>
 
     <!-- Title -->
-    <h1 class="text-5xl font-semibold text-neutral-900 tracking-tight leading-tight">
+    <h1 class="text-4xl md:text-5xl font-semibold text-neutral-900 tracking-tight leading-tight">
       {title}
     </h1>
 
     <!-- Description -->
     {#if description}
-      <p class="text-md text-neutral-600 font-light leading-relaxed max-w-3xl">
+      <p class="text-sm text-neutral-600 font-light leading-relaxed max-w-3xl">
         {description}
       </p>
     {/if}
