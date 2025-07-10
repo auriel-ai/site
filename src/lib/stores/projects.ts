@@ -9,7 +9,7 @@ export interface Project {
     width?: number;
     height?: number;
     darkMode?: string;
-    component?: 'propscan' | 'sam' | 'support-network';
+    component?: 'propscan' | 'sam' | 'support-network' | 'pulse';
     includesTitle?: boolean;
   };
   projectType: 'agent' | 'tool';
@@ -63,12 +63,12 @@ export const projects: Project[] = [
     githubUrl: undefined
   },
   {
-    id: 'raceai-telemetry',
-    title: 'RaceAI',
+    id: 'pulse',
+    title: 'Pulse',
     description:
-      'Enabling motorsport teams to monitor telemetry, predict failures, and optimize strategy.',
+      'Pulse is an AI-powered observability platform for motorsport teams to monitor telemetry, predict failures, and optimize race strategy.',
     fullDescription:
-      'RaceAI provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, RaceAI uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing performance and competitiveness.',
+      'Pulse provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, Pulse uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing team performance and competitiveness.',
     capabilities: [
       'Predictive Failure Detection',
       'Real-Time Anomaly Alerts',
@@ -76,9 +76,13 @@ export const projects: Project[] = [
       'Telemetry Visualization',
       'Hands-Free Voice Queries'
     ],
+    logo: {
+      component: 'pulse',
+      includesTitle: true
+    },
     categoryTags: ['Motorsport', 'Telemetry', 'Observability'],
     projectType: 'agent',
-    websiteUrl: 'https://comingsoon.com',
+    websiteUrl: undefined,
     githubUrl: undefined
   },
   {

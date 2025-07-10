@@ -5,6 +5,7 @@
 	import PropscanLogo from '$lib/components/logos/PropscanLogo.svelte';
 	import SamLogo from '$lib/components/logos/SamLogo.svelte';
 	import SupportNetworkLogo from '$lib/components/logos/SupportNetworkLogo.svelte';
+	import PulseLogo from '$lib/components/logos/PulseLogo.svelte';
 	import type { Project } from '$lib/stores/projects';
 
 	export let project: Project;
@@ -59,6 +60,10 @@
 								<SamLogo />
 							{:else if project.logo.component === 'support-network'}
 								<SupportNetworkLogo />
+							{:else if project.logo.component === 'pulse'}
+								<div class="bg-neutral-900 rounded-lg px-3 py-2">
+									<PulseLogo size="md" />
+								</div>
 							{:else if project.logo.src}
 								<img
 									src={project.logo.src}
