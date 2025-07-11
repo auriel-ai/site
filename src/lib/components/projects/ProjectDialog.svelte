@@ -48,7 +48,7 @@
 		</button>
 
 		<!-- Header Section -->
-		<div class="p-8 md:p-10 bg-white/50 border-b border-neutral-200">
+		<div class="p-8 md:py-6 md:px-10 bg-white/50 border-b border-neutral-200">
 			<div class="flex flex-col items-start gap-5">
 				<!-- Logo and Title Row -->
 				<div class="flex items-center gap-4">
@@ -135,29 +135,38 @@
 		</div>
 		<!-- Body Section -->
 		<div class="px-10 py-5 pb-10">
-			<div class="max-w-none">
-				<p class="text-neutral-600 mb-8 font-light leading-relaxed text-sm">
-					{project.fullDescription}
-				</p>
-				<h4 class="text-md font-medium text-neutral-900 mb-4">Capabilities</h4>
-				<ul class="list-none p-0 space-y-2">
-					{#each project.capabilities as capability}
-						<li class="flex items-center gap-2 text-neutral-600 font-light text-sm">
-							<svg
-								class="w-5 h-5 text-emerald-500 flex-shrink-0"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								><polyline points="20 6 9 17 4 12"></polyline></svg
-							>
-							{capability}
-						</li>
-					{/each}
-				</ul>
+			<div class="max-w-none space-y-8">
+				<!-- Overview -->
+				<div>
+					<h4 class="text-sm uppercase text-neutral-400 mb-3">Overview</h4>
+					<p class="text-neutral-600 leading-relaxed text-sm">
+						{project.fullDescription}
+					</p>
+				</div>
+
+				<!-- Capabilities -->
+				<div>
+					<h4 class="text-sm uppercase text-neutral-400 mb-3">Capabilities</h4>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+						{#each project.capabilities as capability}
+							<div class="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 border border-neutral-100">
+								<svg
+									class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="20 6 9 17 4 12"></polyline>
+								</svg>
+								<span class="text-neutral-700 text-sm">{capability}</span>
+							</div>
+						{/each}
+					</div>
+				</div>
 			</div>
 		</div>
 	</AlertDialog.Content>

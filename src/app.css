@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("https://rsms.me/inter/font-files/Inter.var.woff2?v=3.19") format("woff2");
+  font-feature-settings: "cv01", "cv02", "cv03", "cv04", "ss01";
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -24,8 +34,12 @@
     --radius: 0.5rem;
   }
 
+  :root {
+    font-feature-settings: "cv01", "cv02", "cv03", "cv04", "ss01";
+  }
+
   body {
-    @apply bg-white text-neutral-800 font-sans;
+    @apply bg-white text-neutral-800;
   }
 }
 

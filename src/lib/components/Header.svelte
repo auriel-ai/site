@@ -63,28 +63,39 @@
 <header 
   class="sticky top-0 py-5 px-5 md:px-24 md:py-5 z-30 flex items-center {hideBackground ? 'pointer-events-none' : ''}"
 >
-  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-2 py-3 rounded-2xl clickable transition-colors duration-200 {hasScrolled && !hideBackground ? 'bg-white shadow-sm' : ''} {hideBackground ? 'opacity-0' : 'opacity-100'}">
+  <nav class="container mx-auto max-w-7xl flex items-center justify-between relative px-4 py-4 rounded-2xl clickable backdrop-blur-md transition-all duration-300 {hasScrolled && !hideBackground ? 'bg-white/95 shadow-[0_2px_8px_rgba(0,0,0,0.06)]' : ''} {hideBackground ? 'opacity-0' : 'opacity-100'}">
     <!-- Logo (Left) -->
     <div class="flex-shrink-0 z-50">
-      <a href="/" aria-label="Home">
+      <a href="/" class="transition-opacity duration-200 hover:opacity-80" aria-label="Home">
         <Logo />
       </a>
     </div>
 
     <!-- Nav Links (Center, Desktop) -->
-    <div class="hidden lg:flex items-center gap-5 absolute left-1/2 -translate-x-1/2">
-      <a href="/projects" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
+    <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+      <a 
+        href="/projects" 
+        class="nav-link text-neutral-700 hover:text-black text-base relative group transition-colors duration-200"
+      >
         <span>Projects</span>
       </a>
-      <a href="/news" class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group">
+      <a 
+        href="/news" 
+        class="nav-link text-neutral-700 hover:text-black text-base relative group transition-colors duration-200"
+      >
         <span>News</span>
       </a>
-      <a href="https://network.auriel.tech" class="nav-link text-neutral-700 hover:text-black font-noramal tracking-wide text-base relative group" target="_blank">
+      <a 
+        href="https://network.auriel.tech" 
+        class="nav-link text-neutral-700 hover:text-black text-base relative group transition-colors duration-200" 
+        target="_blank"
+      >
         <span>Network</span>
       </a>
       <button 
         on:click={() => openPopup('sb7xbw2f')}
-        class="nav-link text-neutral-700 hover:text-black font-normal tracking-wide text-base relative group cursor-pointer">
+        class="nav-link text-neutral-700 hover:text-black text-base relative group transition-colors duration-200 cursor-pointer"
+      >
         <span>Contact</span>
       </button>
     </div>
@@ -95,9 +106,10 @@
       <div class="hidden lg:block">
         <button 
           on:click={() => openPopup('lyjf2sfh')}
-          class="bg-white text-sm text-neutral-900 font-normal py-2 px-5 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2">
+          class="bg-white text-sm text-neutral-900 py-2.5 px-6 rounded-lg border border-neutral-200 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center gap-2"
+        >
           Request A Project
-          <ArrowRight size={18} class="ml-1" />
+          <ArrowRight size={18} class="ml-1 transition-transform duration-200 group-hover:translate-x-0.5" />
         </button>
       </div>
 
@@ -121,33 +133,47 @@
 <!-- MOBILE NAVIGATION MENU -->
 {#if isMobileMenuOpen}
   <div 
-    class="fixed inset-0 z-20 bg-[#f7f9f8]/95 backdrop-blur-md pointer-events-auto" 
-    transition:fly={{ y: -100, duration: 300 }}
+    class="fixed inset-0 z-20 bg-white/60 backdrop-blur-lg pointer-events-auto overflow-hidden" 
+    transition:fly={{ y: -20, duration: 300 }}
     style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;"
   >
     <div class="h-full overflow-y-auto">
-      <div class="container mx-auto px-6 pt-32 pb-5 h-full flex flex-col">
-        <div class="flex flex-col gap-6 flex-grow">
-          <a href="/projects" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
+      <div class="container mx-auto px-6 pt-32 pb-8 h-full flex flex-col">
+        <div class="flex flex-col gap-2 flex-grow">
+          <a 
+            href="/projects" 
+            on:click={handleNavClick} 
+            class="text-neutral-900 hover:text-black text-4xl py-6 transition-all duration-200 hover:pl-2"
+          >
             Projects
           </a>
-          <a href="/news" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
+          <a 
+            href="/news" 
+            on:click={handleNavClick} 
+            class="text-neutral-900 hover:text-black text-4xl py-6 transition-all duration-200 hover:pl-2"
+          >
             News
           </a>
-          <a href="https://network.auriel.tech" on:click={handleNavClick} class="text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors">
+          <a 
+            href="https://network.auriel.tech" 
+            on:click={handleNavClick} 
+            class="text-neutral-900 hover:text-black text-4xl py-6 transition-all duration-200 hover:pl-2"
+          >
             Network
           </a>
           <button 
             on:click={() => openPopup('sb7xbw2f')}
-            class="text-left w-full text-neutral-900 hover:text-black font-normal tracking-wide text-4xl py-4 border-b border-[#ececec] transition-colors cursor-pointer">
+            class="text-left w-full text-neutral-900 hover:text-black text-4xl py-6 transition-all duration-200 hover:pl-2 cursor-pointer"
+          >
             Contact
           </button>
         </div>
         <button 
           on:click={() => openPopup('lyjf2sfh')}
-          class="bg-white text-neutral-900 text-lg font-normal py-3 px-5 rounded-full border border-[#ececec] shadow-sm hover:bg-neutral-50 transition-all duration-200 text-center flex items-center justify-center gap-2 mt-auto">
+          class="bg-black text-white text-lg py-4 px-6 rounded-xl shadow-sm hover:bg-neutral-800 active:scale-[0.98] transition-all duration-200 text-center flex items-center justify-center gap-2 mt-auto"
+        >
           Request Project
-          <ArrowRight size={18} class="ml-1" />
+          <ArrowRight size={20} class="ml-1" />
         </button>
       </div>
     </div>

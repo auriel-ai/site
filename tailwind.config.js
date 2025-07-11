@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Inter var', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
         grotesk: ['Space Grotesk', 'sans-serif'],
         unbounded: ['Unbounded', 'sans-serif'],

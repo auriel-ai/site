@@ -33,7 +33,7 @@
     </div>
     <!-- Right: Custom FAQ Accordion -->
     <div class="flex-1 px-6 py-10 md:p-20 flex flex-col justify-center">
-      <h2 class="text-2xl md:text-3xl font-normal mb-10 text-neutral-700">Questions? Answered.</h2>
+      <h2 class="text-3xl md:text-5xl font-medium text-neutral-900 font-sans mb-10">Questions? Answered.</h2>
       <div class="space-y-2">
         {#each faqs as faq, i}
           <div
@@ -45,7 +45,7 @@
             aria-controls={`faq-answer-${i}`}
           >
             <div class="flex items-center justify-between py-5">
-              <span class="font-normal text-neutral-700 text-lg">{faq.question}</span>
+              <span class="font-medium text-neutral-700 text-lg">{faq.question}</span>
               <span class="ml-4 flex items-center justify-center">
                 <svg
                   class="w-5 h-5 text-neutral-900 transition-transform duration-200"

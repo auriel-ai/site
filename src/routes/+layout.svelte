@@ -14,17 +14,15 @@
 	// Font configuration
 	const fonts = [
 		{
-			rel: 'preconnect',
-			href: 'https://fonts.googleapis.com'
-		},
-		{
-			rel: 'preconnect',
-			href: 'https://fonts.gstatic.com',
+			rel: 'preload',
+			href: 'https://rsms.me/inter/font-files/Inter.var.woff2?v=3.19',
+			as: 'font',
+			type: 'font/woff2',
 			crossorigin: 'anonymous'
 		},
 		{
 			rel: 'stylesheet',
-			href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap'
+			href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap'
 		}
 	] as const;
 </script>

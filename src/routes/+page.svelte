@@ -33,20 +33,20 @@
           <div class="max-w-3xl relative z-10 flex flex-col items-center justify-center gap-8 py-20 md:py-28 w-full px-4 md:px-0">
             <h1 
               in:fly={{ y: 30, duration: 800, delay: 200 }}
-              class="text-4xl px-2 md:px-0 leading-normal md:text-6xl md:leading-tight tracking-wide text-white text-center font-orbitron"
+              class="text-4xl px-2 md:px-0 leading-normal md:text-6xl md:leading-tight tracking-wide text-white text-center font-orbitron font-regular"
             >
               Custom AI Agents That Work 24/7/365
             </h1>
             <h2 
               in:fly={{ y: 30, duration: 800, delay: 400 }}
-              class="text-base md:text-xl font-light tracking-wide text-white text-center max-w-3xl px-2 md:px-10"
+              class="text-base md:text-xl tracking-normal text-white text-center max-w-3xl px-2 md:px-10 opacity-90"
             >
               Auriel builds AI agents, workflows, and observability tools to help businesses cut costs, boost revenue, and streamline operations.
             </h2>
             <a 
               in:fly={{ y: 30, duration: 800, delay: 600 }}
               href="/get-started" 
-              class="bg-white text-sm text-neutral-900 font-normal py-3 px-6 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2"
+              class="bg-white text-sm text-neutral-900 font-medium py-3.5 px-7 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2"
               >
               Get Started
             </a>

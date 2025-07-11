@@ -46,7 +46,7 @@
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center space-y-12 mb-12">
         <p class="text-base md:text-lg text-neutral-400 font-light font-orbitron tracking-wide">WHAT WE BUILD</p>
-      <h2 class="text-3xl md:text-5xl font-light mb-2 text-neutral-900">AI Agents, Any Architecture</h2>
+      <h2 class="text-3xl md:text-5xl font-medium text-neutral-900 font-sans">AI Agents, Any Architecture</h2>
     </div>
     <div class="flex justify-center gap-2 mb-20 flex-wrap">
       {#each agentTypes as agent}
