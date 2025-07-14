@@ -88,14 +88,13 @@ export const projects: Project[] = [
   {
     id: 'sync',
     title: 'Sync',
-    description: 'A predictive player management and welfare operating system for football club management and coaching staff.',
+    description: 'A predictive player management and welfare operating system for football clubs.',
     fullDescription: 'Sync is an intelligent operating system designed to help football clubs manage player load and welfare by leveraging predictive analysis. It aggregates vast player data, medical reports, physio metrics, training loads and performance stats to preempt outcomes like injuries, optimize load management, and ensure player welfare, ultimately driving consistent, long-term performance output.',
     capabilities: [
       'Injury Risk Prevention',
       'Load Management Optimization',
       'Player Welfare Monitoring',
-      'Performance Analytics',
-      'Actionable Reporting'
+      'Performance Analytics'
     ],
     categoryTags: ['Sports', 'Analytics', 'Health', 'Performance'],
     projectType: 'agent',
