@@ -9,7 +9,7 @@ export interface Project {
     width?: number;
     height?: number;
     darkMode?: string;
-    component?: 'propscan' | 'sam' | 'support-network' | 'pulse';
+    component?: 'propscan' | 'sam' | 'support-network' | 'pulse' | 'sync';
     includesTitle?: boolean;
   };
   projectType: 'agent' | 'tool';
@@ -81,6 +81,23 @@ export const projects: Project[] = [
       includesTitle: true
     },
     categoryTags: ['Motorsport', 'Telemetry', 'Observability'],
+    projectType: 'agent',
+    websiteUrl: undefined,
+    githubUrl: undefined
+  },
+  {
+    id: 'sync',
+    title: 'Sync',
+    description: 'A predictive player management and welfare operating system for football club management and coaching staff.',
+    fullDescription: 'Sync is an intelligent operating system designed to help football clubs manage player load and welfare by leveraging predictive analysis. It aggregates vast player data, medical reports, physio metrics, training loads and performance stats to preempt outcomes like injuries, optimize load management, and ensure player welfare, ultimately driving consistent, long-term performance output.',
+    capabilities: [
+      'Injury Risk Prevention',
+      'Load Management Optimization',
+      'Player Welfare Monitoring',
+      'Performance Analytics',
+      'Actionable Reporting'
+    ],
+    categoryTags: ['Sports', 'Analytics', 'Health', 'Performance'],
     projectType: 'agent',
     websiteUrl: undefined,
     githubUrl: undefined
