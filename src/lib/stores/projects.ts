@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: 'propscan-agent', 
     title: 'Propscan',
-    description: 'The analytical AI assistant for property investors. Analyse any property deal in seconds.',
+    description: 'An AI assistant that lets property investors analyse any property deal in seconds.',
     fullDescription: 'Propscan enables property investors to transform Rightmove listings into comprehensive investment reports in seconds. It instantly analyzes property data, market trends, and risk factors to provides investors a complete investment picture in one place. This way, hours of manual research and data aggregation can be automated by AI in seconds',
     capabilities: [
       'AI property analysis', 
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     id: 'pulse',
     title: 'Pulse',
     description:
-      'Pulse is an AI-powered observability platform for motorsport teams to monitor telemetry, predict failures, and optimize race strategy.',
+      'AI-powered observability platform for motorsport teams to monitor telemetry.',
     fullDescription:
       'Pulse provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, Pulse uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing team performance and competitiveness.',
     capabilities: [
@@ -125,7 +125,7 @@ export const projects: Project[] = [
   {
     id: 'agentlens',
     title: 'Agent Lens',
-    description: "See your agent's future before it fails. A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline.",
+    description: "A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline.",
     fullDescription: 'Agent Lens is a lightweight, open-source Python package designed to record, replay, and analyze AI agent runs offline. Debug faster and save API credits with comprehensive observability tools for your LLM applications and AI agents.',
     capabilities: [
       'Offline Replay',
