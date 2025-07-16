@@ -19,8 +19,8 @@
 <div class="bg-neutral-50 min-h-screen overflow-x-hidden">
   
   <!-- HERO SECTION -->
-  <section id="hero" class="min-h-[70vh] flex justify-center relative">
-    <div class="container mx-auto max-w-7xl flex flex-col items-center justify-center min-h-[70vh] px-4">
+  <section id="hero" class="flex justify-center relative py-5">
+    <div class="container mx-auto max-w-7xl flex flex-col items-center justify-center px-4">
       
       <!-- Image and Content Wrapper -->
       {#if mounted}

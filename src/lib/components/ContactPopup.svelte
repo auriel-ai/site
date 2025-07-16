@@ -66,7 +66,7 @@
     aria-modal="true"
   >
     <div
-      class="relative w-full rounded-2xl bg-white {isProjectForm ? 'max-w-3xl' : 'max-w-lg'}"
+      class="relative w-full rounded-2xl bg-white {isProjectForm ? 'max-w-lg md:max-w-2xl lg:max-w-4xl' : 'max-w-sm md:max-w-lg lg:max-w-2xl'}"
       transition:fly={{ y: 20, duration: 200 }}
     >
       <button

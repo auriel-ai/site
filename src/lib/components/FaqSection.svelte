@@ -33,7 +33,7 @@
     </div>
     <!-- Right: Custom FAQ Accordion -->
     <div class="flex-1 px-6 py-10 md:p-20 flex flex-col justify-center">
-      <h2 class="text-3xl md:text-5xl font-medium text-neutral-900 font-sans mb-10">Questions? Answered.</h2>
+      <h2 class="text-3xl md:text-5xl font-regular text-neutral-900 font-sans mb-10">Questions? Answered.</h2>
       <div class="space-y-2">
         {#each faqs as faq, i}
           <div

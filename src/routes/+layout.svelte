@@ -40,7 +40,7 @@
 	{@render children()}
 {:else}
 	<!-- For all other routes, render the full layout -->
-	<div class="flex min-h-screen flex-col bg-[#f7f9f8]">
+	<div class="flex min-h-screen flex-col bg-neutral-50">
 		<Header />
 		
 		<main class="flex flex-1 relative">

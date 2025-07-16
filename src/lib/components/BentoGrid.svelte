@@ -6,9 +6,9 @@
 </script>
 
 <div class="w-full max-w-7xl mx-auto px-4 py-10 my-24">
-  <div class="text-center space-y-12 mb-12">
-    <p class="text-base md:text-lg text-neutral-400 font-light font-orbitron tracking-wide">ENTERPRISE-READY AI INFRASTRUCTURE</p>
-    <h2 class="text-3xl md:text-5xl font-medium text-neutral-900 font-sans">Build Once, Scale Infinitely</h2>
+  <div class="text-center space-y-12 mb-20">
+    <p class="text-base md:text-lg text-neutral-400 font-light tracking-wide">Enterprise Ready AI Infrastructure</p>
+    <h2 class="text-3xl md:text-5xl font-regular text-neutral-900 font-sans">Build Once, Scale Infinitely</h2>
   </div>
 
   <div class="w-full grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 bg-transparent max-w-7xl mx-auto mb-24">
@@ -17,8 +17,7 @@
       <div class="flex flex-col md:flex-row h-full gap-8">
         <!-- Left: Heading and Subtext -->
         <div class="flex-1 flex flex-col justify-start">
-          <Bot class="w-8 h-8 text-neutral-700 mb-3" />
-          <h3 class="font-medium text-xl text-neutral-900 mb-2">Your 24/7 Digital Workforce</h3>
+          <h3 class="font-light text-4xl text-neutral-900 mb-5">Your 24/7 Digital Workforce</h3>
           <p class="text-neutral-600 font-light">Boost productivity with AI agents designed specifically for your business, automating repetitive tasks, reducing costs, and working tirelessly around the clock to support your team.</p>
         </div>
         <!-- Right: Mini Dashboard Visual -->
@@ -31,8 +30,7 @@
     <!-- Module 2: Automated Workflows -->
     <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[260px] shadow-sm lg:col-span-1 lg:row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
       <div class="mb-4">
-        <Settings class="w-8 h-8 text-neutral-700 mb-3" />
-        <h3 class="font-medium text-xl text-neutral-900 mb-2">Streamline Your Operations</h3>
+        <h3 class="font-light text-4xl text-neutral-900 mb-5">Streamline Your Operations</h3>
         <p class="text-neutral-600 font-light mb-2">Simplify complex processes with AI-powered automation, removing bottlenecks, enhancing team efficiency, and ensuring smooth operations with minimal manual effort.</p>
       </div>
 
@@ -47,8 +45,7 @@
     <!-- Module 3: Gain Real-Time Insights -->
     <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm lg:col-span-1 lg:row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
       <div class="mb-4">
-        <ChartNetwork class="w-8 h-8 text-neutral-700 mb-3" />
-        <h3 class="font-medium text-xl text-neutral-900 mb-2">Gain Real-Time Insights</h3>
+        <h3 class="font-light text-4xl text-neutral-900 mb-5">Gain Real-Time Insights</h3>
         <p class="text-neutral-600 font-light mb-4">Track agent performance instantly, identify issues before they escalate, and leverage actionable data to optimize decisions and drive business growth.</p>
       </div>
         <div class="w-full flex flex-col justify-center items-center gap-2">
@@ -74,8 +71,7 @@
     <!-- Module 4: Connect Your Tools -->
     <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm lg:col-span-1 lg:row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
       <div class="mb-4">
-        <Plug class="w-8 h-8 text-neutral-700 mb-3" />
-        <h3 class="font-medium text-xl text-neutral-900 mb-2">Connect Your Tools</h3>
+        <h3 class="font-light text-4xl text-neutral-900 mb-5">Connect Your Tools</h3>
         <p class="text-neutral-600 font-light mb-2">We'll connect your favorite apps and platforms. Our AI agents can integrate with CRMs, email, chat, and more—so your workflows stay connected and your data flows through your business without friction.</p>
       </div>
       <IntegrationNetwork />
@@ -85,8 +81,7 @@
     <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[200px] shadow-sm lg:col-span-1 lg:row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
       <div class="mb-4">
         <div class="mb-4">
-          <ShieldCheck class="w-8 h-8 text-neutral-700 mb-3" />
-          <h3 class="font-medium text-xl text-neutral-900 mb-2 mt-2">Top Notch Security</h3>
+          <h3 class="font-light text-4xl text-neutral-900 mb-5">Top Notch Security</h3>
           <p class="text-neutral-600 font-light mb-4">We'll deploy on your servers or private cloud infrastructure for maximum control. Our agents support on-premises hosting, so your data never leaves your environment—ensuring compliance, privacy, and peace of mind.</p>
         </div>
       </div>
