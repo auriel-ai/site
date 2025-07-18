@@ -5,13 +5,9 @@
   import AnimatedLock from './AnimatedLock.svelte';
 </script>
 
-<div class="w-full max-w-7xl mx-auto px-4 py-10 my-24">
-  <div class="text-center space-y-12 mb-20">
-    <p class="text-base md:text-lg text-neutral-400 font-light tracking-wide">Enterprise Ready AI Infrastructure</p>
-    <h2 class="text-3xl md:text-5xl font-regular text-neutral-900 font-sans">Build Once, Scale Infinitely</h2>
-  </div>
+<div class="w-full max-w-7xl mx-auto px-4 py-10 my-5">
 
-  <div class="w-full grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 bg-transparent max-w-7xl mx-auto mb-24">
+  <div class="w-full grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 bg-transparent max-w-7xl mx-auto mb-10">
     <!-- Special Card: Your 24/7 Digital Workforce (wide, split layout) -->
     <div class="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[260px] shadow-sm lg:col-span-2 lg:row-span-1 transition-transform duration-200 will-change-transform hover:-translate-y-2">
       <div class="flex flex-col md:flex-row h-full gap-8">

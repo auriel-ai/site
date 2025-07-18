@@ -25,7 +25,7 @@
   }
 </script>
 
-<div class="w-full max-w-7xl mx-auto my-24 px-4">
+<div class="w-full max-w-7xl mx-auto py-10 px-4">
   <div class="rounded-2xl overflow-hidden bg-white shadow flex flex-col md:flex-row items-stretch">
     <!-- Left: SVG background, fills column -->
     <div class="relative flex-1 min-h-[340px] md:min-h-[440px]">

@@ -7,6 +7,7 @@
   import AgentTypesSection from '$lib/components/AgentTypesSection.svelte';
   import CTA from '$lib/components/CTA.svelte';
   import BrandFooter from '$lib/components/BrandFooter.svelte';
+  import ProjectLogos from '$lib/components/ProjectLogos.svelte';
   
   let mounted = false;
   
@@ -56,6 +57,7 @@
     </div>
   </section>
 
+  <ProjectLogos />
   <BentoGrid />
   <AgentTypesSection />
   <CTA />
@@ -70,5 +72,32 @@
   }
   :global(.container) {
     @apply mx-auto;
+  }
+
+  /* Custom Scrollbar Styles */
+  :global(*::-webkit-scrollbar) {
+    width: 10px;
+    height: 10px;
+  }
+
+  :global(*::-webkit-scrollbar-track) {
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+
+  :global(*::-webkit-scrollbar-thumb) {
+    background: #d4d4d4;
+    border-radius: 5px;
+    border: 2px solid #f5f5f5;
+  }
+
+  :global(*::-webkit-scrollbar-thumb:hover) {
+    background: #a3a3a3;
+  }
+
+  /* Firefox */
+  :global(*) {
+    scrollbar-width: thin;
+    scrollbar-color: #d4d4d4 #f5f5f5;
   }
 </style>

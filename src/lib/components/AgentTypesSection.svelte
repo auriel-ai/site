@@ -42,10 +42,10 @@
   }
 </script>
 
-<section class="w-full bg-neutral-50 py-10 my-24">
+<section class="w-full bg-neutral-50 py-10 my-10">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center space-y-12 mb-12">
-        <p class="text-base md:text-lg text-neutral-400 font-light tracking-wide">What We Build</p>
+        <p class="font-orbitron text-base md:text-lg text-neutral-400 font-light tracking-wide">What We Build</p>
       <h2 class="text-3xl md:text-5xl font-regular text-neutral-900 font-sans">AI Agents, Any Architecture</h2>
     </div>
     <div class="flex justify-center gap-2 mb-20 flex-wrap">
