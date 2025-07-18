@@ -40,29 +40,6 @@ export const projects: Project[] = [
     githubUrl: undefined
   },
   {
-    id: 'sam-agent',
-    title: 'SAM',
-    description:
-      'The future of enterprise learning. An AI-powered learning experience platform for modern teams.',
-    fullDescription:
-      "SAM is the future of enterprise learning and development. It's a personal AI tutor for enterprise-grade employee training and upskilling. SAM provides a modern learning experience for employers to onboard and train new hires, and help employees brush up on enterprise-level SOPs, compliance, and more.",
-    capabilities: [
-      'Personalized AI Tutoring',
-      'Employee Onboarding',
-      'Corporate Training',
-      'Compliance & SOPs',
-      'Upskilling & Reskilling'
-    ],
-    logo: {
-      component: 'sam',
-      includesTitle: true
-    },
-    categoryTags: ['Enterprise', 'L&D', 'EdTech', 'AI'],
-    projectType: 'agent',
-    websiteUrl: 'https://samfire.uk',
-    githubUrl: undefined
-  },
-  {
     id: 'pulse',
     title: 'Pulse',
     description:
@@ -82,7 +59,30 @@ export const projects: Project[] = [
     },
     categoryTags: ['Motorsport', 'Telemetry', 'Observability'],
     projectType: 'agent',
-    websiteUrl: undefined,
+    websiteUrl: 'https://getpulse.racing',
+    githubUrl: undefined
+  },
+  {
+    id: 'sam-agent',
+    title: 'SAM',
+    description:
+      'The future of enterprise learning. An AI-powered learning experience platform for modern teams.',
+    fullDescription:
+      "SAM is the future of enterprise learning and development. It's a personal AI tutor for enterprise-grade employee training and upskilling. SAM provides a modern learning experience for employers to onboard and train new hires, and help employees brush up on enterprise-level SOPs, compliance, and more.",
+    capabilities: [
+      'Personalized AI Tutoring',
+      'Employee Onboarding',
+      'Corporate Training',
+      'Compliance & SOPs',
+      'Upskilling & Reskilling'
+    ],
+    logo: {
+      component: 'sam',
+      includesTitle: true
+    },
+    categoryTags: ['Enterprise', 'L&D', 'EdTech', 'Open Source'],
+    projectType: 'agent',
+    websiteUrl: 'https://samfire.uk',
     githubUrl: undefined
   },
   {
@@ -96,9 +96,13 @@ export const projects: Project[] = [
       'Player Welfare Monitoring',
       'Performance Analytics'
     ],
+    logo: {
+      component: 'sync',
+      includesTitle: true
+    },
     categoryTags: ['Sports', 'Analytics', 'Health', 'Performance'],
     projectType: 'agent',
-    websiteUrl: undefined,
+    websiteUrl: 'https://sync.football',
     githubUrl: undefined
   },
   {
