@@ -48,7 +48,7 @@
               href="/get-started" 
               class="bg-white text-sm text-neutral-900 font-medium py-3.5 px-7 rounded-lg border border-neutral-200 shadow-sm hover:bg-neutral-100 transition-all duration-200 flex items-center gap-2"
               >
-              Get Started
+              Explore Our Work
             </a>
           </div>
         </div>

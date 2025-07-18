@@ -108,7 +108,7 @@
           on:click={() => openPopup('lyjf2sfh')}
           class="bg-white text-sm text-neutral-900 py-2.5 px-6 rounded-lg border border-neutral-200 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center gap-2"
         >
-          Request A Project
+          Request Custom Project
           <ArrowRight size={18} class="ml-1 transition-transform duration-200 group-hover:translate-x-0.5" />
         </button>
       </div>
@@ -172,7 +172,7 @@
           on:click={() => openPopup('lyjf2sfh')}
           class="bg-black text-white text-lg py-4 px-6 rounded-xl shadow-sm hover:bg-neutral-800 active:scale-[0.98] transition-all duration-200 text-center flex items-center justify-center gap-2 mt-auto"
         >
-          Request Project
+          Request A Custom Project
           <ArrowRight size={20} class="ml-1" />
         </button>
       </div>
