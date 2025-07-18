@@ -4,7 +4,7 @@
 
 <div class="flex items-center gap-2">
 	<!-- Sync Icon -->
-	<img src="/sync-icon.svg" alt="Sync AI Icon" class="w-6 h-6 brightness-0 invert" />
+	<img src="/sync-icon.svg" alt="Sync AI Icon" class="w-6 h-6" />
 	
 	<!-- Sync Text -->
 	<span class="text-2xl font-semibold text-neutral-900" style="font-family: 'Space Grotesk', sans-serif;">
