@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: 'propscan-agent', 
     title: 'Propscan',
-    description: 'An AI assistant that lets property investors analyse any property deal in seconds.',
+    description: 'An AI assistant for property investors that creates comprehensive investment reports in seconds.',
     fullDescription: 'Propscan enables property investors to transform Rightmove listings into comprehensive investment reports in seconds. It instantly analyzes property data, market trends, and risk factors to provides investors a complete investment picture in one place. This way, hours of manual research and data aggregation can be automated by AI in seconds',
     capabilities: [
       'AI property analysis', 
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     id: 'pulse',
     title: 'Pulse',
     description:
-      'AI-powered observability platform for motorsport teams to monitor telemetry.',
+      'AI-powered telemetry for motorsport teams.',
     fullDescription:
       'Pulse provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, Pulse uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing team performance and competitiveness.',
     capabilities: [
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     id: 'sam-agent',
     title: 'SAM',
     description:
-      'The future of enterprise learning. An AI-powered learning experience platform for modern teams.',
+      'An AI-powered learning experience and employee training platform for enterprise teams.',
     fullDescription:
       "SAM is the future of enterprise learning and development. It's a personal AI tutor for enterprise-grade employee training and upskilling. SAM provides a modern learning experience for employers to onboard and train new hires, and help employees brush up on enterprise-level SOPs, compliance, and more.",
     capabilities: [
@@ -88,7 +88,7 @@ export const projects: Project[] = [
   {
     id: 'sync',
     title: 'Sync',
-    description: 'A predictive player management and welfare operating system for football clubs.',
+    description: 'Predictive player management platform to help football clubs manage player load and welfare.',
     fullDescription: 'Sync is an intelligent operating system designed to help football clubs manage player load and welfare by leveraging predictive analysis. It aggregates vast player data, medical reports, physio metrics, training loads and performance stats to preempt outcomes like injuries, optimize load management, and ensure player welfare, ultimately driving consistent, long-term performance output.',
     capabilities: [
       'Injury Risk Prevention',
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   {
     id: 'support-network',
     title: "Auriel's Support Network",
-    description: 'A developer support network for building and monetizing AI agents with community resources.',
+    description: 'A support network for developers building and monetizing AI agents and workflows.',
     fullDescription: "Auriel's Support Network is our developer support network that provides everything you need to build and monetize AI agents. From basic concepts to practical implementation, best practices, and working with the latest tools - all in one community platform.",
     capabilities: [
       'Community learning resources',
@@ -129,7 +129,7 @@ export const projects: Project[] = [
   {
     id: 'agentlens',
     title: 'Agent Lens',
-    description: "A lightweight, open-source Python package to record, replay, and analyze AI agent runs offline.",
+    description: "A lightweight, open-source Python package to record, replay, and analyze AI agent runs locally.",
     fullDescription: 'Agent Lens is a lightweight, open-source Python package designed to record, replay, and analyze AI agent runs offline. Debug faster and save API credits with comprehensive observability tools for your LLM applications and AI agents.',
     capabilities: [
       'Offline Replay',

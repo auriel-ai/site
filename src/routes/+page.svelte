@@ -41,7 +41,7 @@
               in:fly={{ y: 30, duration: 800, delay: 400 }}
               class="text-base md:text-xl tracking-normal text-white text-center max-w-3xl px-2 md:px-10 opacity-90"
             >
-              Auriel builds AI agents, workflows, and observability tools to help businesses cut costs, boost revenue, and streamline operations.
+              Auriel builds AI agents, workflows, and observability tools to help businesses cut costs, boost revenue, and perform better.
             </h2>
             <a 
               in:fly={{ y: 30, duration: 800, delay: 600 }}
