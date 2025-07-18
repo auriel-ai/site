@@ -13,7 +13,7 @@
     {/if}
     
     {#if showIcon}
-      <img src="/logos/propscan-icon.svg" alt="PropScan Icon" 
+      <img src="/propscan-icon.svg" alt="PropScan Icon" 
         class="inline-block h-4 w-4" 
       />
     {/if}
