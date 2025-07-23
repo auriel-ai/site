@@ -66,7 +66,7 @@ export const projects: Project[] = [
     id: 'sam-agent',
     title: 'SAM',
     description:
-      'An AI-powered learning experience and employee training platform for enterprise teams.',
+      'An AI-Powered Onboarding Assistant for Scaling Startups.',
     fullDescription:
       "SAM is the future of enterprise learning and development. It's a personal AI tutor for enterprise-grade employee training and upskilling. SAM provides a modern learning experience for employers to onboard and train new hires, and help employees brush up on enterprise-level SOPs, compliance, and more.",
     capabilities: [
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     },
     categoryTags: ['Enterprise', 'L&D', 'EdTech', 'Open Source'],
     projectType: 'agent',
-    websiteUrl: 'https://samfire.uk',
+    websiteUrl: 'https://getsam.co',
     githubUrl: undefined
   },
   {
