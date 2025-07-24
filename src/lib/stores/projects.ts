@@ -40,29 +40,6 @@ export const projects: Project[] = [
     githubUrl: undefined
   },
   {
-    id: 'pulse',
-    title: 'Pulse',
-    description:
-      'AI-powered telemetry for motorsport teams.',
-    fullDescription:
-      'Pulse provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, Pulse uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing team performance and competitiveness.',
-    capabilities: [
-      'Predictive Failure Detection',
-      'Real-Time Anomaly Alerts',
-      'AI Race Strategy Optimization',
-      'Telemetry Visualization',
-      'Hands-Free Voice Queries'
-    ],
-    logo: {
-      component: 'pulse',
-      includesTitle: true
-    },
-    categoryTags: ['Motorsport', 'Telemetry', 'Observability'],
-    projectType: 'agent',
-    websiteUrl: 'https://getpulse.racing',
-    githubUrl: undefined
-  },
-  {
     id: 'sam-agent',
     title: 'SAM',
     description:
@@ -83,6 +60,29 @@ export const projects: Project[] = [
     categoryTags: ['Enterprise', 'L&D', 'EdTech', 'Open Source'],
     projectType: 'agent',
     websiteUrl: 'https://getsam.co',
+    githubUrl: undefined
+  },
+  {
+    id: 'pulse',
+    title: 'Pulse',
+    description:
+      'AI-powered telemetry for motorsport teams.',
+    fullDescription:
+      'Pulse provides motorsport teams with an AI-powered observability platform that monitors real-time telemetry, predicts potential failures, and optimizes race strategies. Beyond traditional telemetry monitoring, Pulse uses machine learning to predict failures with high accuracy, reducing unplanned pit stops, and leverages decision-tree models to suggest optimal race strategies, enhancing team performance and competitiveness.',
+    capabilities: [
+      'Predictive Failure Detection',
+      'Real-Time Anomaly Alerts',
+      'AI Race Strategy Optimization',
+      'Telemetry Visualization',
+      'Hands-Free Voice Queries'
+    ],
+    logo: {
+      component: 'pulse',
+      includesTitle: true
+    },
+    categoryTags: ['Motorsport', 'Telemetry', 'Observability'],
+    projectType: 'agent',
+    websiteUrl: 'https://getpulse.racing',
     githubUrl: undefined
   },
   {

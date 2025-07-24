@@ -1,14 +1,14 @@
 <script lang="ts">
   import PropscanLogo from './logos/PropscanLogo.svelte';
-  import PulseLogo from './logos/PulseLogo.svelte';
   import SamLogo from './logos/SamLogo.svelte';
+  import PulseLogo from './logos/PulseLogo.svelte';
   import SyncLogo from './logos/SyncLogo.svelte';
   import { projects } from '$lib/stores/projects';
 
   // Get the URLs for each project
   const propscanUrl = projects.find(p => p.id === 'propscan-agent')?.websiteUrl;
-  const pulseUrl = projects.find(p => p.id === 'pulse')?.websiteUrl;
   const samUrl = projects.find(p => p.id === 'sam-agent')?.websiteUrl;
+  const pulseUrl = projects.find(p => p.id === 'pulse')?.websiteUrl;
   const syncUrl = projects.find(p => p.id === 'sync')?.websiteUrl;
 </script>
 
@@ -25,15 +25,15 @@
         class="transition-opacity hover:opacity-70 logo-filter">
         <PropscanLogo />
       </a>
+
+      <a href={samUrl} target="_blank" rel="noopener noreferrer"
+      class="transition-opacity hover:opacity-70 logo-filter">
+      <SamLogo />
+      </a>
       
       <a href={pulseUrl} target="_blank" rel="noopener noreferrer"
         class="transition-opacity hover:opacity-70 logo-filter">
         <PulseLogo />
-      </a>
-      
-      <a href={samUrl} target="_blank" rel="noopener noreferrer"
-        class="transition-opacity hover:opacity-70 logo-filter">
-        <SamLogo />
       </a>
       
       <a href={syncUrl} target="_blank" rel="noopener noreferrer"
